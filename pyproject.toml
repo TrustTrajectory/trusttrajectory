@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trusttrajectory"
+version = "0.4.0"
+description = "TrustTrajectory: measuring when LLM agents begin to hallucinate in long-trajectory agentic execution"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Preetam Hegde" },
+  { name = "Vincent Li" },
+  { name = "Jacob Dang" },
+  { name = "Aviv Chatterjee" },
+]
+dependencies = [
+  "openai>=1.0",
+  "pandas>=2.0",
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+trusttrajectory = "trusttrajectory.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["trusttrajectory*"]
+
+[tool.setuptools.package-data]
+trusttrajectory = ["data/scenarios/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

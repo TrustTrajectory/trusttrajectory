@@ -1,0 +1,107 @@
+{
+  "n_turns": 779,
+  "judge_parse_rate": null,
+  "parsed_only": null,
+  "label_agreement": 0.7163029525032092,
+  "label_kappa": 0.0076147106294670195,
+  "binary_agreement": 0.7163029525032092,
+  "binary_kappa": 0.006429160919473862,
+  "confusion": {
+    "NONE": {
+      "NONE": 557,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "PARAM_DRIFT": {
+      "NONE": 44,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "PREMATURE_COMMIT": {
+      "NONE": 14,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 1,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "CONSTRAINT_IGNORE": {
+      "NONE": 104,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "CONFIDENT_CONFAB": {
+      "NONE": 0,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "MEMORY_COLLAPSE": {
+      "NONE": 59,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    }
+  },
+  "per_class": {
+    "NONE": {
+      "regex_count": 557,
+      "assertion_count": 778,
+      "precision_of_regex_vs_assertion": 0.7159383033419023,
+      "recall_of_regex_vs_assertion": 1.0
+    },
+    "PARAM_DRIFT": {
+      "regex_count": 44,
+      "assertion_count": 0,
+      "precision_of_regex_vs_assertion": null,
+      "recall_of_regex_vs_assertion": 0.0
+    },
+    "PREMATURE_COMMIT": {
+      "regex_count": 15,
+      "assertion_count": 1,
+      "precision_of_regex_vs_assertion": 1.0,
+      "recall_of_regex_vs_assertion": 0.06666666666666667
+    },
+    "CONSTRAINT_IGNORE": {
+      "regex_count": 104,
+      "assertion_count": 0,
+      "precision_of_regex_vs_assertion": null,
+      "recall_of_regex_vs_assertion": 0.0
+    },
+    "CONFIDENT_CONFAB": {
+      "regex_count": 0,
+      "assertion_count": 0,
+      "precision_of_regex_vs_assertion": null,
+      "recall_of_regex_vs_assertion": null
+    },
+    "MEMORY_COLLAPSE": {
+      "regex_count": 59,
+      "assertion_count": 0,
+      "precision_of_regex_vs_assertion": null,
+      "recall_of_regex_vs_assertion": 0.0
+    }
+  },
+  "regex_rates": {
+    "pre_rate": 0.10507246376811594,
+    "post_rate": 0.7224669603524229,
+    "post_constraint_ignore_rate": 0.4581497797356828
+  },
+  "assertion_rates": {
+    "pre_rate": 0.0018115942028985507,
+    "post_rate": 0.0,
+    "post_constraint_ignore_rate": 0.0
+  }
+}

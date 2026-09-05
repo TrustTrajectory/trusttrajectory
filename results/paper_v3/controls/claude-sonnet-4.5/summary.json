@@ -1,0 +1,922 @@
+{
+  "main": {
+    "label": "main",
+    "model": "claude-sonnet-4.5",
+    "n_trajectories": 138,
+    "n_turns": 2415,
+    "pivot_turns": [
+      13
+    ],
+    "gate_mode": "hard",
+    "scorer": "assertion",
+    "pre_post": {
+      "pre_rate": 0.0,
+      "pre_ci": [
+        0.0,
+        0.0
+      ],
+      "post_rate": 0.0013175230566534915,
+      "post_ci": [
+        0.0,
+        0.004032258064516129
+      ],
+      "delta": 0.0013175230566534915,
+      "delta_ci": [
+        0.0,
+        0.004032258064516129
+      ],
+      "n_trajectories": 138,
+      "n_boot": 10000,
+      "alpha": 0.05
+    },
+    "pre_post_by_tier": [
+      {
+        "difficulty": "easy",
+        "pre_rate": 0.0,
+        "post_rate": 0.007462686567164179,
+        "delta": 0.007462686567164179,
+        "n_pre": 360,
+        "n_post": 134
+      },
+      {
+        "difficulty": "medium",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 360,
+        "n_post": 172
+      },
+      {
+        "difficulty": "hard",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 360,
+        "n_post": 171
+      },
+      {
+        "difficulty": "conflicting",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 288,
+        "n_post": 109
+      },
+      {
+        "difficulty": "adversarial",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 288,
+        "n_post": 173
+      }
+    ],
+    "fht_by_tier": [
+      {
+        "difficulty": "easy",
+        "n": 30,
+        "n_with_fht": 1,
+        "mean_fht": 20.0,
+        "min_fht": 20.0,
+        "max_fht": 20.0
+      },
+      {
+        "difficulty": "medium",
+        "n": 30,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      },
+      {
+        "difficulty": "hard",
+        "n": 30,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      },
+      {
+        "difficulty": "conflicting",
+        "n": 24,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      },
+      {
+        "difficulty": "adversarial",
+        "n": 24,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      }
+    ],
+    "booked_by_tier": [
+      {
+        "difficulty": "easy",
+        "booked": 30,
+        "n": 30,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "medium",
+        "booked": 26,
+        "n": 30,
+        "rate": 0.8666666666666667
+      },
+      {
+        "difficulty": "hard",
+        "booked": 29,
+        "n": 30,
+        "rate": 0.9666666666666667
+      },
+      {
+        "difficulty": "conflicting",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "adversarial",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      }
+    ],
+    "taxonomy_counts": [
+      {
+        "type": "PARAM_DRIFT",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "PREMATURE_COMMIT",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "CONSTRAINT_IGNORE",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "CONFIDENT_CONFAB",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "MEMORY_COLLAPSE",
+        "pre": 0,
+        "post": 1,
+        "total": 1
+      }
+    ],
+    "label_collisions": {
+      "n_hallucinated": 1,
+      "n_multi_condition": 0,
+      "frac_multi_condition": 0.0,
+      "combinations": {}
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.3,
+        "post_pivot_constraint_ignore_rate": 0.5098814229249012,
+        "post_pivot_hallucination_rate": 0.5111989459815547,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.5770750988142292,
+        "post_pivot_hallucination_rate": 0.5783926218708827,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.616600790513834,
+        "post_pivot_hallucination_rate": 0.6179183135704874,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.5770750988142292,
+        "post_pivot_hallucination_rate": 0.5783926218708827,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.5770750988142292,
+        "post_pivot_hallucination_rate": 0.5783926218708827,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.6,
+        "post_pivot_constraint_ignore_rate": 0.5770750988142292,
+        "post_pivot_hallucination_rate": 0.5783926218708827,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      }
+    ]
+  },
+  "pivot_random": {
+    "label": "pivot_random",
+    "model": "claude-sonnet-4.5",
+    "n_trajectories": 46,
+    "n_turns": 818,
+    "pivot_turns": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "gate_mode": "hard",
+    "scorer": "assertion",
+    "pre_post": {
+      "pre_rate": 0.001763668430335097,
+      "pre_ci": [
+        0.0,
+        0.005376344086021506
+      ],
+      "post_rate": 0.0,
+      "post_ci": [
+        0.0,
+        0.0
+      ],
+      "delta": -0.001763668430335097,
+      "delta_ci": [
+        -0.005376344086021506,
+        0.0
+      ],
+      "n_trajectories": 46,
+      "n_boot": 10000,
+      "alpha": 0.05
+    },
+    "pre_post_by_tier": [
+      {
+        "difficulty": "easy",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 120,
+        "n_post": 44
+      },
+      {
+        "difficulty": "medium",
+        "pre_rate": 0.008,
+        "post_rate": 0.0,
+        "delta": -0.008,
+        "n_pre": 125,
+        "n_post": 56
+      },
+      {
+        "difficulty": "hard",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 129,
+        "n_post": 55
+      },
+      {
+        "difficulty": "conflicting",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 96,
+        "n_post": 38
+      },
+      {
+        "difficulty": "adversarial",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 97,
+        "n_post": 58
+      }
+    ],
+    "fht_by_tier": [
+      {
+        "difficulty": "easy",
+        "n": 10,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      },
+      {
+        "difficulty": "medium",
+        "n": 10,
+        "n_with_fht": 1,
+        "mean_fht": 14.0,
+        "min_fht": 14.0,
+        "max_fht": 14.0
+      },
+      {
+        "difficulty": "hard",
+        "n": 10,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      },
+      {
+        "difficulty": "conflicting",
+        "n": 8,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      },
+      {
+        "difficulty": "adversarial",
+        "n": 8,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      }
+    ],
+    "booked_by_tier": [
+      {
+        "difficulty": "easy",
+        "booked": 10,
+        "n": 10,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "medium",
+        "booked": 9,
+        "n": 10,
+        "rate": 0.9
+      },
+      {
+        "difficulty": "hard",
+        "booked": 9,
+        "n": 10,
+        "rate": 0.9
+      },
+      {
+        "difficulty": "conflicting",
+        "booked": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "adversarial",
+        "booked": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    ],
+    "taxonomy_counts": [
+      {
+        "type": "PARAM_DRIFT",
+        "pre": 1,
+        "post": 0,
+        "total": 1
+      },
+      {
+        "type": "PREMATURE_COMMIT",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "CONSTRAINT_IGNORE",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "CONFIDENT_CONFAB",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "MEMORY_COLLAPSE",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      }
+    ],
+    "label_collisions": {
+      "n_hallucinated": 1,
+      "n_multi_condition": 0,
+      "frac_multi_condition": 0.0,
+      "combinations": {}
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.3,
+        "post_pivot_constraint_ignore_rate": 0.5179282868525896,
+        "post_pivot_hallucination_rate": 0.5179282868525896,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.5737051792828686,
+        "post_pivot_hallucination_rate": 0.5737051792828686,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.6095617529880478,
+        "post_pivot_hallucination_rate": 0.6095617529880478,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.5737051792828686,
+        "post_pivot_hallucination_rate": 0.5737051792828686,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.5737051792828686,
+        "post_pivot_hallucination_rate": 0.5737051792828686,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.6,
+        "post_pivot_constraint_ignore_rate": 0.5737051792828686,
+        "post_pivot_hallucination_rate": 0.5737051792828686,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      }
+    ]
+  },
+  "nogate": {
+    "label": "nogate",
+    "model": "claude-sonnet-4.5",
+    "n_trajectories": 46,
+    "n_turns": 812,
+    "pivot_turns": [
+      13
+    ],
+    "gate_mode": "none",
+    "scorer": "assertion",
+    "pre_post": {
+      "pre_rate": 0.0,
+      "pre_ci": [
+        0.0,
+        0.0
+      ],
+      "post_rate": 0.007692307692307693,
+      "post_ci": [
+        0.0,
+        0.01937984496124031
+      ],
+      "delta": 0.007692307692307693,
+      "delta_ci": [
+        0.0,
+        0.01937984496124031
+      ],
+      "n_trajectories": 46,
+      "n_boot": 10000,
+      "alpha": 0.05
+    },
+    "pre_post_by_tier": [
+      {
+        "difficulty": "easy",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 120,
+        "n_post": 44
+      },
+      {
+        "difficulty": "medium",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 120,
+        "n_post": 55
+      },
+      {
+        "difficulty": "hard",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 120,
+        "n_post": 62
+      },
+      {
+        "difficulty": "conflicting",
+        "pre_rate": 0.0,
+        "post_rate": 0.05128205128205128,
+        "delta": 0.05128205128205128,
+        "n_pre": 96,
+        "n_post": 39
+      },
+      {
+        "difficulty": "adversarial",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 96,
+        "n_post": 60
+      }
+    ],
+    "fht_by_tier": [
+      {
+        "difficulty": "easy",
+        "n": 10,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      },
+      {
+        "difficulty": "medium",
+        "n": 10,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      },
+      {
+        "difficulty": "hard",
+        "n": 10,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      },
+      {
+        "difficulty": "conflicting",
+        "n": 8,
+        "n_with_fht": 2,
+        "mean_fht": 18.5,
+        "min_fht": 16.0,
+        "max_fht": 21.0
+      },
+      {
+        "difficulty": "adversarial",
+        "n": 8,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": NaN,
+        "max_fht": NaN
+      }
+    ],
+    "booked_by_tier": [
+      {
+        "difficulty": "easy",
+        "booked": 10,
+        "n": 10,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "medium",
+        "booked": 9,
+        "n": 10,
+        "rate": 0.9
+      },
+      {
+        "difficulty": "hard",
+        "booked": 8,
+        "n": 10,
+        "rate": 0.8
+      },
+      {
+        "difficulty": "conflicting",
+        "booked": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "adversarial",
+        "booked": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    ],
+    "taxonomy_counts": [
+      {
+        "type": "PARAM_DRIFT",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "PREMATURE_COMMIT",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "CONSTRAINT_IGNORE",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "CONFIDENT_CONFAB",
+        "pre": 0,
+        "post": 1,
+        "total": 1
+      },
+      {
+        "type": "MEMORY_COLLAPSE",
+        "pre": 0,
+        "post": 1,
+        "total": 1
+      }
+    ],
+    "label_collisions": {
+      "n_hallucinated": 2,
+      "n_multi_condition": 0,
+      "frac_multi_condition": 0.0,
+      "combinations": {}
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.3,
+        "post_pivot_constraint_ignore_rate": 0.4461538461538462,
+        "post_pivot_hallucination_rate": 0.45384615384615384,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.5153846153846153,
+        "post_pivot_hallucination_rate": 0.5230769230769231,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.5615384615384615,
+        "post_pivot_hallucination_rate": 0.5692307692307692,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.5153846153846153,
+        "post_pivot_hallucination_rate": 0.5230769230769231,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.5153846153846153,
+        "post_pivot_hallucination_rate": 0.5230769230769231,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.6,
+        "post_pivot_constraint_ignore_rate": 0.5153846153846153,
+        "post_pivot_hallucination_rate": 0.5230769230769231,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      }
+    ]
+  },
+  "statecard": {
+    "label": "statecard",
+    "model": "claude-sonnet-4.5",
+    "n_trajectories": 46,
+    "n_turns": 789,
+    "pivot_turns": [
+      13
+    ],
+    "gate_mode": "hard",
+    "scorer": "assertion",
+    "pre_post": {
+      "pre_rate": 0.0,
+      "pre_ci": [
+        0.0,
+        0.0
+      ],
+      "post_rate": 0.0,
+      "post_ci": [
+        0.0,
+        0.0
+      ],
+      "delta": 0.0,
+      "delta_ci": [
+        0.0,
+        0.0
+      ],
+      "n_trajectories": 46,
+      "n_boot": 10000,
+      "alpha": 0.05
+    },
+    "pre_post_by_tier": [
+      {
+        "difficulty": "easy",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 120,
+        "n_post": 42
+      },
+      {
+        "difficulty": "medium",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 120,
+        "n_post": 50
+      },
+      {
+        "difficulty": "hard",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 120,
+        "n_post": 56
+      },
+      {
+        "difficulty": "conflicting",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 96,
+        "n_post": 33
+      },
+      {
+        "difficulty": "adversarial",
+        "pre_rate": 0.0,
+        "post_rate": 0.0,
+        "delta": 0.0,
+        "n_pre": 96,
+        "n_post": 56
+      }
+    ],
+    "fht_by_tier": [
+      {
+        "difficulty": "easy",
+        "n": 10,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": null,
+        "max_fht": null
+      },
+      {
+        "difficulty": "medium",
+        "n": 10,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": null,
+        "max_fht": null
+      },
+      {
+        "difficulty": "hard",
+        "n": 10,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": null,
+        "max_fht": null
+      },
+      {
+        "difficulty": "conflicting",
+        "n": 8,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": null,
+        "max_fht": null
+      },
+      {
+        "difficulty": "adversarial",
+        "n": 8,
+        "n_with_fht": 0,
+        "mean_fht": NaN,
+        "min_fht": null,
+        "max_fht": null
+      }
+    ],
+    "booked_by_tier": [
+      {
+        "difficulty": "easy",
+        "booked": 10,
+        "n": 10,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "medium",
+        "booked": 9,
+        "n": 10,
+        "rate": 0.9
+      },
+      {
+        "difficulty": "hard",
+        "booked": 9,
+        "n": 10,
+        "rate": 0.9
+      },
+      {
+        "difficulty": "conflicting",
+        "booked": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "adversarial",
+        "booked": 8,
+        "n": 8,
+        "rate": 1.0
+      }
+    ],
+    "taxonomy_counts": [
+      {
+        "type": "PARAM_DRIFT",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "PREMATURE_COMMIT",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "CONSTRAINT_IGNORE",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "CONFIDENT_CONFAB",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "MEMORY_COLLAPSE",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      }
+    ],
+    "label_collisions": {
+      "n_hallucinated": 0,
+      "n_multi_condition": 0,
+      "frac_multi_condition": NaN,
+      "combinations": {}
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.3,
+        "post_pivot_constraint_ignore_rate": 0.5569620253164557,
+        "post_pivot_hallucination_rate": 0.5569620253164557,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.6118143459915611,
+        "post_pivot_hallucination_rate": 0.6118143459915611,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.6413502109704642,
+        "post_pivot_hallucination_rate": 0.6413502109704642,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.6118143459915611,
+        "post_pivot_hallucination_rate": 0.6118143459915611,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.6118143459915611,
+        "post_pivot_hallucination_rate": 0.6118143459915611,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.6,
+        "post_pivot_constraint_ignore_rate": 0.6118143459915611,
+        "post_pivot_hallucination_rate": 0.6118143459915611,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      }
+    ]
+  }
+}

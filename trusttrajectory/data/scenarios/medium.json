@@ -1,0 +1,503 @@
+[
+  {
+    "id": "medium_01",
+    "difficulty": "medium",
+    "domain": "restaurant",
+    "initial": "I need a reservation somewhere nice for a business dinner next week.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "6 colleagues",
+      "cuisine|type of food|what kind": "I'm thinking steakhouse or American",
+      "which city|what city|where": "we're in Boston",
+      "what time|when|time": "evening, around 7",
+      "which day|what day|date": "preferably Tuesday",
+      "any preference|specific|name": "somewhere private, maybe a private room",
+      "budget|price|cost": "company card, so no limit",
+      "indoor|outdoor|seating": "definitely indoor private room",
+      "dietary|allerg|vegan|vegetarian": "one vegetarian and one kosher",
+      "confirm|correct|right|all set": "yes that is all correct"
+    },
+    "complication": "The VP just confirmed he is joining too, so make it 7 people. He is also pescatarian, so we need a place that can handle that.",
+    "complication_turn": 11,
+    "pivot": "Bad news — Tuesday got cancelled for a board meeting. We need to move to Thursday evening and the location changed to New York since most of us will be there. Keep the 7 people and private room requirement.",
+    "expected_pre": {
+      "people": 7,
+      "cuisine": "steakhouse",
+      "city": "boston",
+      "day": "tuesday",
+      "time": "7 PM",
+      "room": "private"
+    },
+    "expected_post": {
+      "people": 7,
+      "cuisine": "steakhouse",
+      "city": "new york",
+      "day": "thursday",
+      "time": "7 PM",
+      "room": "private"
+    },
+    "post_booking_probes": [
+      "How many people is the reservation for?",
+      "Which city are we booked in?",
+      "Do they have a private room?",
+      "Is the pescatarian requirement noted?"
+    ],
+    "facts_to_track": [
+      "7",
+      "private",
+      "vegetarian",
+      "pescatarian"
+    ],
+    "accepted": {
+      "cuisine": [
+        "american"
+      ]
+    }
+  },
+  {
+    "id": "medium_02",
+    "difficulty": "medium",
+    "domain": "restaurant",
+    "initial": "Help me plan a dinner outing for my team this month.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "about 10 people",
+      "cuisine|type of food|what kind": "something fun, maybe Korean BBQ",
+      "which city|what city|where": "Seattle",
+      "what time|when|time": "6:30 in the evening",
+      "which day|what day|date": "next Friday",
+      "any preference|specific|name": "lively atmosphere, good for groups",
+      "budget|price|cost": "around $40 per person",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "two vegans and one nut allergy",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "Our manager just said the budget is now $30 per person max. Also two more people RSVP'd so now 12 total.",
+    "complication_turn": 10,
+    "pivot": "The team voted and wants to switch to a different city — we'll be in Portland that week actually. Also change the day to Saturday, same time. Still 12 people.",
+    "expected_pre": {
+      "people": 12,
+      "cuisine": "korean",
+      "city": "seattle",
+      "day": "friday",
+      "time": "6:30 PM"
+    },
+    "expected_post": {
+      "people": 12,
+      "cuisine": "korean",
+      "city": "portland",
+      "day": "saturday",
+      "time": "6:30 PM"
+    },
+    "post_booking_probes": [
+      "How many people did we book for?",
+      "Which city is the booking in?",
+      "What cuisine?",
+      "Are the dietary restrictions noted?"
+    ],
+    "facts_to_track": [
+      "12",
+      "korean",
+      "vegan",
+      "nut allergy"
+    ]
+  },
+  {
+    "id": "medium_03",
+    "difficulty": "medium",
+    "domain": "restaurant",
+    "initial": "I'm looking for a spot for a casual lunch meeting.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "3 people",
+      "cuisine|type of food|what kind": "Mediterranean or Middle Eastern",
+      "which city|what city|where": "Los Angeles",
+      "what time|when|time": "noon",
+      "which day|what day|date": "this coming Monday",
+      "any preference|specific|name": "quiet enough to have a conversation",
+      "budget|price|cost": "casual, maybe $25 each",
+      "indoor|outdoor|seating": "outdoor patio if they have one",
+      "dietary|allerg|vegan|vegetarian": "all three of us are vegetarian",
+      "confirm|correct|right|all set": "yes that is right"
+    },
+    "complication": "One person just said they keep halal. Please make sure the restaurant is halal-certified.",
+    "complication_turn": 9,
+    "pivot": "We've had to reschedule to Tuesday at 1 PM. Also one more person is joining so 4 people total.",
+    "expected_pre": {
+      "people": 3,
+      "cuisine": "mediterranean",
+      "city": "los angeles",
+      "day": "monday",
+      "time": "12 PM"
+    },
+    "expected_post": {
+      "people": 4,
+      "cuisine": "mediterranean",
+      "city": "los angeles",
+      "day": "tuesday",
+      "time": "1 PM"
+    },
+    "post_booking_probes": [
+      "How many people?",
+      "What time is the reservation?",
+      "Is halal noted?"
+    ],
+    "facts_to_track": [
+      "mediterranean",
+      "los angeles",
+      "vegetarian",
+      "halal"
+    ],
+    "accepted": {
+      "cuisine": [
+        "middle eastern"
+      ]
+    }
+  },
+  {
+    "id": "medium_04",
+    "difficulty": "medium",
+    "domain": "restaurant",
+    "initial": "I want to take my parents out to dinner while they visit.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "4 of us — me, my partner, and my parents",
+      "cuisine|type of food|what kind": "Chinese, my parents love dim sum",
+      "which city|what city|where": "San Jose",
+      "what time|when|time": "around 6 PM",
+      "which day|what day|date": "this Sunday",
+      "any preference|specific|name": "authentic, not touristy",
+      "budget|price|cost": "moderate",
+      "indoor|outdoor|seating": "indoor, my father uses a wheelchair",
+      "dietary|allerg|vegan|vegetarian": "my mother is diabetic, low sugar options",
+      "confirm|correct|right|all set": "yes that is correct"
+    },
+    "complication": "My sister just said she can make it too, so add one more — 5 people. She is lactose intolerant.",
+    "complication_turn": 11,
+    "pivot": "My parents changed their flight and are now arriving Saturday not Sunday. Can we move the dinner to Saturday at the same time? Everything else stays the same.",
+    "expected_pre": {
+      "people": 5,
+      "cuisine": "chinese",
+      "city": "san jose",
+      "day": "sunday",
+      "time": "6 PM"
+    },
+    "expected_post": {
+      "people": 5,
+      "cuisine": "chinese",
+      "city": "san jose",
+      "day": "saturday",
+      "time": "6 PM"
+    },
+    "post_booking_probes": [
+      "How many people is the booking for?",
+      "What day?",
+      "Is wheelchair accessibility noted?",
+      "Is lactose intolerance noted?"
+    ],
+    "facts_to_track": [
+      "5",
+      "chinese",
+      "san jose",
+      "wheelchair",
+      "lactose"
+    ]
+  },
+  {
+    "id": "medium_05",
+    "difficulty": "medium",
+    "domain": "restaurant",
+    "initial": "I need to book a team lunch for some colleagues visiting from out of town.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "8 people",
+      "cuisine|type of food|what kind": "something crowd-pleasing, maybe Italian or American",
+      "which city|what city|where": "Chicago",
+      "what time|when|time": "noon",
+      "which day|what day|date": "next Thursday",
+      "any preference|specific|name": "private dining room if possible",
+      "budget|price|cost": "company budget, around $45 per head",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "two vegetarians",
+      "confirm|correct|right|all set": "yes all good"
+    },
+    "complication": "One of the visitors just flagged a severe tree nut allergy. Please make sure the kitchen can accommodate that.",
+    "complication_turn": 10,
+    "pivot": "The visit got pushed — now it's Friday not Thursday. Also the group grew to 10 people. Same time, same city.",
+    "expected_pre": {
+      "people": 8,
+      "cuisine": "italian",
+      "city": "chicago",
+      "day": "thursday",
+      "time": "12 PM"
+    },
+    "expected_post": {
+      "people": 10,
+      "cuisine": "italian",
+      "city": "chicago",
+      "day": "friday",
+      "time": "12 PM"
+    },
+    "post_booking_probes": [
+      "How many people is the booking for?",
+      "What day?",
+      "Is the nut allergy noted?"
+    ],
+    "facts_to_track": [
+      "10",
+      "italian",
+      "chicago",
+      "nut allergy"
+    ],
+    "accepted": {
+      "cuisine": [
+        "american"
+      ]
+    }
+  },
+  {
+    "id": "medium_06",
+    "difficulty": "medium",
+    "domain": "restaurant",
+    "initial": "Help me plan a retirement dinner for my boss.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "around 15 colleagues",
+      "cuisine|type of food|what kind": "fine dining, maybe French or Contemporary American",
+      "which city|what city|where": "Washington DC",
+      "what time|when|time": "7 PM",
+      "which day|what day|date": "next Friday",
+      "any preference|specific|name": "somewhere with a private room for speeches",
+      "budget|price|cost": "no limit, the company is paying",
+      "indoor|outdoor|seating": "indoor, private room essential",
+      "dietary|allerg|vegan|vegetarian": "two vegetarians, one dairy-free",
+      "confirm|correct|right|all set": "yes that's correct"
+    },
+    "complication": "My boss's spouse is also coming now — 16 people total. And we want to arrange a surprise cake and a toast.",
+    "complication_turn": 11,
+    "pivot": "The boss found out so the surprise is off, but the dinner is still on. She's asked to change it to Saturday instead. 16 people, 7 PM, still Washington DC, still needs private room.",
+    "expected_pre": {
+      "people": 16,
+      "cuisine": "french",
+      "city": "washington dc",
+      "day": "friday",
+      "time": "7 PM"
+    },
+    "expected_post": {
+      "people": 16,
+      "cuisine": "french",
+      "city": "washington dc",
+      "day": "saturday",
+      "time": "7 PM"
+    },
+    "post_booking_probes": [
+      "What day is the dinner?",
+      "How many people?",
+      "Is the private room confirmed?",
+      "Are dietary restrictions noted?"
+    ],
+    "facts_to_track": [
+      "16",
+      "french",
+      "washington dc",
+      "vegetarian",
+      "dairy"
+    ],
+    "accepted": {
+      "cuisine": [
+        "american",
+        "contemporary american"
+      ]
+    }
+  },
+  {
+    "id": "flight_medium_01",
+    "difficulty": "medium",
+    "domain": "flight",
+    "initial": "I need to sort out flights for a group trip we're planning.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "we're all departing from New York, JFK",
+      "destination|flying to|where.*going|to": "Tokyo",
+      "when.*leav|depart.*date|outbound|going": "April 10th",
+      "return|coming back|when.*back": "April 20th",
+      "how many|passengers|travell": "6 of us",
+      "cabin|class|economy|business|first": "economy, we're on a budget",
+      "loyalty|frequent|miles|rewards": "no loyalty programmes",
+      "baggage|luggage|bags|checked": "one checked bag each",
+      "meal|dietary|food on|special meal": "two vegetarian meals, one vegan",
+      "confirm|correct|right|all set": "yes that's all correct"
+    },
+    "complication": "Two more friends confirmed — 8 passengers total now. One of the new ones is gluten-free.",
+    "complication_turn": 11,
+    "pivot": "We can't all get the same April 10th flight — can you change departure to April 12th? Return stays April 20th. Still 8 people, economy, same meals.",
+    "expected_pre": {
+      "origin": "new york",
+      "destination": "tokyo",
+      "date_out": "april 10",
+      "date_return": "april 20",
+      "passengers": 8,
+      "cabin": "economy"
+    },
+    "expected_post": {
+      "origin": "new york",
+      "destination": "tokyo",
+      "date_out": "april 12",
+      "date_return": "april 20",
+      "passengers": 8,
+      "cabin": "economy"
+    },
+    "post_booking_probes": [
+      "What is the departure date?",
+      "How many passengers?",
+      "Are all meal preferences noted?"
+    ],
+    "facts_to_track": [
+      "8",
+      "tokyo",
+      "april 12",
+      "vegetarian",
+      "vegan",
+      "gluten"
+    ]
+  },
+  {
+    "id": "flight_medium_02",
+    "difficulty": "medium",
+    "domain": "flight",
+    "initial": "I'm planning a honeymoon and need help booking the flights.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Los Angeles LAX",
+      "destination|flying to|where.*going|to": "Paris",
+      "when.*leav|depart.*date|outbound|going": "June 1st",
+      "return|coming back|when.*back": "June 14th",
+      "how many|passengers|travell": "2 passengers",
+      "cabin|class|economy|business|first": "business class, it's our honeymoon",
+      "loyalty|frequent|miles|rewards": "both have Air France Flying Blue",
+      "baggage|luggage|bags|checked": "two checked bags each",
+      "meal|dietary|food on|special meal": "she is lactose intolerant, special meal for her",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "Can you add a honeymoon note to the booking? And see if we can get adjoining seats.",
+    "complication_turn": 10,
+    "pivot": "We pushed the honeymoon back — now departing June 8th, returning June 21st. Everything else stays the same — 2 passengers, business, Paris.",
+    "expected_pre": {
+      "origin": "los angeles",
+      "destination": "paris",
+      "date_out": "june 1",
+      "date_return": "june 14",
+      "passengers": 2,
+      "cabin": "business"
+    },
+    "expected_post": {
+      "origin": "los angeles",
+      "destination": "paris",
+      "date_out": "june 8",
+      "date_return": "june 21",
+      "passengers": 2,
+      "cabin": "business"
+    },
+    "post_booking_probes": [
+      "What is the departure date?",
+      "What is the return date?",
+      "Is the lactose intolerant meal noted?"
+    ],
+    "facts_to_track": [
+      "los angeles",
+      "paris",
+      "june 8",
+      "june 21",
+      "lactose",
+      "honeymoon"
+    ]
+  },
+  {
+    "id": "flight_medium_03",
+    "difficulty": "medium",
+    "domain": "flight",
+    "initial": "I need flights for a medical trip, it's a bit urgent.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Dallas",
+      "destination|flying to|where.*going|to": "Mayo Clinic is in Rochester, Minnesota",
+      "when.*leav|depart.*date|outbound|going": "this coming Monday",
+      "return|coming back|when.*back": "open return, not sure when I'll be done",
+      "how many|passengers|travell": "2 — me and my wife",
+      "cabin|class|economy|business|first": "economy, whatever is available",
+      "loyalty|frequent|miles|rewards": "American AAdvantage for both",
+      "baggage|luggage|bags|checked": "carry-on only, we're packing light",
+      "meal|dietary|food on|special meal": "diabetic meal for my wife please",
+      "confirm|correct|right|all set": "yes that is correct"
+    },
+    "complication": "My son is flying in to help — can you add him as a third passenger? He is departing from Chicago, not Dallas.",
+    "complication_turn": 10,
+    "pivot": "The appointment got moved to Wednesday. Change departure to Wednesday for both Dallas passengers. My son in Chicago still leaves Monday. 3 passengers total, destination still Rochester.",
+    "expected_pre": {
+      "destination": "rochester",
+      "date_out": "monday",
+      "passengers": 3
+    },
+    "expected_post": {
+      "destination": "rochester",
+      "date_out": "wednesday",
+      "passengers": 3
+    },
+    "post_booking_probes": [
+      "What day do the Dallas passengers depart?",
+      "How many total passengers?",
+      "Is the diabetic meal noted?"
+    ],
+    "facts_to_track": [
+      "rochester",
+      "wednesday",
+      "3",
+      "diabetic"
+    ],
+    "accepted": {
+      "passengers": [
+        2,
+        1
+      ],
+      "date_out": [
+        "monday"
+      ]
+    }
+  },
+  {
+    "id": "flight_medium_04",
+    "difficulty": "medium",
+    "domain": "flight",
+    "initial": "Can you book flights for a company offsite trip?",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from San Francisco",
+      "destination|flying to|where.*going|to": "Las Vegas",
+      "when.*leav|depart.*date|outbound|going": "Thursday morning",
+      "return|coming back|when.*back": "Sunday evening",
+      "how many|passengers|travell": "12 employees",
+      "cabin|class|economy|business|first": "economy, company policy",
+      "loyalty|frequent|miles|rewards": "company account with United",
+      "baggage|luggage|bags|checked": "carry-on only for everyone",
+      "meal|dietary|food on|special meal": "three vegetarians, one vegan, one nut allergy",
+      "confirm|correct|right|all set": "yes all correct"
+    },
+    "complication": "Two employees can't make Thursday — they need to fly Friday morning instead. The other 10 still go Thursday. All 12 return Sunday.",
+    "complication_turn": 11,
+    "pivot": "The whole offsite moved to Phoenix instead of Las Vegas. Same dates, still 12 people total.",
+    "expected_pre": {
+      "origin": "san francisco",
+      "destination": "las vegas",
+      "passengers": 12,
+      "cabin": "economy"
+    },
+    "expected_post": {
+      "origin": "san francisco",
+      "destination": "phoenix",
+      "passengers": 12,
+      "cabin": "economy"
+    },
+    "post_booking_probes": [
+      "What is the destination?",
+      "How many passengers total?",
+      "Are dietary restrictions noted?"
+    ],
+    "facts_to_track": [
+      "phoenix",
+      "12",
+      "vegetarian",
+      "vegan",
+      "nut allergy"
+    ]
+  }
+]

@@ -1,0 +1,928 @@
+{
+  "llama-3.3-70b-instruct": {
+    "label": "llama-3.3-70b-instruct",
+    "model": "llama-3.3-70b-instruct",
+    "n_trajectories": 138,
+    "n_turns": 2349,
+    "pivot_turns": [
+      13
+    ],
+    "gate_mode": "hard",
+    "scorer": "regex",
+    "pre_post": {
+      "pre_rate": 0.05495169082125604,
+      "pre_ci": [
+        0.041666666666666664,
+        0.06944444444444445
+      ],
+      "post_rate": 0.6955266955266955,
+      "post_ci": [
+        0.6560232220609579,
+        0.7323162274618585
+      ],
+      "delta": 0.6405750047054395,
+      "delta_ci": [
+        0.5999756520891141,
+        0.6785886202388223
+      ],
+      "n_trajectories": 138,
+      "n_boot": 10000,
+      "alpha": 0.05
+    },
+    "pre_post_by_tier": [
+      {
+        "difficulty": "easy",
+        "pre_rate": 0.027777777777777776,
+        "post_rate": 0.6031746031746031,
+        "delta": 0.5753968253968254,
+        "n_pre": 360,
+        "n_post": 126
+      },
+      {
+        "difficulty": "medium",
+        "pre_rate": 0.075,
+        "post_rate": 0.7361111111111112,
+        "delta": 0.6611111111111112,
+        "n_pre": 360,
+        "n_post": 144
+      },
+      {
+        "difficulty": "hard",
+        "pre_rate": 0.05555555555555555,
+        "post_rate": 0.6601307189542484,
+        "delta": 0.6045751633986928,
+        "n_pre": 360,
+        "n_post": 153
+      },
+      {
+        "difficulty": "conflicting",
+        "pre_rate": 0.052083333333333336,
+        "post_rate": 0.6464646464646465,
+        "delta": 0.5943813131313131,
+        "n_pre": 288,
+        "n_post": 99
+      },
+      {
+        "difficulty": "adversarial",
+        "pre_rate": 0.06597222222222222,
+        "post_rate": 0.7894736842105263,
+        "delta": 0.7235014619883041,
+        "n_pre": 288,
+        "n_post": 171
+      }
+    ],
+    "fht_by_tier": [
+      {
+        "difficulty": "easy",
+        "n": 30,
+        "n_with_fht": 28,
+        "mean_fht": 12.571428571428571,
+        "min_fht": 6,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "medium",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 11.6,
+        "min_fht": 6,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "hard",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 11.2,
+        "min_fht": 6,
+        "max_fht": 20
+      },
+      {
+        "difficulty": "conflicting",
+        "n": 24,
+        "n_with_fht": 24,
+        "mean_fht": 12.125,
+        "min_fht": 7,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "adversarial",
+        "n": 24,
+        "n_with_fht": 23,
+        "mean_fht": 12.304347826086957,
+        "min_fht": 6,
+        "max_fht": 19
+      }
+    ],
+    "booked_by_tier": [
+      {
+        "difficulty": "easy",
+        "booked": 30,
+        "n": 30,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "medium",
+        "booked": 30,
+        "n": 30,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "hard",
+        "booked": 30,
+        "n": 30,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "conflicting",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "adversarial",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      }
+    ],
+    "taxonomy_counts": [
+      {
+        "type": "PARAM_DRIFT",
+        "pre": 34,
+        "post": 0,
+        "total": 34
+      },
+      {
+        "type": "PREMATURE_COMMIT",
+        "pre": 57,
+        "post": 8,
+        "total": 65
+      },
+      {
+        "type": "CONSTRAINT_IGNORE",
+        "pre": 0,
+        "post": 305,
+        "total": 305
+      },
+      {
+        "type": "CONFIDENT_CONFAB",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "MEMORY_COLLAPSE",
+        "pre": 0,
+        "post": 169,
+        "total": 169
+      }
+    ],
+    "label_collisions": {
+      "n_hallucinated": 573,
+      "n_multi_condition": 112,
+      "frac_multi_condition": 0.19546247818499127,
+      "combinations": {
+        "CONSTRAINT_IGNORE+MEMORY_COLLAPSE": 111,
+        "MEMORY_COLLAPSE+PREMATURE_COMMIT": 1
+      }
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.3,
+        "post_pivot_constraint_ignore_rate": 0.3924963924963925,
+        "post_pivot_hallucination_rate": 0.6479076479076479,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.4401154401154401,
+        "post_pivot_hallucination_rate": 0.6955266955266955,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.4444444444444444,
+        "post_pivot_hallucination_rate": 0.6998556998556998,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.4401154401154401,
+        "post_pivot_hallucination_rate": 0.6955266955266955,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.4401154401154401,
+        "post_pivot_hallucination_rate": 0.6955266955266955,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.6,
+        "post_pivot_constraint_ignore_rate": 0.4401154401154401,
+        "post_pivot_hallucination_rate": 0.6955266955266955,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      }
+    ]
+  },
+  "claude-sonnet-4.5": {
+    "label": "claude-sonnet-4.5",
+    "model": "claude-sonnet-4.5",
+    "n_trajectories": 138,
+    "n_turns": 2415,
+    "pivot_turns": [
+      13
+    ],
+    "gate_mode": "hard",
+    "scorer": "regex",
+    "pre_post": {
+      "pre_rate": 0.0966183574879227,
+      "pre_ci": [
+        0.0821256038647343,
+        0.11171497584541062
+      ],
+      "post_rate": 0.7114624505928854,
+      "post_ci": [
+        0.6859051656677806,
+        0.735897435897436
+      ],
+      "delta": 0.6148440931049627,
+      "delta_ci": [
+        0.5829491160267012,
+        0.645400653873586
+      ],
+      "n_trajectories": 138,
+      "n_boot": 10000,
+      "alpha": 0.05
+    },
+    "pre_post_by_tier": [
+      {
+        "difficulty": "easy",
+        "pre_rate": 0.08055555555555556,
+        "post_rate": 0.6567164179104478,
+        "delta": 0.5761608623548922,
+        "n_pre": 360,
+        "n_post": 134
+      },
+      {
+        "difficulty": "medium",
+        "pre_rate": 0.10833333333333334,
+        "post_rate": 0.7034883720930233,
+        "delta": 0.59515503875969,
+        "n_pre": 360,
+        "n_post": 172
+      },
+      {
+        "difficulty": "hard",
+        "pre_rate": 0.05277777777777778,
+        "post_rate": 0.7017543859649122,
+        "delta": 0.6489766081871344,
+        "n_pre": 360,
+        "n_post": 171
+      },
+      {
+        "difficulty": "conflicting",
+        "pre_rate": 0.16319444444444445,
+        "post_rate": 0.6422018348623854,
+        "delta": 0.47900739041794094,
+        "n_pre": 288,
+        "n_post": 109
+      },
+      {
+        "difficulty": "adversarial",
+        "pre_rate": 0.09027777777777778,
+        "post_rate": 0.815028901734104,
+        "delta": 0.7247511239563262,
+        "n_pre": 288,
+        "n_post": 173
+      }
+    ],
+    "fht_by_tier": [
+      {
+        "difficulty": "easy",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 11.266666666666667,
+        "min_fht": 6,
+        "max_fht": 16
+      },
+      {
+        "difficulty": "medium",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 10.933333333333334,
+        "min_fht": 7,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "hard",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 12.133333333333333,
+        "min_fht": 6,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "conflicting",
+        "n": 24,
+        "n_with_fht": 24,
+        "mean_fht": 9.583333333333334,
+        "min_fht": 6,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "adversarial",
+        "n": 24,
+        "n_with_fht": 24,
+        "mean_fht": 11.875,
+        "min_fht": 9,
+        "max_fht": 15
+      }
+    ],
+    "booked_by_tier": [
+      {
+        "difficulty": "easy",
+        "booked": 30,
+        "n": 30,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "medium",
+        "booked": 26,
+        "n": 30,
+        "rate": 0.8666666666666667
+      },
+      {
+        "difficulty": "hard",
+        "booked": 29,
+        "n": 30,
+        "rate": 0.9666666666666667
+      },
+      {
+        "difficulty": "conflicting",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "adversarial",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      }
+    ],
+    "taxonomy_counts": [
+      {
+        "type": "PARAM_DRIFT",
+        "pre": 143,
+        "post": 0,
+        "total": 143
+      },
+      {
+        "type": "PREMATURE_COMMIT",
+        "pre": 17,
+        "post": 4,
+        "total": 21
+      },
+      {
+        "type": "CONSTRAINT_IGNORE",
+        "pre": 0,
+        "post": 320,
+        "total": 320
+      },
+      {
+        "type": "CONFIDENT_CONFAB",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "MEMORY_COLLAPSE",
+        "pre": 0,
+        "post": 216,
+        "total": 216
+      }
+    ],
+    "label_collisions": {
+      "n_hallucinated": 700,
+      "n_multi_condition": 120,
+      "frac_multi_condition": 0.17142857142857143,
+      "combinations": {
+        "CONSTRAINT_IGNORE+MEMORY_COLLAPSE": 118,
+        "MEMORY_COLLAPSE+PREMATURE_COMMIT": 2
+      }
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.3,
+        "post_pivot_constraint_ignore_rate": 0.37549407114624506,
+        "post_pivot_hallucination_rate": 0.6653491436100132,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.42160737812911725,
+        "post_pivot_hallucination_rate": 0.7114624505928854,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.4426877470355731,
+        "post_pivot_hallucination_rate": 0.7325428194993412,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.42160737812911725,
+        "post_pivot_hallucination_rate": 0.7114624505928854,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.42160737812911725,
+        "post_pivot_hallucination_rate": 0.7114624505928854,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.6,
+        "post_pivot_constraint_ignore_rate": 0.42160737812911725,
+        "post_pivot_hallucination_rate": 0.7114624505928854,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      }
+    ]
+  },
+  "claude-sonnet-4.6": {
+    "label": "claude-sonnet-4.6",
+    "model": "claude-sonnet-4.6",
+    "n_trajectories": 138,
+    "n_turns": 2363,
+    "pivot_turns": [
+      13
+    ],
+    "gate_mode": "hard",
+    "scorer": "regex",
+    "pre_post": {
+      "pre_rate": 0.13949275362318841,
+      "pre_ci": [
+        0.12258454106280194,
+        0.15579710144927536
+      ],
+      "post_rate": 0.6718528995756718,
+      "post_ci": [
+        0.6417899922110182,
+        0.6997282608695652
+      ],
+      "delta": 0.5323601459524834,
+      "delta_ci": [
+        0.4955828736011565,
+        0.5668386412502167
+      ],
+      "n_trajectories": 138,
+      "n_boot": 10000,
+      "alpha": 0.05
+    },
+    "pre_post_by_tier": [
+      {
+        "difficulty": "easy",
+        "pre_rate": 0.1361111111111111,
+        "post_rate": 0.6148148148148148,
+        "delta": 0.47870370370370374,
+        "n_pre": 360,
+        "n_post": 135
+      },
+      {
+        "difficulty": "medium",
+        "pre_rate": 0.11666666666666667,
+        "post_rate": 0.6754966887417219,
+        "delta": 0.5588300220750552,
+        "n_pre": 360,
+        "n_post": 151
+      },
+      {
+        "difficulty": "hard",
+        "pre_rate": 0.08611111111111111,
+        "post_rate": 0.68,
+        "delta": 0.5938888888888889,
+        "n_pre": 360,
+        "n_post": 150
+      },
+      {
+        "difficulty": "conflicting",
+        "pre_rate": 0.2013888888888889,
+        "post_rate": 0.5294117647058824,
+        "delta": 0.32802287581699346,
+        "n_pre": 288,
+        "n_post": 102
+      },
+      {
+        "difficulty": "adversarial",
+        "pre_rate": 0.17708333333333334,
+        "post_rate": 0.7928994082840237,
+        "delta": 0.6158160749506904,
+        "n_pre": 288,
+        "n_post": 169
+      }
+    ],
+    "fht_by_tier": [
+      {
+        "difficulty": "easy",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 9.833333333333334,
+        "min_fht": 6,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "medium",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 10.866666666666667,
+        "min_fht": 9,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "hard",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 11.166666666666666,
+        "min_fht": 7,
+        "max_fht": 16
+      },
+      {
+        "difficulty": "conflicting",
+        "n": 24,
+        "n_with_fht": 24,
+        "mean_fht": 9.083333333333334,
+        "min_fht": 6,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "adversarial",
+        "n": 24,
+        "n_with_fht": 24,
+        "mean_fht": 9.666666666666666,
+        "min_fht": 9,
+        "max_fht": 13
+      }
+    ],
+    "booked_by_tier": [
+      {
+        "difficulty": "easy",
+        "booked": 29,
+        "n": 30,
+        "rate": 0.9666666666666667
+      },
+      {
+        "difficulty": "medium",
+        "booked": 27,
+        "n": 30,
+        "rate": 0.9
+      },
+      {
+        "difficulty": "hard",
+        "booked": 29,
+        "n": 30,
+        "rate": 0.9666666666666667
+      },
+      {
+        "difficulty": "conflicting",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "adversarial",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      }
+    ],
+    "taxonomy_counts": [
+      {
+        "type": "PARAM_DRIFT",
+        "pre": 211,
+        "post": 0,
+        "total": 211
+      },
+      {
+        "type": "PREMATURE_COMMIT",
+        "pre": 20,
+        "post": 6,
+        "total": 26
+      },
+      {
+        "type": "CONSTRAINT_IGNORE",
+        "pre": 0,
+        "post": 372,
+        "total": 372
+      },
+      {
+        "type": "CONFIDENT_CONFAB",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "MEMORY_COLLAPSE",
+        "pre": 0,
+        "post": 97,
+        "total": 97
+      }
+    ],
+    "label_collisions": {
+      "n_hallucinated": 706,
+      "n_multi_condition": 48,
+      "frac_multi_condition": 0.0679886685552408,
+      "combinations": {
+        "CONSTRAINT_IGNORE+MEMORY_COLLAPSE": 48
+      }
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.3,
+        "post_pivot_constraint_ignore_rate": 0.49504950495049505,
+        "post_pivot_hallucination_rate": 0.6407355021216408,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.5261669024045261,
+        "post_pivot_hallucination_rate": 0.6718528995756718,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.5318246110325319,
+        "post_pivot_hallucination_rate": 0.6775106082036775,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.5261669024045261,
+        "post_pivot_hallucination_rate": 0.6718528995756718,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.5261669024045261,
+        "post_pivot_hallucination_rate": 0.6718528995756718,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.6,
+        "post_pivot_constraint_ignore_rate": 0.5261669024045261,
+        "post_pivot_hallucination_rate": 0.6718528995756718,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      }
+    ]
+  },
+  "gemini-3.5-flash": {
+    "label": "gemini-3.5-flash",
+    "model": "gemini-3.5-flash",
+    "n_trajectories": 138,
+    "n_turns": 2369,
+    "pivot_turns": [
+      13
+    ],
+    "gate_mode": "hard",
+    "scorer": "regex",
+    "pre_post": {
+      "pre_rate": 0.09601449275362318,
+      "pre_ci": [
+        0.08031400966183574,
+        0.11231884057971014
+      ],
+      "post_rate": 0.7068723702664796,
+      "post_ci": [
+        0.6761891233766234,
+        0.7355704697986577
+      ],
+      "delta": 0.6108578775128565,
+      "delta_ci": [
+        0.5737005410915451,
+        0.6463087938631418
+      ],
+      "n_trajectories": 138,
+      "n_boot": 10000,
+      "alpha": 0.05
+    },
+    "pre_post_by_tier": [
+      {
+        "difficulty": "easy",
+        "pre_rate": 0.08333333333333333,
+        "post_rate": 0.6439393939393939,
+        "delta": 0.5606060606060606,
+        "n_pre": 360,
+        "n_post": 132
+      },
+      {
+        "difficulty": "medium",
+        "pre_rate": 0.1111111111111111,
+        "post_rate": 0.6363636363636364,
+        "delta": 0.5252525252525253,
+        "n_pre": 360,
+        "n_post": 143
+      },
+      {
+        "difficulty": "hard",
+        "pre_rate": 0.06111111111111111,
+        "post_rate": 0.7469879518072289,
+        "delta": 0.6858768406961178,
+        "n_pre": 360,
+        "n_post": 166
+      },
+      {
+        "difficulty": "conflicting",
+        "pre_rate": 0.14930555555555555,
+        "post_rate": 0.6363636363636364,
+        "delta": 0.4870580808080808,
+        "n_pre": 288,
+        "n_post": 99
+      },
+      {
+        "difficulty": "adversarial",
+        "pre_rate": 0.08333333333333333,
+        "post_rate": 0.815028901734104,
+        "delta": 0.7316955684007707,
+        "n_pre": 288,
+        "n_post": 173
+      }
+    ],
+    "fht_by_tier": [
+      {
+        "difficulty": "easy",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 10.733333333333333,
+        "min_fht": 6,
+        "max_fht": 17
+      },
+      {
+        "difficulty": "medium",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 11.1,
+        "min_fht": 7,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "hard",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 10.766666666666667,
+        "min_fht": 6,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "conflicting",
+        "n": 24,
+        "n_with_fht": 24,
+        "mean_fht": 10.166666666666666,
+        "min_fht": 6,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "adversarial",
+        "n": 24,
+        "n_with_fht": 24,
+        "mean_fht": 10.958333333333334,
+        "min_fht": 9,
+        "max_fht": 14
+      }
+    ],
+    "booked_by_tier": [
+      {
+        "difficulty": "easy",
+        "booked": 29,
+        "n": 30,
+        "rate": 0.9666666666666667
+      },
+      {
+        "difficulty": "medium",
+        "booked": 29,
+        "n": 30,
+        "rate": 0.9666666666666667
+      },
+      {
+        "difficulty": "hard",
+        "booked": 28,
+        "n": 30,
+        "rate": 0.9333333333333333
+      },
+      {
+        "difficulty": "conflicting",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "adversarial",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      }
+    ],
+    "taxonomy_counts": [
+      {
+        "type": "PARAM_DRIFT",
+        "pre": 126,
+        "post": 0,
+        "total": 126
+      },
+      {
+        "type": "PREMATURE_COMMIT",
+        "pre": 33,
+        "post": 7,
+        "total": 40
+      },
+      {
+        "type": "CONSTRAINT_IGNORE",
+        "pre": 0,
+        "post": 314,
+        "total": 314
+      },
+      {
+        "type": "CONFIDENT_CONFAB",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "MEMORY_COLLAPSE",
+        "pre": 0,
+        "post": 183,
+        "total": 183
+      }
+    ],
+    "label_collisions": {
+      "n_hallucinated": 663,
+      "n_multi_condition": 117,
+      "frac_multi_condition": 0.17647058823529413,
+      "combinations": {
+        "CONSTRAINT_IGNORE+MEMORY_COLLAPSE": 117
+      }
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.3,
+        "post_pivot_constraint_ignore_rate": 0.4011220196353436,
+        "post_pivot_hallucination_rate": 0.667601683029453,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.44039270687237025,
+        "post_pivot_hallucination_rate": 0.7068723702664796,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.45582047685834504,
+        "post_pivot_hallucination_rate": 0.7223001402524544,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.44039270687237025,
+        "post_pivot_hallucination_rate": 0.7068723702664796,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.44039270687237025,
+        "post_pivot_hallucination_rate": 0.7068723702664796,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.6,
+        "post_pivot_constraint_ignore_rate": 0.44039270687237025,
+        "post_pivot_hallucination_rate": 0.7068723702664796,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      }
+    ]
+  }
+}

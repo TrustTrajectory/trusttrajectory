@@ -1,0 +1,11 @@
+scenario_id,model,run_idx,difficulty,domain,pivot_turn,turns_used,booking_done,early_booking_turn,first_hall_turn,total_hallucinations,hallucination_types,latency_total_s
+easy_01,llama-3.1-8b-instruct,1,easy,restaurant,13,16,True,7,11.0,3,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE""]",48.554
+flight_easy_01,llama-3.1-8b-instruct,1,easy,flight,13,16,True,12,,0,[],50.898
+medium_03,llama-3.1-8b-instruct,1,medium,restaurant,13,16,True,12,9.0,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE""]",44.542
+flight_medium_02,llama-3.1-8b-instruct,1,medium,flight,13,16,True,10,,0,[],64.56
+hard_01,llama-3.1-8b-instruct,1,hard,restaurant,13,17,True,8,,0,[],60.367
+flight_hard_03,llama-3.1-8b-instruct,1,hard,flight,13,16,True,10,,0,[],54.709
+conflict_03,llama-3.1-8b-instruct,1,conflicting,restaurant,13,17,True,7,17.0,1,"[""MEMORY_COLLAPSE""]",45.611
+flight_conflict_02,llama-3.1-8b-instruct,1,conflicting,flight,13,16,True,11,,0,[],46.471
+adversarial_01,llama-3.1-8b-instruct,1,adversarial,restaurant,13,20,True,6,6.0,8,"[""PREMATURE_COMMIT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",56.515
+flight_adversarial_01,llama-3.1-8b-instruct,1,adversarial,flight,13,19,True,10,17.0,1,"[""MEMORY_COLLAPSE""]",69.156

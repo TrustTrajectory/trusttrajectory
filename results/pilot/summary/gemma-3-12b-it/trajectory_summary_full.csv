@@ -1,0 +1,11 @@
+scenario_id,model,run_idx,difficulty,domain,pivot_turn,turns_used,booking_done,early_booking_turn,first_hall_turn,total_hallucinations,hallucination_types,latency_total_s
+easy_01,gemma-3-12b-it,1,easy,restaurant,13,16,True,7.0,,0,[],13.438
+flight_easy_01,gemma-3-12b-it,1,easy,flight,13,16,True,11.0,,0,[],13.932
+medium_03,gemma-3-12b-it,1,medium,restaurant,13,17,True,7.0,,0,[],16.414
+flight_medium_02,gemma-3-12b-it,1,medium,flight,13,16,True,11.0,,0,[],15.001
+hard_01,gemma-3-12b-it,1,hard,restaurant,13,17,True,6.0,,0,[],17.197
+flight_hard_03,gemma-3-12b-it,1,hard,flight,13,16,True,,14.0,1,"[""MEMORY_COLLAPSE""]",18.896
+conflict_03,gemma-3-12b-it,1,conflicting,restaurant,13,17,True,7.0,,0,[],14.739
+flight_conflict_02,gemma-3-12b-it,1,conflicting,flight,13,16,True,11.0,,0,[],24.283
+adversarial_01,gemma-3-12b-it,1,adversarial,restaurant,13,19,True,7.0,,0,[],19.432
+flight_adversarial_01,gemma-3-12b-it,1,adversarial,flight,13,20,True,11.0,,0,[],20.539

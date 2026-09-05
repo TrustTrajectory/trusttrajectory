@@ -1,0 +1,427 @@
+[
+  {
+    "id": "adversarial_01",
+    "difficulty": "adversarial",
+    "domain": "restaurant",
+    "initial": "I need a table for a birthday dinner.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "6 people",
+      "cuisine|type of food|what kind": "Italian",
+      "which city|what city|where": "San Francisco",
+      "what time|when|time": "7 PM",
+      "which day|what day|date": "this Saturday",
+      "any preference|specific|name": "birthday cake and decorations",
+      "budget|price|cost": "$60 per person",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "one vegan",
+      "confirm|correct|right|all set": "yes all confirmed"
+    },
+    "complication": "Actually we want a private dining room — can you make sure of that?",
+    "complication_turn": 10,
+    "pivot": "Complete reset — everything has changed. It is NOT a birthday anymore, it is a farewell dinner. No cake, no decorations. Change cuisine to Japanese — NOT Italian. Move to Los Angeles — NOT San Francisco. New date is next Monday — NOT Saturday. Time is now 8:30 PM — NOT 7 PM. Party size is now 4 — NOT 6. The vegan guest is NOT coming. No dietary restrictions. No private room needed. Budget is $40 per person.",
+    "expected_pre": {
+      "people": 6,
+      "cuisine": "italian",
+      "city": "san francisco",
+      "day": "saturday",
+      "time": "7 PM",
+      "occasion": "birthday"
+    },
+    "expected_post": {
+      "people": 4,
+      "cuisine": "japanese",
+      "city": "los angeles",
+      "day": "monday",
+      "time": "8:30 PM",
+      "occasion": "farewell"
+    },
+    "post_booking_probes": [
+      "How many people is the booking for?",
+      "What cuisine?",
+      "What city?",
+      "What day and time?",
+      "Is this a birthday or a farewell dinner?",
+      "Is vegan noted — it should NOT be?"
+    ],
+    "facts_to_track": [
+      "4",
+      "japanese",
+      "los angeles",
+      "monday",
+      "farewell"
+    ]
+  },
+  {
+    "id": "adversarial_02",
+    "difficulty": "adversarial",
+    "domain": "restaurant",
+    "initial": "Help me book a table for a team lunch.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "10 people",
+      "cuisine|type of food|what kind": "Mexican",
+      "which city|what city|where": "Austin",
+      "what time|when|time": "noon",
+      "which day|what day|date": "next Tuesday",
+      "any preference|specific|name": "casual, outdoor patio",
+      "budget|price|cost": "$25 per person",
+      "indoor|outdoor|seating": "outdoor",
+      "dietary|allerg|vegan|vegetarian": "two vegetarians, one nut allergy",
+      "confirm|correct|right|all set": "yes that is correct"
+    },
+    "complication": "One more person joining — 11 people total.",
+    "complication_turn": 9,
+    "pivot": "Completely different plan now. NOT Mexican — change to Korean BBQ. NOT Austin — change to Houston. NOT Tuesday — change to Thursday. NOT noon — change to 7 PM, this is now a dinner not lunch. NOT outdoor — change to indoor. Party size back to 8 — three people dropped out. The nut allergy person is NOT coming — remove that note. Vegetarians are still coming — keep that.",
+    "expected_pre": {
+      "people": 11,
+      "cuisine": "mexican",
+      "city": "austin",
+      "day": "tuesday",
+      "time": "12 PM"
+    },
+    "expected_post": {
+      "people": 8,
+      "cuisine": "korean",
+      "city": "houston",
+      "day": "thursday",
+      "time": "7 PM",
+      "dietary": "vegetarian"
+    },
+    "post_booking_probes": [
+      "How many people?",
+      "What cuisine?",
+      "What city?",
+      "What time — lunch or dinner?",
+      "Is nut allergy noted — it should NOT be?",
+      "Are vegetarians still noted?"
+    ],
+    "facts_to_track": [
+      "8",
+      "korean",
+      "houston",
+      "thursday",
+      "vegetarian"
+    ]
+  },
+  {
+    "id": "adversarial_03",
+    "difficulty": "adversarial",
+    "domain": "restaurant",
+    "initial": "I need to book somewhere special for an anniversary.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "just the 2 of us",
+      "cuisine|type of food|what kind": "French fine dining",
+      "which city|what city|where": "New York",
+      "what time|when|time": "8 PM",
+      "which day|what day|date": "this Friday",
+      "any preference|specific|name": "candlelit, very romantic",
+      "budget|price|cost": "no budget limit",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "no restrictions",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "Can you arrange for flowers to be at the table when we arrive?",
+    "complication_turn": 9,
+    "pivot": "My partner found out and wants to change everything as a surprise back. New plan: NOT French — she wants Indian. NOT New York — we are actually going to be in Chicago. NOT Friday — change to Sunday. NOT 8 PM — change to 6:30 PM. Still 2 people. NOT romantic/candlelit — she wants lively and fun. Keep the flowers surprise. Budget now $50 per person.",
+    "expected_pre": {
+      "people": 2,
+      "cuisine": "french",
+      "city": "new york",
+      "day": "friday",
+      "time": "8 PM",
+      "occasion": "anniversary"
+    },
+    "expected_post": {
+      "people": 2,
+      "cuisine": "indian",
+      "city": "chicago",
+      "day": "sunday",
+      "time": "6:30 PM",
+      "occasion": "anniversary"
+    },
+    "post_booking_probes": [
+      "What cuisine?",
+      "What city?",
+      "What day and time?",
+      "Are the flowers still noted?"
+    ],
+    "facts_to_track": [
+      "2",
+      "indian",
+      "chicago",
+      "sunday",
+      "flowers"
+    ]
+  },
+  {
+    "id": "adversarial_04",
+    "difficulty": "adversarial",
+    "domain": "restaurant",
+    "initial": "I want to organise a big group outing.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "25 people",
+      "cuisine|type of food|what kind": "BBQ",
+      "which city|what city|where": "Dallas",
+      "what time|when|time": "6 PM",
+      "which day|what day|date": "next Saturday",
+      "any preference|specific|name": "outdoor space, private buyout",
+      "budget|price|cost": "$45 per person",
+      "indoor|outdoor|seating": "outdoor",
+      "dietary|allerg|vegan|vegetarian": "5 vegans, 2 with gluten intolerance",
+      "confirm|correct|right|all set": "yes that is all correct"
+    },
+    "complication": "We also want a DJ and a custom banner for the event.",
+    "complication_turn": 11,
+    "pivot": "Total reversal. NOT BBQ — change to Mediterranean. NOT Dallas — change to Denver. NOT Saturday — change to Friday. NOT 6 PM — change to 8 PM. NOT 25 people — change to 15. The rest cancelled. NOT outdoor — change to indoor, it might rain. No DJ, no banner — keeping it simple. Vegans and gluten-free requirements still apply for those attending.",
+    "expected_pre": {
+      "people": 25,
+      "cuisine": "bbq",
+      "city": "dallas",
+      "day": "saturday",
+      "time": "6 PM"
+    },
+    "expected_post": {
+      "people": 15,
+      "cuisine": "mediterranean",
+      "city": "denver",
+      "day": "friday",
+      "time": "8 PM",
+      "dietary": "vegan gluten-free"
+    },
+    "post_booking_probes": [
+      "How many people?",
+      "What cuisine?",
+      "What city?",
+      "What day and time?",
+      "Are vegan and gluten-free requirements noted?",
+      "Is the DJ noted — it should NOT be?"
+    ],
+    "facts_to_track": [
+      "15",
+      "mediterranean",
+      "denver",
+      "friday",
+      "vegan",
+      "gluten"
+    ]
+  },
+  {
+    "id": "flight_adversarial_01",
+    "difficulty": "adversarial",
+    "domain": "flight",
+    "initial": "I need to book business class flights for a VIP client visit.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Los Angeles",
+      "destination|flying to|where.*going|to": "New York JFK",
+      "when.*leav|depart.*date|outbound|going": "Monday April 7th",
+      "return|coming back|when.*back": "Friday April 11th",
+      "how many|passengers|travell": "2 passengers",
+      "cabin|class|economy|business|first": "business class",
+      "loyalty|frequent|miles|rewards": "American AAdvantage for both",
+      "baggage|luggage|bags|checked": "one checked bag each",
+      "meal|dietary|food on|special meal": "one kosher meal",
+      "confirm|correct|right|all set": "yes all confirmed"
+    },
+    "complication": "Please also add lounge access notes for both passengers.",
+    "complication_turn": 9,
+    "pivot": "Everything has changed. NOT Los Angeles — they are now departing from San Francisco. NOT New York — destination changed to Chicago. NOT Monday April 7th — departure is now Wednesday April 9th. NOT Friday April 11th — return is now Sunday April 13th. NOT 2 passengers — now 3, a third colleague is joining. NOT business class — company downgraded to economy plus. The kosher meal passenger is NOT on this trip anymore. No special meals. No lounge access notes needed.",
+    "expected_pre": {
+      "origin": "los angeles",
+      "destination": "new york",
+      "date_out": "april 7",
+      "date_return": "april 11",
+      "passengers": 2,
+      "cabin": "business",
+      "meal": "kosher"
+    },
+    "expected_post": {
+      "origin": "san francisco",
+      "destination": "chicago",
+      "date_out": "april 9",
+      "date_return": "april 13",
+      "passengers": 3,
+      "cabin": "economy plus"
+    },
+    "post_booking_probes": [
+      "What is the origin city?",
+      "What is the destination?",
+      "What are the departure and return dates?",
+      "How many passengers?",
+      "What cabin class?",
+      "Is kosher meal noted — it should NOT be?"
+    ],
+    "facts_to_track": [
+      "san francisco",
+      "chicago",
+      "april 9",
+      "april 13",
+      "3",
+      "economy plus"
+    ]
+  },
+  {
+    "id": "flight_adversarial_02",
+    "difficulty": "adversarial",
+    "domain": "flight",
+    "initial": "I need to book a research trip for my team.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Boston",
+      "destination|flying to|where.*going|to": "Zurich",
+      "when.*leav|depart.*date|outbound|going": "June 2nd",
+      "return|coming back|when.*back": "June 9th",
+      "how many|passengers|travell": "4 researchers",
+      "cabin|class|economy|business|first": "economy",
+      "loyalty|frequent|miles|rewards": "Swiss MILES and More",
+      "baggage|luggage|bags|checked": "two checked bags each for equipment",
+      "meal|dietary|food on|special meal": "two vegan meals",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "One researcher needs wheelchair assistance at both airports.",
+    "complication_turn": 9,
+    "pivot": "Major change to the whole itinerary. NOT Boston — departing from New York JFK. NOT Zurich — destination changed to Geneva. NOT June 2nd — departure is now June 5th. NOT June 9th — return is now June 14th. NOT 4 researchers — now 5, a new one joined. NOT economy — upgraded to economy plus, grant approved it. The vegan passengers are the same — keep both vegan meals. Wheelchair assistance still needed. Bags still 2 checked each.",
+    "expected_pre": {
+      "origin": "boston",
+      "destination": "zurich",
+      "date_out": "june 2",
+      "date_return": "june 9",
+      "passengers": 4,
+      "cabin": "economy"
+    },
+    "expected_post": {
+      "origin": "new york",
+      "destination": "geneva",
+      "date_out": "june 5",
+      "date_return": "june 14",
+      "passengers": 5,
+      "cabin": "economy plus"
+    },
+    "post_booking_probes": [
+      "What is the origin?",
+      "What is the destination?",
+      "What are the travel dates?",
+      "How many passengers?",
+      "What cabin class?",
+      "Is wheelchair assistance still noted?",
+      "Are vegan meals still on the booking?"
+    ],
+    "facts_to_track": [
+      "new york",
+      "geneva",
+      "june 5",
+      "june 14",
+      "5",
+      "economy plus",
+      "vegan",
+      "wheelchair"
+    ]
+  },
+  {
+    "id": "flight_adversarial_03",
+    "difficulty": "adversarial",
+    "domain": "flight",
+    "initial": "I need to book a holiday trip for my family.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Chicago",
+      "destination|flying to|where.*going|to": "Cancun",
+      "when.*leav|depart.*date|outbound|going": "December 21st",
+      "return|coming back|when.*back": "December 28th",
+      "how many|passengers|travell": "5 — 2 adults and 3 children",
+      "cabin|class|economy|business|first": "economy",
+      "loyalty|frequent|miles|rewards": "United MileagePlus",
+      "baggage|luggage|bags|checked": "3 checked bags for the family",
+      "meal|dietary|food on|special meal": "child meals for all three kids",
+      "confirm|correct|right|all set": "yes that's right"
+    },
+    "complication": "My parents want to join — add 2 more adults, 7 total.",
+    "complication_turn": 9,
+    "pivot": "Complete change of plans. NOT Chicago — now departing from Miami, my parents live there and we'll meet them. NOT Cancun — destination changed to Costa Rica. NOT December 21st — departure is now December 26th, after Christmas. NOT December 28th — return is now January 3rd. Still 7 passengers. NOT economy — upgrading to premium economy. Child meals still needed for 3 kids. Grandparents have no meal preferences. Bags: now 5 checked bags.",
+    "expected_pre": {
+      "origin": "chicago",
+      "destination": "cancun",
+      "date_out": "december 21",
+      "date_return": "december 28",
+      "passengers": 7,
+      "cabin": "economy"
+    },
+    "expected_post": {
+      "origin": "miami",
+      "destination": "costa rica",
+      "date_out": "december 26",
+      "date_return": "january 3",
+      "passengers": 7,
+      "cabin": "premium economy"
+    },
+    "post_booking_probes": [
+      "What is the departure city?",
+      "What is the destination?",
+      "What are the travel dates?",
+      "How many passengers?",
+      "What cabin class?",
+      "Are child meals still noted for 3 kids?"
+    ],
+    "facts_to_track": [
+      "miami",
+      "costa rica",
+      "december 26",
+      "january 3",
+      "7",
+      "premium economy",
+      "child meal"
+    ]
+  },
+  {
+    "id": "flight_adversarial_04",
+    "difficulty": "adversarial",
+    "domain": "flight",
+    "initial": "I need to sort out a complicated group flight booking.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Seattle",
+      "destination|flying to|where.*going|to": "Paris",
+      "when.*leav|depart.*date|outbound|going": "May 1st",
+      "return|coming back|when.*back": "May 15th",
+      "how many|passengers|travell": "6 passengers",
+      "cabin|class|economy|business|first": "business class",
+      "loyalty|frequent|miles|rewards": "Air France Flying Blue",
+      "baggage|luggage|bags|checked": "two checked bags each",
+      "meal|dietary|food on|special meal": "two Hindu meals, one diabetic meal",
+      "confirm|correct|right|all set": "yes all confirmed"
+    },
+    "complication": "We also need extra legroom seats pre-assigned for two passengers.",
+    "complication_turn": 10,
+    "pivot": "Everything is different now. NOT Seattle — departing from Portland. NOT Paris — destination changed to Amsterdam. NOT May 1st — departure is now May 4th. NOT May 15th — return is now May 18th. NOT 6 passengers — now 4, two cancelled. NOT business class — downgraded to economy. Hindu meal passengers are NOT on this booking anymore. The diabetic meal passenger IS still coming — keep that. Extra legroom seats no longer needed. One checked bag each, not two.",
+    "expected_pre": {
+      "origin": "seattle",
+      "destination": "paris",
+      "date_out": "may 1",
+      "date_return": "may 15",
+      "passengers": 6,
+      "cabin": "business"
+    },
+    "expected_post": {
+      "origin": "portland",
+      "destination": "amsterdam",
+      "date_out": "may 4",
+      "date_return": "may 18",
+      "passengers": 4,
+      "cabin": "economy",
+      "meal": "diabetic"
+    },
+    "post_booking_probes": [
+      "What is the origin?",
+      "What is the destination?",
+      "What are the dates?",
+      "How many passengers?",
+      "What cabin class?",
+      "Is the diabetic meal noted?",
+      "Are Hindu meals noted — they should NOT be?"
+    ],
+    "facts_to_track": [
+      "portland",
+      "amsterdam",
+      "may 4",
+      "may 18",
+      "4",
+      "economy",
+      "diabetic"
+    ]
+  }
+]

@@ -1,0 +1,507 @@
+[
+  {
+    "id": "hard_01",
+    "difficulty": "hard",
+    "domain": "restaurant",
+    "initial": "Book me something good for the weekend.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "it'll be 8 of us",
+      "cuisine|type of food|what kind": "surprise me, but no seafood",
+      "which city|what city|where": "we'll be in Miami",
+      "what time|when|time": "late dinner, 9 PM",
+      "which day|what day|date": "Saturday night",
+      "any preference|specific|name": "trendy, good cocktails",
+      "budget|price|cost": "not worried about price",
+      "indoor|outdoor|seating": "rooftop if possible",
+      "dietary|allerg|vegan|vegetarian": "one person is vegan, two are gluten-free",
+      "confirm|correct|right|all set": "yes that is all right"
+    },
+    "complication": "The group also wants live music. And two more people confirmed — so 10 total now.",
+    "complication_turn": 12,
+    "pivot": "Huge change — we just found out the venue we wanted is closed. Switch the whole thing to Sunday brunch instead of Saturday dinner. Time becomes 11 AM. Still 10 people, still Miami. Cuisine should now be something brunch-appropriate.",
+    "expected_pre": {
+      "people": 10,
+      "city": "miami",
+      "day": "saturday",
+      "time": "9 PM",
+      "music": "live music"
+    },
+    "expected_post": {
+      "people": 10,
+      "city": "miami",
+      "day": "sunday",
+      "time": "11 AM",
+      "music": "live music"
+    },
+    "post_booking_probes": [
+      "How many people?",
+      "What meal is this — dinner or brunch?",
+      "What time?",
+      "Is the vegan requirement still noted?"
+    ],
+    "facts_to_track": [
+      "10",
+      "miami",
+      "vegan",
+      "gluten",
+      "live music"
+    ]
+  },
+  {
+    "id": "hard_02",
+    "difficulty": "hard",
+    "domain": "restaurant",
+    "initial": "I need a reservation, it's kind of urgent.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "just 2, it's a date",
+      "cuisine|type of food|what kind": "something romantic, maybe French or Italian",
+      "which city|what city|where": "we're in New York",
+      "what time|when|time": "8:30 in the evening",
+      "which day|what day|date": "tomorrow night",
+      "any preference|specific|name": "candlelit, intimate",
+      "budget|price|cost": "splurge, it's a special occasion",
+      "indoor|outdoor|seating": "indoor, private if possible",
+      "dietary|allerg|vegan|vegetarian": "she has a severe shellfish allergy",
+      "confirm|correct|right|all set": "yes all correct"
+    },
+    "complication": "Also, I want to pre-arrange flowers at the table and a custom dessert — it's a marriage proposal.",
+    "complication_turn": 10,
+    "pivot": "She found out about the surprise and wants to choose the restaurant herself. She picked a Spanish tapas place instead of French or Italian. Everything else stays the same — 2 people, tomorrow night, 8:30 PM, still the proposal, still the shellfish allergy.",
+    "expected_pre": {
+      "people": 2,
+      "cuisine": "french",
+      "city": "new york",
+      "day": "tomorrow",
+      "time": "8:30 PM",
+      "occasion": "proposal"
+    },
+    "expected_post": {
+      "people": 2,
+      "cuisine": "spanish",
+      "city": "new york",
+      "day": "tomorrow",
+      "time": "8:30 PM",
+      "occasion": "proposal"
+    },
+    "post_booking_probes": [
+      "What cuisine did we book?",
+      "Is the shellfish allergy noted?",
+      "Is the proposal noted?",
+      "How many people?"
+    ],
+    "facts_to_track": [
+      "2",
+      "new york",
+      "shellfish",
+      "proposal",
+      "flowers"
+    ],
+    "accepted": {
+      "cuisine": [
+        "italian"
+      ]
+    }
+  },
+  {
+    "id": "hard_03",
+    "difficulty": "hard",
+    "domain": "restaurant",
+    "initial": "Can you arrange a big group dinner? It's for a celebration.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "probably around 20 people",
+      "cuisine|type of food|what kind": "something everyone can enjoy, maybe BBQ or American",
+      "which city|what city|where": "Austin, Texas",
+      "what time|when|time": "6 PM to start",
+      "which day|what day|date": "next Saturday",
+      "any preference|specific|name": "buyout or private event space",
+      "budget|price|cost": "$50 per person all inclusive",
+      "indoor|outdoor|seating": "outdoor preferred, Texas weather",
+      "dietary|allerg|vegan|vegetarian": "3 vegans, 2 with nut allergies, 1 celiac",
+      "confirm|correct|right|all set": "yes that is right"
+    },
+    "complication": "We want to add a live band and a custom cake. Also 5 more people RSVP'd — 25 total now.",
+    "complication_turn": 12,
+    "pivot": "Complete change of venue city — the guest of honor is actually in Dallas not Austin. Move everything to Dallas. Also, the date shifts to Sunday. 25 people, 6 PM, same budget, same dietary needs.",
+    "expected_pre": {
+      "people": 25,
+      "cuisine": "bbq",
+      "city": "austin",
+      "day": "saturday",
+      "time": "6 PM"
+    },
+    "expected_post": {
+      "people": 25,
+      "cuisine": "bbq",
+      "city": "dallas",
+      "day": "sunday",
+      "time": "6 PM"
+    },
+    "post_booking_probes": [
+      "Which city is the event in?",
+      "What day?",
+      "How many people?",
+      "Is the live band noted?"
+    ],
+    "facts_to_track": [
+      "25",
+      "bbq",
+      "vegan",
+      "celiac",
+      "live band",
+      "cake"
+    ],
+    "accepted": {
+      "cuisine": [
+        "american"
+      ]
+    }
+  },
+  {
+    "id": "hard_04",
+    "difficulty": "hard",
+    "domain": "restaurant",
+    "initial": "I need help with dinner plans, it's complicated.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "it keeps changing, let's say 5 for now",
+      "cuisine|type of food|what kind": "she likes Thai or Vietnamese",
+      "which city|what city|where": "Portland, Oregon",
+      "what time|when|time": "7:30 PM",
+      "which day|what day|date": "this Thursday",
+      "any preference|specific|name": "something cosy, not too loud",
+      "budget|price|cost": "moderate, $35 each",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "one person has a peanut allergy — very serious",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "Actually make it 6 people — my old friend just confirmed. And we specifically need a restaurant that can guarantee peanut-free preparation, not just peanut-free menu.",
+    "complication_turn": 10,
+    "pivot": "The person with the peanut allergy can't make it anymore. But now we have a new guest who is vegan. The day also needs to change to Friday — and we want Ethiopian food instead of Thai. 6 people, Friday, 7:30 PM, Portland, Ethiopian, vegan-friendly.",
+    "expected_pre": {
+      "people": 6,
+      "cuisine": "thai",
+      "city": "portland",
+      "day": "thursday",
+      "time": "7:30 PM",
+      "allergy": "peanut"
+    },
+    "expected_post": {
+      "people": 6,
+      "cuisine": "ethiopian",
+      "city": "portland",
+      "day": "friday",
+      "time": "7:30 PM",
+      "dietary": "vegan"
+    },
+    "post_booking_probes": [
+      "What cuisine did we end up booking?",
+      "What day?",
+      "Is vegan noted?"
+    ],
+    "facts_to_track": [
+      "6",
+      "portland",
+      "ethiopian",
+      "vegan"
+    ],
+    "accepted": {
+      "cuisine": [
+        "vietnamese"
+      ]
+    }
+  },
+  {
+    "id": "hard_05",
+    "difficulty": "hard",
+    "domain": "restaurant",
+    "initial": "I'm trying to organize something for a group but I'm not sure where to start.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "somewhere between 8 and 12",
+      "cuisine|type of food|what kind": "we're open to anything except Indian",
+      "which city|what city|where": "Denver",
+      "what time|when|time": "evening, 7 or 7:30",
+      "which day|what day|date": "sometime next weekend",
+      "any preference|specific|name": "good for conversation, not too noisy",
+      "budget|price|cost": "mid-range",
+      "indoor|outdoor|seating": "indoors, it might rain",
+      "dietary|allerg|vegan|vegetarian": "two kosher, three halal",
+      "confirm|correct|right|all set": "yes"
+    },
+    "complication": "We need to lock in 10 people exactly for the reservation. And they need to be able to accommodate both kosher and halal.",
+    "complication_turn": 11,
+    "pivot": "Everyone is now flying in to meet in Las Vegas instead. Change the city to Las Vegas. Day is now Friday, time is 8 PM. Still 10 people, still no Indian food, still need kosher and halal options.",
+    "expected_pre": {
+      "people": 10,
+      "city": "denver",
+      "day": "saturday",
+      "time": "7 PM",
+      "dietary": "kosher halal"
+    },
+    "expected_post": {
+      "people": 10,
+      "city": "las vegas",
+      "day": "friday",
+      "time": "8 PM",
+      "dietary": "kosher halal"
+    },
+    "post_booking_probes": [
+      "What city?",
+      "What day and time?",
+      "How many people?",
+      "Are both kosher and halal requirements noted?"
+    ],
+    "facts_to_track": [
+      "10",
+      "las vegas",
+      "kosher",
+      "halal"
+    ],
+    "accepted": {
+      "time": [
+        "7:30 PM"
+      ]
+    }
+  },
+  {
+    "id": "hard_06",
+    "difficulty": "hard",
+    "domain": "restaurant",
+    "initial": "I need to sort out food for a big family thing, it's kind of complicated.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "probably 14, maybe 15",
+      "cuisine|type of food|what kind": "something the whole family will like, maybe Indian or Middle Eastern",
+      "which city|what city|where": "Houston",
+      "what time|when|time": "6:30 PM",
+      "which day|what day|date": "this Saturday",
+      "any preference|specific|name": "somewhere that does large group bookings",
+      "budget|price|cost": "moderate, around $30 per person",
+      "indoor|outdoor|seating": "indoor, we have elderly guests",
+      "dietary|allerg|vegan|vegetarian": "4 vegetarians, 2 diabetics, everything halal",
+      "confirm|correct|right|all set": "yes that is correct"
+    },
+    "complication": "My uncle confirmed so now 16 people. He is in a wheelchair so we need full accessibility. Also the restaurant must be fully halal-certified.",
+    "complication_turn": 11,
+    "pivot": "Switch city to San Antonio — grandparents can't travel. Also move to Sunday, same time. 16 people, halal, accessible.",
+    "expected_pre": {
+      "people": 16,
+      "city": "houston",
+      "day": "saturday",
+      "time": "6:30 PM",
+      "dietary": "halal"
+    },
+    "expected_post": {
+      "people": 16,
+      "city": "san antonio",
+      "day": "sunday",
+      "time": "6:30 PM",
+      "dietary": "halal"
+    },
+    "post_booking_probes": [
+      "What city are we booked in?",
+      "What day?",
+      "Is halal certification noted?",
+      "Is wheelchair accessibility noted?"
+    ],
+    "facts_to_track": [
+      "16",
+      "san antonio",
+      "halal",
+      "wheelchair"
+    ]
+  },
+  {
+    "id": "flight_hard_01",
+    "difficulty": "hard",
+    "domain": "flight",
+    "initial": "I need to sort out some flights, it's a complicated multi-leg situation.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "starting from Miami",
+      "destination|flying to|where.*going|to": "end destination is Singapore",
+      "when.*leav|depart.*date|outbound|going": "leaving May 5th",
+      "return|coming back|when.*back": "returning May 19th",
+      "how many|passengers|travell": "3 passengers",
+      "cabin|class|economy|business|first": "business class for all",
+      "loyalty|frequent|miles|rewards": "Singapore Airlines KrisFlyer for all three",
+      "baggage|luggage|bags|checked": "two checked bags each",
+      "meal|dietary|food on|special meal": "one Hindu meal, one Muslim meal, one standard",
+      "confirm|correct|right|all set": "yes that is correct"
+    },
+    "complication": "We want to add a stopover in Tokyo for 2 nights on the way there.",
+    "complication_turn": 12,
+    "pivot": "Major change — one passenger dropped out. Now 2 passengers. Also we now depart May 7th not May 5th. Return stays May 19th. Tokyo stopover still on. Business class still.",
+    "expected_pre": {
+      "origin": "miami",
+      "destination": "singapore",
+      "date_out": "may 5",
+      "date_return": "may 19",
+      "passengers": 3,
+      "cabin": "business",
+      "stopover": "tokyo"
+    },
+    "expected_post": {
+      "origin": "miami",
+      "destination": "singapore",
+      "date_out": "may 7",
+      "date_return": "may 19",
+      "passengers": 2,
+      "cabin": "business",
+      "stopover": "tokyo"
+    },
+    "post_booking_probes": [
+      "How many passengers?",
+      "What is the departure date?",
+      "Is the Tokyo stopover included?"
+    ],
+    "facts_to_track": [
+      "2",
+      "singapore",
+      "may 7",
+      "tokyo",
+      "business",
+      "hindu",
+      "muslim"
+    ]
+  },
+  {
+    "id": "flight_hard_02",
+    "difficulty": "hard",
+    "domain": "flight",
+    "initial": "I need flights for a family reunion trip, lots of people coming from different places.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "most are flying from New York, a few from London",
+      "destination|flying to|where.*going|to": "everyone is meeting in Cape Town",
+      "when.*leav|depart.*date|outbound|going": "New York group leaves July 10th, London group July 11th",
+      "return|coming back|when.*back": "everyone returns July 24th",
+      "how many|passengers|travell": "8 from New York, 4 from London — 12 total",
+      "cabin|class|economy|business|first": "economy for everyone",
+      "loyalty|frequent|miles|rewards": "mixed — some have BA Executive Club",
+      "baggage|luggage|bags|checked": "one checked bag each",
+      "meal|dietary|food on|special meal": "3 vegetarians, 1 child meal for a 5-year-old",
+      "confirm|correct|right|all set": "yes that is all right"
+    },
+    "complication": "Two more cousins from Sydney want to join — 14 total now. They depart Sydney July 11th to Cape Town.",
+    "complication_turn": 12,
+    "pivot": "The London group visa got delayed — move their departure to July 13th. Sydney and New York unchanged. Everyone still returns July 24th. 14 total.",
+    "expected_pre": {
+      "destination": "cape town",
+      "passengers": 14,
+      "date_return": "july 24"
+    },
+    "expected_post": {
+      "destination": "cape town",
+      "passengers": 14,
+      "date_return": "july 24"
+    },
+    "post_booking_probes": [
+      "What date does the London group depart?",
+      "How many total passengers?",
+      "Is the child meal noted?"
+    ],
+    "facts_to_track": [
+      "14",
+      "cape town",
+      "july 13",
+      "july 24",
+      "child meal",
+      "vegetarian"
+    ]
+  },
+  {
+    "id": "flight_hard_03",
+    "difficulty": "hard",
+    "domain": "flight",
+    "initial": "I'm trying to organize a research expedition and need flights sorted.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "departing from Washington DC Dulles",
+      "destination|flying to|where.*going|to": "Nairobi, Kenya",
+      "when.*leav|depart.*date|outbound|going": "September 1st",
+      "return|coming back|when.*back": "return is open-ended, probably October 15th",
+      "how many|passengers|travell": "5 researchers",
+      "cabin|class|economy|business|first": "economy, grant funded",
+      "loyalty|frequent|miles|rewards": "no loyalty accounts",
+      "baggage|luggage|bags|checked": "each person needs 2 checked bags for equipment",
+      "meal|dietary|food on|special meal": "one vegan, one kosher",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "The grant approved an extra researcher — 6 people now. She has a severe shellfish allergy.",
+    "complication_turn": 11,
+    "pivot": "Field site changed to Tanzania — destination is now Dar es Salaam. Departure shifts to September 3rd. Return stays October 15th. 6 passengers, same meals.",
+    "expected_pre": {
+      "origin": "washington dc",
+      "destination": "nairobi",
+      "date_out": "september 1",
+      "passengers": 6,
+      "cabin": "economy"
+    },
+    "expected_post": {
+      "origin": "washington dc",
+      "destination": "dar es salaam",
+      "date_out": "september 3",
+      "passengers": 6,
+      "cabin": "economy"
+    },
+    "post_booking_probes": [
+      "What is the destination?",
+      "What is the departure date?",
+      "Is the shellfish allergy noted?"
+    ],
+    "facts_to_track": [
+      "6",
+      "dar es salaam",
+      "september 3",
+      "shellfish",
+      "kosher",
+      "vegan"
+    ]
+  },
+  {
+    "id": "flight_hard_04",
+    "difficulty": "hard",
+    "domain": "flight",
+    "initial": "I need to book some emergency travel, things keep changing.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Denver",
+      "destination|flying to|where.*going|to": "not sure yet, either London or Amsterdam",
+      "when.*leav|depart.*date|outbound|going": "as soon as possible, ideally tomorrow",
+      "return|coming back|when.*back": "open return, about 2 weeks",
+      "how many|passengers|travell": "just 1",
+      "cabin|class|economy|business|first": "business class, this is urgent work travel",
+      "loyalty|frequent|miles|rewards": "United MileagePlus, Premier 1K status",
+      "baggage|luggage|bags|checked": "one checked bag",
+      "meal|dietary|food on|special meal": "gluten-free meal",
+      "confirm|correct|right|all set": "yes"
+    },
+    "complication": "The client confirmed — it's London Heathrow. And my colleague needs to come too — add one more passenger from Denver.",
+    "complication_turn": 10,
+    "pivot": "Change of destination — London office is closed for maintenance. We need to go to Amsterdam instead. Same departure tomorrow, 2 passengers, business class, my gluten-free meal still needed.",
+    "expected_pre": {
+      "origin": "denver",
+      "destination": "london",
+      "passengers": 2,
+      "cabin": "business",
+      "meal": "gluten-free"
+    },
+    "expected_post": {
+      "origin": "denver",
+      "destination": "amsterdam",
+      "passengers": 2,
+      "cabin": "business",
+      "meal": "gluten-free"
+    },
+    "post_booking_probes": [
+      "What is the destination?",
+      "How many passengers?",
+      "Is the gluten-free meal still on my booking?"
+    ],
+    "facts_to_track": [
+      "amsterdam",
+      "2",
+      "business",
+      "gluten-free"
+    ],
+    "accepted": {
+      "destination": [
+        "amsterdam"
+      ]
+    }
+  }
+]

@@ -1,0 +1,820 @@
+sample_id,model,scenario_id,run_idx,turn_idx,difficulty,domain,phase,expected_state,committed_facts_before,tool_call_detected,assistant_text,label,notes
+S0001,claude-sonnet-4.6,conflict_04,3,13,conflicting,restaurant,post,"{""people"": 15, ""cuisine"": ""korean"", ""city"": ""los angeles"", ""day"": ""thursday"", ""time"": ""6:30 PM""}","{""people"": ""15"", ""15"": ""15"", ""los angeles"": ""los angeles"", ""cuisine"": ""korean"", ""korean"": ""korean"", ""kosher"": ""kosher""}",json_block,"Great, that simplifies things! Let me update the booking now:
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 15, ""cuisine"": ""korean bbq"", ""city"": ""los angeles"", ""day"": ""thursday"", ""time"": ""6:30 PM"", ""notes"": ""4 guests will not be eating - please provide non-alcoholic drink service only for them""}}
+```
+
+Once I get the tool response, I'll confirm all the updated details for you!",,
+S0002,gemini-3.5-flash,flight_medium_02,1,14,medium,flight,post,"{""origin"": ""los angeles"", ""destination"": ""paris"", ""date_out"": ""june 8"", ""date_return"": ""june 21"", ""passengers"": 2, ""cabin"": ""business""}","{""los angeles"": ""los angeles"", ""honeymoon"": ""honeymoon"", ""paris"": ""paris"", ""lactose"": ""lactose"", ""city"": ""paris"", ""june 8"": ""june 8"", ""june 21"": ""june 21""}",no_tool_signal,"Your updated departure date is **June 8th**. 
+
+Your return date is June 21st. Let me know if you need any other details from your confirmed booking (Confirmation ID: 6CE17C6A-563)!",,
+S0003,claude-sonnet-4.6,flight_conflict_03,1,16,conflicting,flight,post,"{""origin"": ""miami"", ""destination"": ""paris"", ""date_out"": ""july 1"", ""date_return"": ""july 15"", ""passengers"": 4, ""cabin"": ""economy""}","{""miami"": ""miami"", ""paris"": ""paris"", ""july 1"": ""july 1"", ""4"": ""4"", ""child meal"": ""child meal""}",no_tool_signal,"There are **4 passengers** in total:
+
+- 👨‍👩 **2 adults**
+- 🧒🧒 **2 children**
+
+Is there anything else you'd like to know?",,
+S0004,llama-3.3-70b-instruct,easy_06,3,12,easy,restaurant,pre,"{""people"": 5, ""cuisine"": ""brunch"", ""city"": ""boston"", ""day"": ""sunday"", ""time"": ""10:30 AM""}","{""people"": ""5"", ""cuisine"": ""brunch"", ""brunch"": ""brunch"", ""boston"": ""boston"", ""day"": ""sunday"", ""time"": ""10:30 am"", ""vegan"": ""vegan""}",no_tool_signal,"I've confirmed the details multiple times already. To reiterate one more time:
+
+* Party size: 5 people
+* Cuisine: American brunch
+* City: Boston
+* Day: Sunday
+* Time: 10:30 AM
+* Dietary restrictions: One vegan in the party
+
+Everything remains the same. If you're ready to move forward or have any new questions, I'm here to help!",,
+S0005,llama-3.3-70b-instruct,medium_02,1,8,medium,restaurant,pre,"{""people"": 12, ""cuisine"": ""korean"", ""city"": ""seattle"", ""day"": ""friday"", ""time"": ""6:30 PM""}","{""people"": ""10"", ""cuisine"": ""korean"", ""korean"": ""korean""}",no_tool_signal,"Let me confirm the details again:
+
+* Party size: 10 people
+* Cuisine: Korean BBQ
+* City: Seattle
+* Day: Next Friday
+* Time: 6:30 PM
+* Dietary restrictions: 2 vegans, 1 nut allergy
+
+Yes, all the details are still correct. The booking tool has also confirmed the reservation with a confirmation ID: 4111DF3B-DEF. Everything looks good!",,
+S0006,claude-sonnet-4.6,adversarial_02,2,13,adversarial,restaurant,post,"{""people"": 8, ""cuisine"": ""korean"", ""city"": ""houston"", ""day"": ""thursday"", ""time"": ""7 PM"", ""dietary"": ""vegetarian""}","{""people"": ""11"", ""cuisine"": ""mexican"", ""vegetarian"": ""vegetarian"", ""day"": ""tuesday""}",json_block,"Got it! That's a complete overhaul. Let me confirm the updated details before booking:
+
+- **Party size:** 8
+- **Cuisine:** Korean BBQ
+- **City:** Houston
+- **Day:** Thursday
+- **Time:** 7 PM (dinner)
+- **Special notes:** 2 vegetarians (nut allergy removed)
+
+Booking now!
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 8, ""cuisine"": ""korean bbq"", ""city"": ""houston"", ""day"": ""thursday"", ""time"": ""7 PM"", ""notes"": ""2 vegetarians""}}
+```",,
+S0007,gemini-3.5-flash,conflict_04,3,14,conflicting,restaurant,post,"{""people"": 15, ""cuisine"": ""korean"", ""city"": ""los angeles"", ""day"": ""thursday"", ""time"": ""6:30 PM""}","{""people"": ""15"", ""15"": ""15"", ""los angeles"": ""los angeles"", ""cuisine"": ""korean"", ""city"": ""los angeles"", ""korean"": ""korean"", ""time"": ""6:30 pm"", ""kosher"": ""kosher""}",no_tool_signal,The booking is confirmed for a total of **15 people** (with a note that 4 of those guests will only be joining for non-alcoholic drinks and won't be eating).,,
+S0008,gemini-3.5-flash,adversarial_03,2,3,adversarial,restaurant,pre,"{""people"": 2, ""cuisine"": ""french"", ""city"": ""new york"", ""day"": ""friday"", ""time"": ""8 PM"", ""occasion"": ""anniversary""}",{},no_tool_signal,"French fine dining in New York sounds absolutely wonderful for an anniversary. 
+
+How many people will be in your party?",,
+S0009,llama-3.3-70b-instruct,adversarial_04,2,10,adversarial,restaurant,pre,"{""people"": 25, ""cuisine"": ""bbq"", ""city"": ""dallas"", ""day"": ""saturday"", ""time"": ""6 PM""}","{""people"": ""25"", ""cuisine"": ""bbq"", ""vegan"": ""vegan"", ""gluten"": ""gluten""}",no_tool_signal,"Yes, all the details are still correct:
+
+* Party size: 25 people
+* Cuisine: BBQ
+* City: Dallas
+* Day: Saturday
+* Time: 6 PM
+* Dietary restrictions: 5 vegans, 2 gluten intolerances
+
+Your booking confirmation ID remains the same: D584AF6E-DFB. Everything is in order, and you're all set for your BBQ outing in Dallas!",,
+S0010,gemini-3.5-flash,adversarial_02,3,15,adversarial,restaurant,post,"{""people"": 8, ""cuisine"": ""korean"", ""city"": ""houston"", ""day"": ""thursday"", ""time"": ""7 PM"", ""dietary"": ""vegetarian""}","{""people"": ""8"", ""city"": ""austin"", ""cuisine"": ""korean"", ""vegetarian"": ""vegetarian"", ""8"": ""8"", ""korean"": ""korean"", ""houston"": ""houston"", ""thursday"": ""thursday""}",no_tool_signal,The cuisine for your confirmed booking is **Korean BBQ**.,,
+S0011,llama-3.3-70b-instruct,flight_easy_02,2,17,easy,flight,post,"{""origin"": ""chicago"", ""destination"": ""miami"", ""date_out"": ""december 21"", ""date_return"": ""december 27"", ""passengers"": 2, ""cabin"": ""economy plus""}","{""chicago"": ""chicago"", ""miami"": ""miami"", ""economy plus"": ""economy plus""}",no_tool_signal,"Yes, according to the booking confirmation, the cabin class is indeed Economy Plus.",,
+S0012,claude-sonnet-4.5,hard_03,2,13,hard,restaurant,post,"{""people"": 25, ""cuisine"": ""bbq"", ""city"": ""dallas"", ""day"": ""sunday"", ""time"": ""6 PM""}","{""people"": ""25"", ""cuisine"": ""bbq"", ""bbq"": ""bbq"", ""time"": ""6 pm"", ""25"": ""25"", ""vegan"": ""vegan"", ""celiac"": ""celiac"", ""city"": ""austin""}",json_block,"Understood! You need to completely change the location and day:
+- **City:** Dallas (changed from Austin)
+- **Day:** Sunday (changed from Saturday)
+- All other details remain: 25 people, 6 PM, BBQ, same dietary needs, live band, custom cake, and private event space inquiry
+
+Let me book this updated reservation:
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 25, ""cuisine"": ""BBQ"", ""city"": ""Dallas"", ""day"": ""Sunday"", ""time"": ""6 PM"", ""notes"": ""3 vegans, 2 with nut allergies, 1 celiac. Live band needed. Custom cake. Inquiring about buyout or private event space.""}}
+```",,
+S0013,claude-sonnet-4.5,flight_adversarial_03,3,13,adversarial,flight,post,"{""origin"": ""miami"", ""destination"": ""costa rica"", ""date_out"": ""december 26"", ""date_return"": ""january 3"", ""passengers"": 7, ""cabin"": ""premium economy""}","{""premium economy"": ""premium economy"", ""child meal"": ""child meal"", ""7"": ""7""}",json_block,"Thank you for the complete update! Let me confirm all the NEW details:
+
+- **Origin:** Miami (changed from Chicago)
+- **Destination:** Costa Rica (changed from Cancun)
+- **Departure date:** December 26th (changed from December 21st)
+- **Return date:** January 3rd (changed from December 28th)
+- **Passengers:** 7 (4 adults and 3 children) - unchanged
+- **Cabin class:** Premium Economy (upgraded from Economy)
+- **Baggage:** 5 checked bags (changed from 3)
+- **Meals:** Child meals for 3 children, standard for 4 adults
+
+Now let me call the booking tool with these updated parameters:
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_flight"", ""params"": {""origin"": ""Miami"", ""destination"": ""Costa Rica"", ""date_out"": ""December 26"", ""date_return"": ""January 3"", ""cabin"": ""premium economy"", ""passengers"": 7, ""baggage"": ""5 checked bags"", ""meal"": ""child meals for 3 children, standard for 4 adults"", ""notes"": ""Family trip: 4 adults and 3 children""}}
+```",,
+S0014,gemini-3.5-flash,easy_06,2,8,easy,restaurant,pre,"{""people"": 5, ""cuisine"": ""brunch"", ""city"": ""boston"", ""day"": ""sunday"", ""time"": ""10:30 AM""}","{""cuisine"": ""brunch"", ""city"": ""boston"", ""brunch"": ""brunch"", ""boston"": ""boston"", ""people"": ""4""}",json_block,"I have updated your party size to 5 people. I am booking your table with these updated details now.
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 5, ""cuisine"": ""american brunch"", ""city"": ""boston"", ""day"": ""sunday"", ""time"": ""10:30 AM"", ""notes"": """"}}
+```",,
+S0015,llama-3.3-70b-instruct,hard_04,1,6,hard,restaurant,pre,"{""people"": 6, ""cuisine"": ""thai"", ""city"": ""portland"", ""day"": ""thursday"", ""time"": ""7:30 PM"", ""allergy"": ""peanut""}","{""people"": ""5""}",no_tool_signal,"So, to recap, your party size is 5 people, you're interested in either Thai or Vietnamese cuisine, you're looking to dine in Portland, Oregon, you're planning to go out for dinner this Thursday, and you'd like to dine at 7:30 PM. Before I proceed with booking, do you or anyone in your party have any dietary restrictions I should be aware of?
+
+(After this, I'll call the booking tool to confirm your reservation)",,
+S0016,claude-sonnet-4.6,adversarial_01,3,11,adversarial,restaurant,pre,"{""people"": 6, ""cuisine"": ""italian"", ""city"": ""san francisco"", ""day"": ""saturday"", ""time"": ""7 PM"", ""occasion"": ""birthday""}","{""people"": ""6"", ""day"": ""saturday"", ""cuisine"": ""italian""}",no_tool_signal,"Here's a summary of your updated booking:
+
+- **Confirmation ID:** Pending update
+- **Party size:** 6 people
+- **Cuisine:** Italian
+- **City:** San Francisco
+- **Day:** Saturday
+- **Time:** 7 PM
+- **Notes:** Birthday dinner, 1 vegan, private dining room requested
+
+⚠️ **Please note:** Private dining room availability is not guaranteed and may need to be confirmed directly with the restaurant. I'd recommend calling them to ensure it's available for your party.
+
+Is there anything else I can help you with?",,
+S0017,claude-sonnet-4.5,flight_adversarial_02,2,17,adversarial,flight,post,"{""origin"": ""new york"", ""destination"": ""geneva"", ""date_out"": ""june 5"", ""date_return"": ""june 14"", ""passengers"": 5, ""cabin"": ""economy plus""}","{""wheelchair"": ""wheelchair"", ""vegan"": ""vegan"", ""new york"": ""new york"", ""geneva"": ""geneva"", ""june 5"": ""june 5"", ""june 14"": ""june 14"", ""5"": ""5"", ""economy plus"": ""economy plus""}",no_tool_signal,There are **5 passengers**.,,
+S0018,claude-sonnet-4.5,flight_hard_04,3,16,hard,flight,post,"{""origin"": ""denver"", ""destination"": ""amsterdam"", ""passengers"": 2, ""cabin"": ""business"", ""meal"": ""gluten-free""}","{""amsterdam"": ""amsterdam"", ""2"": ""2"", ""business"": ""business"", ""people"": ""2"", ""gluten-free"": ""gluten-free""}",no_tool_signal,"Yes, **the gluten-free meal is still on your booking**. 
+
+The confirmation shows ""gluten-free for 1 passenger"" - that's for you, as requested.",,
+S0019,claude-sonnet-4.6,adversarial_01,3,14,adversarial,restaurant,post,"{""people"": 4, ""cuisine"": ""japanese"", ""city"": ""los angeles"", ""day"": ""monday"", ""time"": ""8:30 PM"", ""occasion"": ""farewell""}","{""people"": ""6"", ""day"": ""saturday"", ""cuisine"": ""italian"", ""4"": ""4"", ""japanese"": ""japanese"", ""los angeles"": ""los angeles"", ""monday"": ""monday"", ""farewell"": ""farewell""}",no_tool_signal,"Your reservation is confirmed! And to answer your question — the booking is for **4 people**.
+
+Here's your full confirmation:
+
+- **Confirmation ID:** FCE1FF74-3A9
+- **Party size:** 4 people
+- **Cuisine:** Japanese
+- **City:** Los Angeles
+- **Day:** Monday
+- **Time:** 8:30 PM
+- **Notes:** Farewell dinner, no cake or decorations, budget $40 per person
+
+Is there anything else I can help you with?",,
+S0020,claude-sonnet-4.5,flight_adversarial_04,1,19,adversarial,flight,post,"{""origin"": ""portland"", ""destination"": ""amsterdam"", ""date_out"": ""may 4"", ""date_return"": ""may 18"", ""passengers"": 4, ""cabin"": ""economy"", ""meal"": ""diabetic""}","{""economy"": ""economy"", ""diabetic"": ""diabetic"", ""people"": ""6"", ""portland"": ""portland"", ""amsterdam"": ""amsterdam"", ""may 4"": ""may 4"", ""may 18"": ""may 18"", ""4"": ""4""}",no_tool_signal,"Yes, **1 diabetic meal** is noted in the booking.",,
+S0021,gemini-3.5-flash,flight_medium_01,3,13,medium,flight,post,"{""origin"": ""new york"", ""destination"": ""tokyo"", ""date_out"": ""april 12"", ""date_return"": ""april 20"", ""passengers"": 8, ""cabin"": ""economy""}","{""tokyo"": ""tokyo"", ""vegetarian"": ""vegetarian"", ""vegan"": ""vegan"", ""gluten"": ""gluten"", ""8"": ""8""}",json_block,"I have updated your departure date to April 12th, keeping the return date on April 20th for your group of 8. 
+
+I will now book the revised flights for you.
+
+```json
+{
+  ""action"": ""call_tool"",
+  ""tool"": ""book_flight"",
+  ""params"": {
+    ""origin"": ""New York (JFK)"",
+    ""destination"": ""Tokyo"",
+    ""date_out"": ""April 12"",
+    ""date_return"": ""April 20"",
+    ""cabin"": ""economy"",
+    ""passengers"": 8,
+    ""baggage"": ""1 checked bag each"",
+    ""meal"": ""2 vegetarian, 1 vegan, 1 gluten-free"",
+    ""notes"": """"
+  }
+}
+```",,
+S0022,gemini-3.5-flash,flight_easy_04,3,9,easy,flight,pre,"{""origin"": ""seattle"", ""destination"": ""denver"", ""date_out"": ""december 23"", ""date_return"": ""january 2"", ""passengers"": 2}","{""seattle"": ""seattle"", ""denver"": ""denver"", ""2"": ""2"", ""people"": ""1"", ""checked bag"": ""checked bag""}",no_tool_signal,"Got it! I have updated the passenger count to **2 passengers** and your baggage to **3 checked bags total** (2 for you and 1 for your girlfriend). 
+
+Here is what we have so far:
+* **Origin:** Seattle
+* **Destination:** Denver
+* **Departure Date:** December 23rd
+* **Return Date:** January 2nd
+* **Cabin Class:** Economy
+* **Passengers:** 2
+* **Baggage:** 3 checked bags total
+
+Next, do either of you have any specific **meal preferences** for the flights?",,
+S0023,claude-sonnet-4.5,medium_03,3,13,medium,restaurant,post,"{""people"": 4, ""cuisine"": ""mediterranean"", ""city"": ""los angeles"", ""day"": ""tuesday"", ""time"": ""1 PM""}","{""people"": ""3"", ""cuisine"": ""mediterranean"", ""mediterranean"": ""mediterranean"", ""los angeles"": ""los angeles"", ""time"": ""12 pm""}",json_block,"Understood! Let me update your reservation with all the changes:
+- **4 people** (one more joining)
+- **Tuesday** (rescheduled from Monday)
+- **1 PM** (changed from 12 PM)
+- Still Mediterranean cuisine in Los Angeles
+- Still need halal-certified and all vegetarian
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 4, ""cuisine"": ""mediterranean"", ""city"": ""los angeles"", ""day"": ""tuesday"", ""time"": ""1 PM"", ""notes"": ""halal-certified required, all four guests vegetarian""}}
+```",,
+S0024,claude-sonnet-4.6,hard_01,3,16,hard,restaurant,post,"{""people"": 10, ""city"": ""miami"", ""day"": ""sunday"", ""time"": ""11 AM"", ""music"": ""live music""}","{""people"": ""10"", ""miami"": ""miami"", ""day"": ""saturday"", ""cuisine"": ""brunch"", ""city"": ""miami"", ""10"": ""10"", ""live music"": ""live music""}",no_tool_signal,Your reservation is at **11 AM** on Sunday. 🕚,,
+S0025,gemini-3.5-flash,conflict_03,3,16,conflicting,restaurant,post,"{""people"": 20, ""cuisine"": ""indian"", ""city"": ""san francisco"", ""day"": ""saturday"", ""time"": ""7 PM"", ""dietary"": ""vegan""}","{""people"": ""20"", ""20"": ""20"", ""san francisco"": ""san francisco"", ""cuisine"": ""indian"", ""indian"": ""indian"", ""vegan"": ""vegan"", ""city"": ""san francisco"", ""time"": ""7 pm"", ""halal"": ""halal""}",no_tool_signal,"Yes, the halal preference is noted! 
+
+The exact note on your confirmed reservation is: **""half the group is vegan, halal preferred""**.",,
+S0026,llama-3.3-70b-instruct,easy_03,2,15,easy,restaurant,post,"{""people"": 2, ""cuisine"": ""french"", ""city"": ""chicago"", ""day"": ""sunday"", ""time"": ""7 PM"", ""occasion"": ""anniversary""}","{""people"": ""2"", ""cuisine"": ""french"", ""french"": ""french"", ""chicago"": ""chicago"", ""time"": ""7 pm"", ""day"": ""saturday"", ""anniversary"": ""anniversary"", ""city"": ""chicago""}",no_tool_signal,The reservation is for Sunday.,,
+S0027,llama-3.3-70b-instruct,medium_01,3,10,medium,restaurant,pre,"{""people"": 7, ""cuisine"": ""steakhouse"", ""city"": ""boston"", ""day"": ""tuesday"", ""time"": ""7 PM"", ""room"": ""private""}","{""people"": ""6"", ""cuisine"": ""american"", ""7"": ""7"", ""vegetarian"": ""vegetarian""}",no_tool_signal,"Yes, all the details are still correct. To recap:
+
+- Party size: 6 people
+- Cuisine: American
+- City: Boston
+- Day: Tuesday
+- Time: 7 PM
+- Dietary restrictions: Vegetarian and kosher options are noted
+
+Your reservation has been confirmed with a confirmation ID of A100CB65-82F. If you need any further assistance or have any other questions, feel free to ask!",,
+S0028,claude-sonnet-4.6,flight_adversarial_03,1,9,adversarial,flight,pre,"{""origin"": ""chicago"", ""destination"": ""cancun"", ""date_out"": ""december 21"", ""date_return"": ""december 28"", ""passengers"": 7, ""cabin"": ""economy""}","{""city"": ""cancun"", ""premium economy"": ""premium economy""}",no_tool_signal,"Got it! I've noted both updates:
+- **Meals:** Child meals for the 3 kids, no specific meal for the adults.
+- **Passengers:** Updated to **7 total (4 adults + 3 children)**.
+
+One last question — do you have any **loyalty programme** or frequent flyer numbers you'd like to apply to this booking?",,
+S0029,claude-sonnet-4.6,easy_06,3,16,easy,restaurant,post,"{""people"": 5, ""cuisine"": ""brunch"", ""city"": ""boston"", ""day"": ""saturday"", ""time"": ""10:30 AM""}","{""people"": ""5"", ""boston"": ""boston"", ""cuisine"": ""brunch"", ""brunch"": ""brunch""}",no_tool_signal,"No, there are no dietary notes on your reservation — vegan was not noted. Would you like me to update the booking to include a vegan requirement?",,
+S0030,claude-sonnet-4.5,flight_conflict_01,3,13,conflicting,flight,post,"{""origin"": ""new york"", ""destination"": ""london"", ""date_out"": ""march 15"", ""date_return"": ""march 22"", ""passengers"": 10, ""cabin"": ""economy plus""}","{""london"": ""london"", ""march 15"": ""march 15"", ""10"": ""10"", ""vegetarian"": ""vegetarian"", ""people"": ""1""}",no_tool_signal,"Thank you for the clarification! HR policy takes precedence - booking Economy Plus for everyone.
+
+However, I still need two more pieces of information before I can call the booking tool:
+
+**1) Loyalty programme:** You mentioned ""company account"" earlier - do you have the programme name/number, or should I proceed without entering loyalty details?
+
+**2) Meal preferences:** You mentioned 3 vegetarian meals. What about the other 7 passengers - standard meals, or do they have other preferences?
+
+Once you provide these final two details, I'll immediately call the booking tool with all the updated parameters including Economy Plus cabin class.",,
+S0031,llama-3.3-70b-instruct,conflict_04,1,15,conflicting,restaurant,post,"{""people"": 15, ""cuisine"": ""korean"", ""city"": ""los angeles"", ""day"": ""thursday"", ""time"": ""6:30 PM""}","{""people"": ""15"", ""15"": ""15"", ""cuisine"": ""korean"", ""korean"": ""korean"", ""los angeles"": ""los angeles"", ""day"": ""thursday"", ""kosher"": ""kosher""}",no_tool_signal,"Yes, the cuisine for your booking is indeed Korean BBQ.",,
+S0032,gemini-3.5-flash,easy_04,1,14,easy,restaurant,post,"{""people"": 3, ""cuisine"": ""mexican"", ""city"": ""austin"", ""day"": ""tomorrow"", ""time"": ""7 PM"", ""dietary"": ""vegetarian""}","{""austin"": ""austin"", ""people"": ""3"", ""cuisine"": ""mexican"", ""mexican"": ""mexican""}",no_tool_signal,"Your reservation has been successfully updated to **7:00 PM** tomorrow. 
+
+Here are your confirmed details:
+*   **Time:** 7:00 PM
+*   **Day:** Tomorrow
+*   **Party Size:** 3 people
+*   **Cuisine:** Mexican
+*   **City:** Austin
+*   **Confirmation ID:** C9BA9780-8BC",,
+S0033,gemini-3.5-flash,conflict_04,3,16,conflicting,restaurant,post,"{""people"": 15, ""cuisine"": ""korean"", ""city"": ""los angeles"", ""day"": ""thursday"", ""time"": ""6:30 PM""}","{""people"": ""15"", ""15"": ""15"", ""los angeles"": ""los angeles"", ""cuisine"": ""korean"", ""city"": ""los angeles"", ""korean"": ""korean"", ""time"": ""6:30 pm"", ""kosher"": ""kosher""}",no_tool_signal,"Yes, the note is included in the booking. It specifies that 4 guests are strictly kosher, will not be eating, and require non-alcoholic drink service only.",,
+S0034,claude-sonnet-4.5,adversarial_01,1,10,adversarial,restaurant,pre,"{""people"": 6, ""cuisine"": ""italian"", ""city"": ""san francisco"", ""day"": ""saturday"", ""time"": ""7 PM"", ""occasion"": ""birthday""}","{""people"": ""7"", ""cuisine"": ""italian"", ""city"": ""san francisco"", ""time"": ""7 pm""}",json_block,"I understand you'd like a private dining room for your birthday celebration. Let me update your reservation with that request.
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 6, ""cuisine"": ""italian"", ""city"": ""san francisco"", ""day"": ""saturday"", ""time"": ""7 PM"", ""notes"": ""one vegan, birthday dinner, private dining room requested""}}
+```",,
+S0035,claude-sonnet-4.6,conflict_02,3,2,conflicting,restaurant,pre,"{""people"": 6, ""cuisine"": ""japanese"", ""city"": ""new york"", ""day"": ""friday"", ""time"": ""8 PM""}",{},no_tool_signal,"Great, a party of 6! What city are you looking to dine in?",,
+S0036,llama-3.3-70b-instruct,easy_06,1,14,easy,restaurant,post,"{""people"": 5, ""cuisine"": ""brunch"", ""city"": ""boston"", ""day"": ""saturday"", ""time"": ""10:30 AM""}","{""cuisine"": ""brunch"", ""brunch"": ""brunch"", ""boston"": ""boston"", ""day"": ""sunday""}",no_tool_signal,"According to the latest booking confirmation, brunch is scheduled for Saturday at 10:30 AM.",,
+S0037,claude-sonnet-4.5,hard_04,3,1,hard,restaurant,pre,"{""people"": 6, ""cuisine"": ""thai"", ""city"": ""portland"", ""day"": ""thursday"", ""time"": ""7:30 PM"", ""allergy"": ""peanut""}",{},no_tool_signal,"I'm here to help you sort out your dinner plans! Let's take it step by step.
+
+First, how many people will be dining?",,
+S0038,gemini-3.5-flash,adversarial_03,2,17,adversarial,restaurant,post,"{""people"": 2, ""cuisine"": ""indian"", ""city"": ""chicago"", ""day"": ""sunday"", ""time"": ""6:30 PM"", ""occasion"": ""anniversary""}","{""people"": ""6"", ""2"": ""2"", ""cuisine"": ""indian"", ""flowers"": ""flowers"", ""indian"": ""indian"", ""chicago"": ""chicago"", ""sunday"": ""sunday""}",no_tool_signal,"Yes, the request to keep the flowers as a surprise is still noted on your reservation!",,
+S0039,claude-sonnet-4.5,easy_04,2,17,easy,restaurant,post,"{""people"": 3, ""cuisine"": ""mexican"", ""city"": ""austin"", ""day"": ""tomorrow"", ""time"": ""7 PM"", ""dietary"": ""vegetarian""}","{""people"": ""3"", ""cuisine"": ""mexican"", ""mexican"": ""mexican"", ""austin"": ""austin"", ""city"": ""austin"", ""time"": ""7 pm"", ""vegetarian"": ""vegetarian""}",no_tool_signal,"I cannot continue without the day of the week. This is a fundamental requirement for the booking system.
+
+I'm designed to help you make an accurate reservation, not to guess at critical information. Booking a table for the wrong day would be a failure of my core function.
+
+**I will wait for you to provide the day of the week.** When you're ready to share that information, I'll immediately complete your booking for:
+- 3 people
+- Mexican cuisine  
+- Austin
+- 7 PM
+- Vegetarian options needed
+
+What day of the week would you like this reservation?",,
+S0040,gemini-3.5-flash,flight_hard_04,2,9,hard,flight,pre,"{""origin"": ""denver"", ""destination"": ""london"", ""passengers"": 2, ""cabin"": ""business"", ""meal"": ""gluten-free""}","{""amsterdam"": ""amsterdam"", ""business"": ""business""}",no_tool_signal,"I cannot proceed with the booking until we resolve the destination. 
+
+We have a conflict between **London** and **Amsterdam**. Which of these two destinations takes priority for this trip?",,
+S0041,gemini-3.5-flash,easy_06,1,9,easy,restaurant,pre,"{""people"": 5, ""cuisine"": ""brunch"", ""city"": ""boston"", ""day"": ""sunday"", ""time"": ""10:30 AM""}","{""boston"": ""boston"", ""city"": ""boston"", ""people"": ""5"", ""cuisine"": ""brunch"", ""day"": ""sunday"", ""brunch"": ""brunch"", ""time"": ""10:30 am"", ""vegan"": ""vegan""}",json_block,"```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 5, ""cuisine"": ""american brunch"", ""city"": ""boston"", ""day"": ""sunday"", ""time"": ""10:30 AM"", ""notes"": ""one vegan""}}
+```",,
+S0042,claude-sonnet-4.5,adversarial_02,1,8,adversarial,restaurant,pre,"{""people"": 11, ""cuisine"": ""mexican"", ""city"": ""austin"", ""day"": ""tuesday"", ""time"": ""12 PM""}","{""people"": ""10"", ""cuisine"": ""mexican""}",no_tool_signal,"Yes, your reservation is confirmed! Here are all the details:
+
+✓ **Confirmation ID:** E5B7054F-D78
+✓ **Party size:** 10 people
+✓ **Cuisine:** Mexican
+✓ **Location:** Austin
+✓ **Day:** Next Tuesday
+✓ **Time:** Noon (12 PM)
+✓ **Special notes:** Two vegetarians, one nut allergy
+
+Your table for 10 at a Mexican restaurant in Austin is all set for next Tuesday at noon. The restaurant has been notified about the two vegetarians and one guest with a nut allergy.
+
+Is there anything else you need help with for this reservation?",,
+S0043,claude-sonnet-4.5,easy_01,1,16,easy,restaurant,post,"{""people"": 3, ""cuisine"": ""italian"", ""city"": ""new york"", ""day"": ""saturday"", ""time"": ""7 PM"", ""dietary"": ""vegetarian""}","{""people"": ""3"", ""cuisine"": ""italian"", ""italian"": ""italian"", ""new york"": ""new york"", ""vegetarian"": ""vegetarian"", ""city"": ""new york""}",no_tool_signal,"Yes, I did note the vegetarian requirement! 
+
+Your reservation includes the note: **""Vegetarian options needed""** to ensure the restaurant can accommodate your guest's dietary needs.
+
+This is confirmed in your booking with confirmation ID 338C9847-E35.",,
+S0044,claude-sonnet-4.5,flight_conflict_01,3,16,conflicting,flight,post,"{""origin"": ""new york"", ""destination"": ""london"", ""date_out"": ""march 15"", ""date_return"": ""march 22"", ""passengers"": 10, ""cabin"": ""economy plus""}","{""london"": ""london"", ""march 15"": ""march 15"", ""10"": ""10"", ""vegetarian"": ""vegetarian"", ""people"": ""1""}",confirmation_after_booking,"We booked **Economy Plus** cabin class for all 10 passengers.
+
+This was in accordance with your HR duty-of-care policy, which requires Economy Plus for flights over 6 hours. Since New York to London is a 7-hour flight, Economy Plus was the correct choice per company policy.
+
+**Booking Confirmation Summary:**
+- **Confirmation ID:** 8F0EACE8-46C
+- **Route:** New York to London (round trip)
+- **Dates:** March 15th - March 22nd
+- **Passengers:** 10
+- **Cabin:** Economy Plus
+- **Baggage:** Carry-on only
+- **Meals:** 3 vegetarian, 7 standard
+- **Notes:** HR duty-of-care policy applied, CFO informed
+
+Your booking is confirmed!",,
+S0045,claude-sonnet-4.6,hard_05,1,6,hard,restaurant,pre,"{""people"": 10, ""city"": ""denver"", ""day"": ""saturday"", ""time"": ""7 PM"", ""dietary"": ""kosher halal""}","{""people"": ""12""}",no_tool_signal,"Good to know — anything except Indian cuisine works!
+
+What **city** will you be dining in?",,
+S0046,gemini-3.5-flash,conflict_04,3,11,conflicting,restaurant,pre,"{""people"": 15, ""cuisine"": ""korean"", ""city"": ""los angeles"", ""day"": ""thursday"", ""time"": ""6:30 PM"", ""dietary"": ""kosher""}","{""people"": ""1"", ""15"": ""15"", ""los angeles"": ""los angeles"", ""cuisine"": ""korean"", ""city"": ""los angeles"", ""korean"": ""korean"", ""time"": ""6:30 pm""}",no_tool_signal,"Before we can proceed or confirm if these details are correct, we need to resolve the conflict regarding the dietary restrictions:
+
+Standard Korean BBQ restaurants cannot provide a certified kosher option or guarantee separate grills. 
+
+Which option takes priority for your team?
+1. **Keep the Korean BBQ booking** (knowing the 4 kosher guests cannot eat the grilled food).
+2. **Change the restaurant/cuisine** to a certified kosher venue in Los Angeles that can accommodate all 15 guests. 
+
+Once you let me know which takes priority, I will update the booking details accordingly!",,
+S0047,llama-3.3-70b-instruct,hard_03,2,14,hard,restaurant,post,"{""people"": 25, ""cuisine"": ""bbq"", ""city"": ""dallas"", ""day"": ""sunday"", ""time"": ""6 PM""}","{""people"": ""25"", ""cuisine"": ""bbq"", ""bbq"": ""bbq"", ""city"": ""austin"", ""time"": ""6 pm"", ""vegan"": ""vegan"", ""celiac"": ""celiac"", ""25"": ""25"", ""live band"": ""live band"", ""cake"": ""cake""}",no_tool_signal,"The event is in Dallas, Texas. I've confirmed the booking, and everything is set for Sunday at 6 PM in Dallas. Your confirmation ID is 97901412-A5E.",,
+S0048,gemini-3.5-flash,flight_hard_01,1,8,hard,flight,pre,"{""origin"": ""miami"", ""destination"": ""singapore"", ""date_out"": ""may 5"", ""date_return"": ""may 19"", ""passengers"": 3, ""cabin"": ""business"", ""stopover"": ""tokyo""}","{""singapore"": ""singapore"", ""business"": ""business""}",no_tool_signal,"Confirmed: Business class for all flights.
+
+How many passengers will be traveling?",,
+S0049,claude-sonnet-4.5,flight_medium_04,3,18,medium,flight,post,"{""origin"": ""san francisco"", ""destination"": ""phoenix"", ""passengers"": 12, ""cabin"": ""economy""}",{},no_tool_signal,"I understand you keep asking me to continue, but I'm unable to move forward without the specific information I've requested multiple times.
+
+**The situation is:** I cannot call the booking tool without valid dates and preferences. Repeatedly asking me to ""continue"" doesn't change this requirement.
+
+**You have three options:**
+
+1. **Provide the missing information** (specific dates, baggage, meals) and I'll immediately book your flights
+
+2. **Tell me you don't have this information yet** and we can pause until you do
+
+3. **Ask me a different question** if there's something else I can help clarify
+
+Which would you prefer?",,
+S0050,claude-sonnet-4.6,flight_medium_01,1,13,medium,flight,post,"{""origin"": ""new york"", ""destination"": ""tokyo"", ""date_out"": ""april 12"", ""date_return"": ""april 20"", ""passengers"": 8, ""cabin"": ""economy""}","{""tokyo"": ""tokyo"", ""vegetarian"": ""vegetarian"", ""vegan"": ""vegan"", ""8"": ""8"", ""gluten"": ""gluten""}",json_block,"Of course! Here's the updated booking:
+
+- **Origin:** New York, JFK
+- **Destination:** Tokyo
+- **Departure:** April 12th *(updated)*
+- **Return:** April 20th
+- **Cabin:** Economy
+- **Passengers:** 8
+- **Baggage:** 1 checked bag each
+- **Meals:** 2 vegetarian, 1 vegan, 1 gluten-free, 4 no preference
+- **Loyalty programmes:** None
+
+Calling the booking tool now with the revised details:
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_flight"", ""params"": {""origin"": ""JFK"", ""destination"": ""Tokyo"", ""date_out"": ""april 12"", ""date_return"": ""april 20"", ""cabin"": ""economy"", ""passengers"": 8, ""baggage"": ""1 checked bag per passenger"", ""meal"": ""2 vegetarian, 1 vegan, 1 gluten-free, 4 no preference"", ""notes"": """"}}
+```",,
+S0051,llama-3.3-70b-instruct,hard_01,1,13,hard,restaurant,post,"{""people"": 10, ""city"": ""miami"", ""day"": ""sunday"", ""time"": ""11 AM"", ""music"": ""live music""}","{""people"": ""8"", ""city"": ""miami"", ""day"": ""saturday"", ""miami"": ""miami"", ""vegan"": ""vegan"", ""gluten"": ""gluten""}",json_block,"Big change indeed! Let's update the parameters accordingly.
+
+We now have:
+
+* Party size: 10
+* Cuisine: Brunch-appropriate (let's go with a general ""brunch"" cuisine, which can include eggs, pancakes, waffles, etc.)
+* City: Miami
+* Day: Sunday
+* Time: 11 AM
+* Dietary restrictions: 1 vegan, 2 gluten-free
+* Additional request: Live music
+
+Here's the revised booking request:
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 10, ""cuisine"": ""brunch"", ""city"": ""miami"", ""day"": ""sunday"", ""time"": ""11 AM"", ""notes"": ""1 vegan, 2 gluten-free, live music""}}
+```
+Let me check availability and book a new table for you.",,
+S0052,claude-sonnet-4.6,medium_02,2,4,medium,restaurant,pre,"{""people"": 12, ""cuisine"": ""korean"", ""city"": ""seattle"", ""day"": ""friday"", ""time"": ""6:30 PM""}","{""people"": ""10"", ""cuisine"": ""korean"", ""korean"": ""korean""}",no_tool_signal,"Perfect, Seattle has some great Korean BBQ spots! What day works best for your team?",,
+S0053,claude-sonnet-4.6,easy_01,2,11,easy,restaurant,pre,"{""people"": 2, ""cuisine"": ""italian"", ""city"": ""new york"", ""day"": ""friday"", ""time"": ""8 PM"", ""dietary"": ""vegetarian""}","{""people"": ""2"", ""cuisine"": ""italian"", ""italian"": ""italian"", ""new york"": ""new york""}",json_block,"Got it! Let me update that and remove the vegetarian note.
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 2, ""cuisine"": ""italian"", ""city"": ""new york"", ""day"": ""friday"", ""time"": ""8 PM"", ""notes"": """"}}
+```",,
+S0054,claude-sonnet-4.6,flight_conflict_02,2,12,conflicting,flight,pre,"{""origin"": ""chicago"", ""destination"": ""tokyo"", ""date_out"": ""september 5"", ""passengers"": 1, ""cabin"": ""business""}","{""chicago"": ""chicago"", ""tokyo"": ""tokyo"", ""economy"": ""economy"", ""vegan"": ""vegan""}",no_tool_signal,"I haven't called the booking tool yet — we still need to resolve the conflict before I can proceed with a booking!
+
+It looks like a tool response may have been pasted in error. Please don't worry — **no booking has been made yet**.
+
+Could you please let me know which option you'd like to go with?
+
+1. **Prioritise the meeting** — Depart September 3rd, economy class
+2. **Prioritise business class** — Depart September 5th, arrive 11 PM (miss the meeting)
+3. **Hybrid approach** — Depart September 3rd, economy class, request an upgrade",,
+S0055,claude-sonnet-4.5,flight_hard_03,1,9,hard,flight,pre,"{""origin"": ""washington dc"", ""destination"": ""nairobi"", ""date_out"": ""september 1"", ""passengers"": 6, ""cabin"": ""economy""}","{""kosher"": ""kosher"", ""vegan"": ""vegan""}",no_tool_signal,"Noted! I have:
+- **Origin:** Washington DC Dulles
+- **Destination:** Nairobi, Kenya
+- **Departure date:** September 1st
+- **Return date:** October 15th (tentative)
+- **Passengers:** 5 researchers
+- **Cabin class:** Economy
+- **Baggage:** 2 checked bags per person for equipment
+- **Meal preferences:** 1 vegan, 1 kosher
+
+Finally, do any of the travelers have a frequent flyer or loyalty programme membership they'd like to use?",,
+S0056,gemini-3.5-flash,flight_medium_03,2,3,medium,flight,pre,"{""destination"": ""rochester"", ""date_out"": ""monday"", ""passengers"": 3}",{},no_tool_signal,"Thank you. So we are looking at flights from Dallas to Rochester, Minnesota. 
+
+What date do you need to depart?",,
+S0057,claude-sonnet-4.6,easy_04,1,3,easy,restaurant,pre,"{""people"": 3, ""cuisine"": ""mexican"", ""city"": ""austin"", ""day"": ""tomorrow"", ""time"": ""12:30 PM"", ""dietary"": ""vegetarian""}","{""people"": ""3""}",no_tool_signal,"Perfect, Austin it is! What type of cuisine are you in the mood for?",,
+S0058,claude-sonnet-4.6,easy_06,2,16,easy,restaurant,post,"{""people"": 5, ""cuisine"": ""brunch"", ""city"": ""boston"", ""day"": ""saturday"", ""time"": ""10:30 AM""}","{""people"": ""5"", ""boston"": ""boston"", ""cuisine"": ""brunch"", ""city"": ""boston"", ""brunch"": ""brunch"", ""vegan"": ""vegan""}",no_tool_signal,"Yes, **one vegan guest** is noted in your reservation. You're all set! Is there anything else I can help you with?",,
+S0059,llama-3.3-70b-instruct,easy_01,2,9,easy,restaurant,pre,"{""people"": 2, ""cuisine"": ""italian"", ""city"": ""new york"", ""day"": ""friday"", ""time"": ""8 PM"", ""dietary"": ""vegetarian""}","{""cuisine"": ""italian"", ""italian"": ""italian"", ""new york"": ""new york""}",no_tool_signal,"Yes, all the details are still correct:
+
+* Party size: 2
+* Cuisine: Italian
+* City: New York
+* Day: Tonight
+* Time: 8 PM
+* Dietary restrictions: None
+
+Your booking remains confirmed with a confirmation ID of A68A0C82-6A3. Is there anything else I can help you with?",,
+S0060,claude-sonnet-4.5,flight_conflict_02,1,10,conflicting,flight,pre,"{""origin"": ""chicago"", ""destination"": ""tokyo"", ""date_out"": ""september 5"", ""passengers"": 1, ""cabin"": ""business""}","{""chicago"": ""chicago"", ""tokyo"": ""tokyo"", ""economy"": ""economy"", ""vegan"": ""vegan""}",no_tool_signal,"You've identified an important **conflict** between your requirements:
+
+- **Meeting requirement**: Arrive by 9 AM on September 5th (requires departing September 3rd, economy only)
+- **Comfort preference**: Business class (only available on flight arriving September 5th at 11 PM - too late)
+
+These two needs are mutually exclusive based on the available flights. Before I proceed with booking, I need to know **which takes priority for you**:
+
+**Option A**: Prioritize making the 9 AM meeting → Book the September 3rd economy flight (arrives in time, but not business class)
+
+**Option B**: Prioritize business class comfort → Book the September 5th business class flight (but you'll miss the 9 AM meeting)
+
+**Option C**: Consider alternatives like:
+- Booking the economy flight to arrive on time, then upgrading if possible
+- Taking a connecting flight that might offer business class and earlier arrival
+- Adjusting the meeting time if feasible
+
+Which is most important to you - **making the meeting on time** or **flying business class**?",,
+S0061,llama-3.3-70b-instruct,conflict_03,1,12,conflicting,restaurant,pre,"{""people"": 20, ""cuisine"": ""indian"", ""city"": ""san francisco"", ""day"": ""saturday"", ""time"": ""7 PM"", ""dietary"": ""vegan halal""}","{""people"": ""20"", ""20"": ""20"", ""cuisine"": ""indian"", ""indian"": ""indian"", ""san francisco"": ""san francisco"", ""vegan"": ""vegan""}",json_block,"Not quite. We've added two new requirements:
+
+* The restaurant must be halal-certified
+* The restaurant must have an extensive vegan menu to cater to the 10 vegan guests
+
+The other details are still the same:
+
+* Party size: 20 people
+* Cuisine: Indian
+* City: San Francisco
+* Day: Next Saturday
+* Time: 7 PM
+* Dietary restrictions: 10 people in the group are vegan
+
+However, I need to update the booking to reflect the new requirements. Let me call the booking tool again to see if we can find a suitable halal-certified Indian restaurant in San Francisco with an extensive vegan menu.
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 20, ""cuisine"": ""indian"", ""city"": ""san francisco"", ""day"": ""saturday"", ""time"": ""7 PM"", ""notes"": ""10 vegans in the group, halal-certified, extensive vegan menu""}}
+```",,
+S0062,claude-sonnet-4.6,flight_adversarial_04,3,19,adversarial,flight,post,"{""origin"": ""portland"", ""destination"": ""amsterdam"", ""date_out"": ""may 4"", ""date_return"": ""may 18"", ""passengers"": 4, ""cabin"": ""economy"", ""meal"": ""diabetic""}","{""economy"": ""economy"", ""people"": ""12"", ""diabetic"": ""diabetic"", ""portland"": ""portland"", ""amsterdam"": ""amsterdam"", ""may 4"": ""may 4"", ""may 18"": ""may 18"", ""4"": ""4""}",no_tool_signal,"Yes, **1 diabetic meal** is noted on the booking.
+
+Is there anything else you'd like to know?",,
+S0063,gemini-3.5-flash,flight_hard_04,3,14,hard,flight,post,"{""origin"": ""denver"", ""destination"": ""amsterdam"", ""passengers"": 2, ""cabin"": ""business"", ""meal"": ""gluten-free""}","{""amsterdam"": ""amsterdam"", ""business"": ""business"", ""2"": ""2"", ""gluten-free"": ""gluten-free""}",no_tool_signal,"To call the booking tool and secure your flights, I need specific calendar dates. 
+
+Could you please tell me **tomorrow's date** (Month and Day)? Once I have that, I can calculate the return date and book this immediately.",,
+S0064,claude-sonnet-4.6,medium_02,2,17,medium,restaurant,post,"{""people"": 12, ""cuisine"": ""korean"", ""city"": ""portland"", ""day"": ""saturday"", ""time"": ""6:30 PM""}","{""people"": ""12"", ""cuisine"": ""korean"", ""korean"": ""korean"", ""vegan"": ""vegan"", ""nut allergy"": ""nut allergy"", ""12"": ""12""}",no_tool_signal,The booking is for **Korean BBQ**. Anything else you'd like to know?,,
+S0065,llama-3.3-70b-instruct,flight_conflict_04,1,10,conflicting,flight,pre,"{""origin"": ""seattle"", ""destination"": ""dubai"", ""date_out"": ""november 10"", ""passengers"": 1, ""cabin"": ""business""}","{""people"": ""1"", ""seattle"": ""seattle"", ""dubai"": ""dubai"", ""november 10"": ""november 10""}",no_tool_signal,"Given the visa restrictions, I will ensure that we only consider booking with either Emirates or Etihad for your Business Class flights, as those are the airlines approved for your entry into Dubai.
+
+To confirm so far: 
+- Origin: Seattle
+- Destination: Dubai
+- Departure Date: November 10th
+- Return Date: November 17th
+- Cabin Class: Business
+- Passengers: 1
+- Baggage: 1 checked bag
+- Meal: No special meal requirements
+- Airline Preference: Emirates or Etihad (due to visa requirements)
+
+Next, are you a member of any loyalty programs (frequent flyer programs) that you'd like to use or earn points with for this trip?",,
+S0066,gemini-3.5-flash,flight_hard_01,2,11,hard,flight,pre,"{""origin"": ""miami"", ""destination"": ""singapore"", ""date_out"": ""may 5"", ""date_return"": ""may 19"", ""passengers"": 3, ""cabin"": ""business"", ""stopover"": ""tokyo""}","{""singapore"": ""singapore"", ""business"": ""business"", ""hindu"": ""hindu"", ""muslim"": ""muslim"", ""2"": ""2""}",no_tool_signal,"Yes, your booking is successfully confirmed! Here are the finalized details of your trip:
+
+*   **Confirmation ID:** 516AD04E-C18
+*   **Route:** Miami to Singapore (Round-trip)
+*   **Departure Date:** May 5
+*   **Return Date:** May 19
+*   **Cabin Class:** Business Class
+*   **Passengers:** 3
+*   **Baggage:** 2 checked bags per passenger
+*   **Meal Preferences:** 1 Hindu meal, 1 Muslim meal, 1 standard meal
+*   **Loyalty Programme:** Singapore Airlines KrisFlyer added for all three passengers
+
+Everything is set and correct. Please let me know if you need to make any changes or have any other questions!",,
+S0067,claude-sonnet-4.6,medium_04,3,15,medium,restaurant,post,"{""people"": 5, ""cuisine"": ""chinese"", ""city"": ""san jose"", ""day"": ""saturday"", ""time"": ""6 PM""}","{""people"": ""5"", ""san jose"": ""san jose"", ""cuisine"": ""chinese"", ""chinese"": ""chinese"", ""5"": ""5"", ""lactose"": ""lactose""}",no_tool_signal,The reservation is for **Saturday**! Let me know if you need any other changes. 😊,,
+S0068,llama-3.3-70b-instruct,medium_06,1,15,medium,restaurant,post,"{""people"": 16, ""cuisine"": ""french"", ""city"": ""washington dc"", ""day"": ""saturday"", ""time"": ""7 PM""}","{""people"": ""16"", ""cuisine"": ""french"", ""french"": ""french"", ""washington dc"": ""washington dc"", ""vegetarian"": ""vegetarian"", ""dairy"": ""dairy"", ""16"": ""16""}",no_tool_signal,There will be 16 people attending the dinner.,,
+S0069,claude-sonnet-4.6,flight_easy_01,3,22,easy,flight,post,"{""origin"": ""new york"", ""destination"": ""los angeles"", ""date_out"": ""saturday"", ""date_return"": ""monday"", ""cabin"": ""economy"", ""passengers"": 1}","{""new york"": ""new york"", ""los angeles"": ""los angeles"", ""checked bag"": ""checked bag"", ""saturday"": ""saturday"", ""monday"": ""monday""}",no_tool_signal,Still here. Still need exact dates. Ready when you are.,,
+S0070,claude-sonnet-4.6,flight_medium_04,3,1,medium,flight,pre,"{""origin"": ""san francisco"", ""destination"": ""las vegas"", ""passengers"": 12, ""cabin"": ""economy""}",{},no_tool_signal,"I'd love to help you book flights for your company offsite trip! Let's get started.
+
+**First question: Where will you be flying from?** (Please share the departure city or airport.)",,
+S0071,claude-sonnet-4.6,adversarial_02,1,12,adversarial,restaurant,pre,"{""people"": 11, ""cuisine"": ""mexican"", ""city"": ""austin"", ""day"": ""tuesday"", ""time"": ""12 PM""}","{""people"": ""11"", ""cuisine"": ""mexican"", ""vegetarian"": ""vegetarian"", ""8"": ""8"", ""city"": ""austin""}",no_tool_signal,"I understand you'd like to continue, but I'm still awaiting the tool response for the updated reservation. I don't want to confirm any details until I have that confirmation.
+
+Could you please share the tool response so I can finalize the updated booking for **11 people**?",,
+S0072,llama-3.3-70b-instruct,flight_medium_03,1,18,medium,flight,post,"{""destination"": ""rochester"", ""date_out"": ""wednesday"", ""passengers"": 3}","{""rochester"": ""rochester"", ""diabetic"": ""diabetic"", ""cuisine"": ""american"", ""3"": ""3"", ""wednesday"": ""wednesday""}",no_tool_signal,"Now that the booking is confirmed, I'd like to provide you with some additional information to ensure a smooth trip.
+
+Please note that since your return date is open, you'll need to contact the airline to confirm your return flight once you have a confirmed date. You can do this by calling the airline's customer service or by managing your booking online.
+
+Additionally, if you need to make any changes to your booking, such as updating your return date or adding additional services like hotel accommodations or car rentals, please let me know and I'll be happy to assist you.
+
+It's also a good idea to check with the airline for any specific requirements or restrictions, such as check-in times, baggage fees, or travel documents.
+
+If you have any questions or concerns, or if there's anything else I can help you with, please don't hesitate to ask.
+
+Is there anything specific you'd like to know or any further assistance I can provide?",,
+S0073,claude-sonnet-4.5,flight_medium_04,1,2,medium,flight,pre,"{""origin"": ""san francisco"", ""destination"": ""las vegas"", ""passengers"": 12, ""cabin"": ""economy""}",{},no_tool_signal,"Great! Flying from San Francisco.
+
+**Next question: Where will you be flying to?** (Which city or airport is the destination for your offsite?)",,
+S0074,llama-3.3-70b-instruct,conflict_01,3,7,conflicting,restaurant,pre,"{""people"": 8, ""cuisine"": ""steakhouse"", ""city"": ""chicago"", ""day"": ""tuesday"", ""time"": ""7 PM"", ""dietary"": ""vegetarian""}","{""people"": ""8"", ""8"": ""8""}",json_block,"So, to confirm, you have a party size of 8 people, you're interested in a steakhouse, you'd like to book in Chicago, you're looking to book for next Tuesday, you'd like to book at 7 PM, and 2 of your guests are vegetarian.
+
+I'll now call the booking tool to see if we can find a suitable option. 
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 8, ""cuisine"": ""steakhouse"", ""city"": ""chicago"", ""day"": ""tuesday"", ""time"": ""7 PM"", ""notes"": ""2 vegetarians""}}
+```",,
+S0075,gemini-3.5-flash,flight_adversarial_01,3,9,adversarial,flight,pre,"{""origin"": ""los angeles"", ""destination"": ""new york"", ""date_out"": ""april 7"", ""date_return"": ""april 11"", ""passengers"": 2, ""cabin"": ""business"", ""meal"": ""kosher""}",{},no_tool_signal,"Got it. I have noted **one kosher meal** and added a request for **lounge access for both passengers** in the notes.
+
+Here is the updated summary:
+* **Origin:** Los Angeles
+* **Destination:** New York JFK
+* **Departure Date:** Monday, April 7th
+* **Return Date:** Friday, April 11th
+* **Cabin Class:** Business Class
+* **Passenger Count:** 2
+* **Baggage:** One checked bag each
+* **Meal:** One kosher meal
+* **Notes:** Lounge access for both passengers
+
+Lastly, do either of the passengers have a **loyalty programme** number or preference they would like to add to this booking?",,
+S0076,claude-sonnet-4.6,conflict_01,3,13,conflicting,restaurant,post,"{""people"": 8, ""cuisine"": ""steakhouse"", ""city"": ""chicago"", ""day"": ""tuesday"", ""time"": ""7 PM"", ""dietary"": ""vegetarian""}","{""people"": ""8"", ""8"": ""8"", ""chicago"": ""chicago"", ""cuisine"": ""steakhouse"", ""steakhouse"": ""steakhouse""}",json_block,"Perfect, that's clear! Booking the traditional steakhouse with a note about the vegetarian requirements right away.
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 8, ""cuisine"": ""steakhouse"", ""city"": ""chicago"", ""day"": ""tuesday"", ""time"": ""7 PM"", ""notes"": ""2 guests are strict vegetarians and require substantial plant-based options. VP is aware.""}}
+```
+
+Once I receive the tool response, I'll confirm all the updated details for you!",,
+S0077,claude-sonnet-4.5,conflict_04,3,16,conflicting,restaurant,post,"{""people"": 15, ""cuisine"": ""korean"", ""city"": ""los angeles"", ""day"": ""thursday"", ""time"": ""6:30 PM""}","{""people"": ""15"", ""cuisine"": ""korean"", ""15"": ""15"", ""korean"": ""korean"", ""city"": ""los angeles"", ""day"": ""thursday"", ""los angeles"": ""los angeles"", ""kosher"": ""kosher""}",no_tool_signal,"Yes, the note about the 4 non-eating guests is included in your reservation. 
+
+The special notes state: **""4 guests won't be eating - need non-alcoholic drink service only (kosher dietary restrictions, eating beforehand)""**
+
+This has been confirmed with your booking.",,
+S0078,claude-sonnet-4.5,flight_easy_01,1,7,easy,flight,pre,"{""origin"": ""new york"", ""destination"": ""los angeles"", ""date_out"": ""friday"", ""date_return"": ""monday"", ""cabin"": ""economy"", ""passengers"": 1}","{""new york"": ""new york"", ""los angeles"": ""los angeles"", ""monday"": ""monday"", ""people"": ""1""}",no_tool_signal,"Great! Economy class it is.
+
+So far:
+- **Origin:** New York JFK
+- **Destination:** Los Angeles
+- **Departure:** Next Friday
+- **Return:** The following Monday
+- **Passengers:** 1
+- **Cabin:** Economy
+
+**What are your baggage requirements?** (Carry-on only, or do you need checked baggage?)",,
+S0079,gemini-3.5-flash,adversarial_02,1,14,adversarial,restaurant,post,"{""people"": 8, ""cuisine"": ""korean"", ""city"": ""houston"", ""day"": ""thursday"", ""time"": ""7 PM"", ""dietary"": ""vegetarian""}","{""people"": ""8"", ""city"": ""austin"", ""cuisine"": ""korean"", ""vegetarian"": ""vegetarian"", ""8"": ""8"", ""korean"": ""korean"", ""houston"": ""houston"", ""thursday"": ""thursday""}",no_tool_signal,"Your new reservation is confirmed! 
+
+To answer your question, the booking is for **8 people**. 
+
+Here are the full details of your confirmed reservation:
+* **Status:** Confirmed
+* **Confirmation ID:** 41BDFEC2-948
+* **Party Size:** 8 people
+* **Cuisine:** Korean BBQ
+* **City:** Houston
+* **Day:** Thursday
+* **Time:** 7:00 PM
+* **Notes:** Two vegetarians",,
+S0080,claude-sonnet-4.5,easy_06,2,6,easy,restaurant,pre,"{""people"": 5, ""cuisine"": ""brunch"", ""city"": ""boston"", ""day"": ""sunday"", ""time"": ""10:30 AM""}","{""people"": ""4"", ""cuisine"": ""brunch"", ""brunch"": ""brunch"", ""boston"": ""boston""}",no_tool_signal,"Perfect! Let me confirm all the details:
+- **4 people**
+- **American cuisine** (brunch)
+- **Boston**
+- **Sunday**
+- **10:30 AM**
+
+Before I book, do you have any **dietary restrictions or special requests** I should note? (If not, just let me know and I'll proceed with the booking)",,
+S0081,claude-sonnet-4.5,flight_medium_02,2,5,medium,flight,pre,"{""origin"": ""los angeles"", ""destination"": ""paris"", ""date_out"": ""june 1"", ""date_return"": ""june 14"", ""passengers"": 2, ""cabin"": ""business""}","{""honeymoon"": ""honeymoon"", ""los angeles"": ""los angeles"", ""paris"": ""paris""}",no_tool_signal,"Perfect! A lovely two-week honeymoon.
+
+So far I have:
+- **Origin:** Los Angeles (LAX)
+- **Destination:** Paris
+- **Departure date:** June 1st
+- **Return date:** June 14th
+
+**Which cabin class would you prefer?** (Economy, Premium Economy, Business, or First Class?)",,
+S0082,claude-sonnet-4.5,flight_hard_03,1,8,hard,flight,pre,"{""origin"": ""washington dc"", ""destination"": ""nairobi"", ""date_out"": ""september 1"", ""passengers"": 6, ""cabin"": ""economy""}",{},no_tool_signal,"Perfect! I have:
+- **Origin:** Washington DC Dulles
+- **Destination:** Nairobi, Kenya
+- **Departure date:** September 1st
+- **Return date:** October 15th (tentative)
+- **Passengers:** 5 researchers
+- **Cabin class:** Economy
+- **Baggage:** 2 checked bags per person for equipment
+
+Do you have any meal preferences for the flight? (vegetarian, vegan, kosher, halal, gluten-free, or no special requirements)",,
+S0083,claude-sonnet-4.5,flight_conflict_04,2,5,conflicting,flight,pre,"{""origin"": ""seattle"", ""destination"": ""dubai"", ""date_out"": ""november 10"", ""passengers"": 1, ""cabin"": ""business""}","{""seattle"": ""seattle"", ""dubai"": ""dubai""}",no_tool_signal,"Perfect! So you'll be traveling:
+- **From:** Seattle
+- **To:** Dubai
+- **Departing:** November 10th
+- **Returning:** November 17th
+- **Passengers:** 1 (solo trip)
+
+Now, **which cabin class would you prefer?** (Economy, Premium Economy, Business, or First Class?)",,
+S0084,claude-sonnet-4.5,medium_01,2,16,medium,restaurant,post,"{""people"": 7, ""cuisine"": ""steakhouse"", ""city"": ""new york"", ""day"": ""thursday"", ""time"": ""7 PM"", ""room"": ""private""}","{""people"": ""7"", ""cuisine"": ""steakhouse"", ""7"": ""7"", ""vegetarian"": ""vegetarian"", ""time"": ""7 pm"", ""city"": ""boston"", ""day"": ""tuesday"", ""pescatarian"": ""pescatarian"", ""private"": ""private""}",no_tool_signal,"Yes, the reservation includes a **private room** as requested. This was noted in the booking details to accommodate your business dinner.",,
+S0085,claude-sonnet-4.5,easy_06,1,16,easy,restaurant,post,"{""people"": 5, ""cuisine"": ""brunch"", ""city"": ""boston"", ""day"": ""saturday"", ""time"": ""10:30 AM""}","{""people"": ""5"", ""cuisine"": ""brunch"", ""brunch"": ""brunch"", ""boston"": ""boston"", ""city"": ""boston"", ""time"": ""10:30 am"", ""vegan"": ""vegan"", ""day"": ""sunday""}",no_tool_signal,"Yes, **one person is vegan** is noted in your reservation. The restaurant has been informed of this dietary requirement.",,
+S0086,llama-3.3-70b-instruct,flight_adversarial_02,1,14,adversarial,flight,post,"{""origin"": ""new york"", ""destination"": ""geneva"", ""date_out"": ""june 5"", ""date_return"": ""june 14"", ""passengers"": 5, ""cabin"": ""economy plus""}","{""people"": ""5"", ""vegan"": ""vegan"", ""wheelchair"": ""wheelchair"", ""5"": ""5""}",no_tool_signal,The origin is New York JFK.,,
+S0087,llama-3.3-70b-instruct,flight_adversarial_02,1,9,adversarial,flight,pre,"{""origin"": ""boston"", ""destination"": ""zurich"", ""date_out"": ""june 2"", ""date_return"": ""june 9"", ""passengers"": 4, ""cabin"": ""economy""}",{},no_tool_signal,"I've noted that one of the researchers will require wheelchair assistance at both Boston and Zurich airports. I'll also update the meal request to reflect that two of the researchers will require vegan meals. Here's the updated information:
+
+* Origin: Boston
+* Destination: Zurich
+* Departure Date: June 2nd
+* Return Date: June 9th
+* Cabin Class: Economy
+* Passenger Count: 4
+* Baggage: 8 checked bags (2 per person)
+* Meal: 2 vegan meals
+* Special Assistance: Wheelchair assistance required for 1 researcher at both Boston and Zurich airports
+
+Next, I'd like to know if any of the researchers are members of a loyalty program that they'd like to use for this booking?",,
+S0088,gemini-3.5-flash,flight_hard_03,2,13,hard,flight,post,"{""origin"": ""washington dc"", ""destination"": ""dar es salaam"", ""date_out"": ""september 3"", ""passengers"": 6, ""cabin"": ""economy""}","{""kosher"": ""kosher"", ""vegan"": ""vegan"", ""6"": ""6"", ""shellfish"": ""shellfish""}",json_block,"I have updated all the parameters for your research expedition to reflect the new destination and departure date. 
+
+Here are the revised details:
+* **Origin:** Washington DC Dulles (IAD)
+* **Destination:** Dar es Salaam, Tanzania (DAR)
+* **Departure Date:** September 3rd
+* **Return Date:** October 15th
+* **Cabin Class:** Economy
+* **Passengers:** 6
+* **Baggage:** 2 checked bags per person
+* **Meals:** 1 Vegan, 1 Kosher, 1 Shellfish Allergy, 3 Standard
+
+I am calling the booking tool now with these updated details:
+
+```json
+{
+  ""action"": ""call_tool"",
+  ""tool"": ""book_flight"",
+  ""params"": {
+    ""origin"": ""Washington DC Dulles"",
+    ""destination"": ""Dar es Salaam"",
+    ""date_out"": ""September 3rd"",
+    ""date_return"": ""October 15th"",
+    ""cabin"": ""economy"",
+    ""passengers"": 6,
+    ""baggage"": ""2 checked bags per person"",
+    ""meal"": ""1 vegan, 1 kosher, 1 shellfish allergy"",
+    ""notes"": ""Research expedition. One passenger has a severe shellfish allergy.""
+  }
+}
+```",,
+S0089,llama-3.3-70b-instruct,flight_adversarial_02,2,17,adversarial,flight,post,"{""origin"": ""new york"", ""destination"": ""geneva"", ""date_out"": ""june 5"", ""date_return"": ""june 14"", ""passengers"": 5, ""cabin"": ""economy plus""}",{},no_tool_signal,There are 5 passengers traveling on this revised flight itinerary.,,
+S0090,llama-3.3-70b-instruct,medium_06,2,13,medium,restaurant,post,"{""people"": 16, ""cuisine"": ""french"", ""city"": ""washington dc"", ""day"": ""saturday"", ""time"": ""7 PM""}","{""people"": ""16"", ""cuisine"": ""french"", ""french"": ""french"", ""washington dc"": ""washington dc"", ""vegetarian"": ""vegetarian"", ""dairy"": ""dairy""}",json_block,"Let me update the details of your booking:
+
+* Party size: 16 people
+* Cuisine: French or Contemporary American
+* City: Washington DC
+* Day: Saturday
+* Time: 7 PM
+* Dietary restrictions: 2 vegetarians, 1 dairy-free
+* Special requests: Private room (previously had surprise cake and toast, but that's been cancelled)
+
+I'll call the booking tool again to update the reservation.
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 16, ""cuisine"": ""french or contemporary american"", ""city"": ""washington dc"", ""day"": ""saturday"", ""time"": ""7 PM"", ""notes"": ""2 vegetarians, 1 dairy-free, private room""}}
+```",,
+S0091,claude-sonnet-4.6,hard_04,3,8,hard,restaurant,pre,"{""people"": 6, ""cuisine"": ""thai"", ""city"": ""portland"", ""day"": ""thursday"", ""time"": ""7:30 PM"", ""allergy"": ""peanut""}","{""people"": ""5"", ""portland"": ""portland"", ""cuisine"": ""thai""}",no_tool_signal,"I'd love to keep moving forward, but I do need a **day** for the reservation before I can book anything. What day are you thinking — this weekend, a weekday, or something else?",,
+S0092,llama-3.3-70b-instruct,flight_adversarial_03,3,14,adversarial,flight,post,"{""origin"": ""miami"", ""destination"": ""costa rica"", ""date_out"": ""december 26"", ""date_return"": ""january 3"", ""passengers"": 7, ""cabin"": ""premium economy""}","{""people"": ""7"", ""7"": ""7"", ""child meal"": ""child meal""}",no_tool_signal,The departure city for your revised booking is Miami.,,
+S0093,gemini-3.5-flash,flight_medium_01,3,14,medium,flight,post,"{""origin"": ""new york"", ""destination"": ""tokyo"", ""date_out"": ""april 12"", ""date_return"": ""april 20"", ""passengers"": 8, ""cabin"": ""economy""}","{""tokyo"": ""tokyo"", ""vegetarian"": ""vegetarian"", ""vegan"": ""vegan"", ""gluten"": ""gluten"", ""8"": ""8"", ""april 12"": ""april 12""}",no_tool_signal,"Your confirmed departure date is **April 12th**. 
+
+Here is a quick summary of your updated booking (Confirmation ID: **4EA19F15-17C**):
+* **Departure:** April 12th from New York (JFK)
+* **Return:** April 20th from Tokyo
+* **Passengers:** 8 passengers (Economy)",,
+S0094,claude-sonnet-4.6,flight_hard_03,1,13,hard,flight,post,"{""origin"": ""washington dc"", ""destination"": ""dar es salaam"", ""date_out"": ""september 3"", ""passengers"": 6, ""cabin"": ""economy""}","{""kosher"": ""kosher"", ""vegan"": ""vegan"", ""6"": ""6"", ""shellfish"": ""shellfish""}",json_block,"Got it! Here's what's changing:
+
+- **Destination:** Nairobi (NBO) → **Dar es Salaam, Tanzania (DAR)**
+- **Departure:** September 1st → **September 3rd**
+- Everything else remains the same
+
+Calling the booking tool now with all updated details:
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_flight"", ""params"": {""origin"": ""washington dc dulles"", ""destination"": ""dar es salaam"", ""date_out"": ""september 3"", ""date_return"": ""october 15"", ""cabin"": ""economy"", ""passengers"": 6, ""baggage"": ""2 checked bags per passenger (12 total)"", ""meal"": ""1 vegan, 1 kosher, 1 shellfish-free, 3 standard"", ""notes"": ""open-ended return date, tentatively october 15; shellfish allergy for one passenger - please flag to airline""}}
+```
+
+Awaiting the tool response — I'll confirm all details once it comes through!",,
+S0095,llama-3.3-70b-instruct,hard_03,3,16,hard,restaurant,post,"{""people"": 25, ""cuisine"": ""bbq"", ""city"": ""dallas"", ""day"": ""sunday"", ""time"": ""6 PM""}","{""people"": ""25"", ""cuisine"": ""american"", ""vegan"": ""vegan"", ""celiac"": ""celiac""}",no_tool_signal,The event is scheduled for 25 people. We had previously updated the party size from 20 to 25 to accommodate the additional guests.,,
+S0096,llama-3.3-70b-instruct,easy_06,2,6,easy,restaurant,pre,"{""people"": 5, ""cuisine"": ""brunch"", ""city"": ""boston"", ""day"": ""sunday"", ""time"": ""10:30 AM""}","{""people"": ""4"", ""cuisine"": ""brunch"", ""brunch"": ""brunch"", ""boston"": ""boston"", ""city"": ""boston"", ""day"": ""sunday""}",json_block,"10:30 AM on Sunday. So, to confirm, I have:
+
+* Party size: 4
+* Cuisine: American brunch
+* City: Boston
+* Day: Sunday
+* Time: 10:30 AM
+
+Now, I'll check availability for you. 
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 4, ""cuisine"": ""american brunch"", ""city"": ""boston"", ""day"": ""sunday"", ""time"": ""10:30 AM"", ""notes"": """"}}
+```",,
+S0097,claude-sonnet-4.6,hard_06,2,3,hard,restaurant,pre,"{""people"": 16, ""city"": ""houston"", ""day"": ""saturday"", ""time"": ""6:30 PM"", ""dietary"": ""halal""}","{""people"": ""14""}",no_tool_signal,"Great, **Houston** it is!
+
+What type of cuisine are you in the mood for?",,
+S0098,claude-sonnet-4.6,flight_easy_02,1,12,easy,flight,pre,"{""origin"": ""chicago"", ""destination"": ""miami"", ""date_out"": ""december 20"", ""date_return"": ""december 27"", ""passengers"": 2, ""cabin"": ""economy plus""}","{""chicago"": ""chicago"", ""miami"": ""miami"", ""vegetarian"": ""vegetarian"", ""economy plus"": ""economy plus""}",no_tool_signal,"That's great to hear — everything is confirmed! ✅ Your booking reference is **C1502AC1-101**, so make sure to keep that handy.
+
+Is there anything else I can help you with, such as hotel recommendations or travel tips for Miami? 😊",,
+S0099,llama-3.3-70b-instruct,flight_conflict_04,2,14,conflicting,flight,post,"{""origin"": ""seattle"", ""destination"": ""dubai"", ""date_out"": ""november 10"", ""passengers"": 1, ""cabin"": ""business""}","{""people"": ""1""}",no_tool_signal,"According to the TOOL_RESPONSE, the booking details don't explicitly mention the airline as ""Emirates"", but since we specified ""Emirates direct"" in the notes and the origin and destination match a typical Emirates route, it's likely that the booking is indeed on Emirates.
+
+However, to confirm this with absolute certainty, I would recommend verifying the airline directly with the booking confirmation ID: C4DF538D-6A6.
+
+Would you like me to simulate a verification step to confirm that the booking is indeed on Emirates?",,
+S0100,llama-3.3-70b-instruct,flight_medium_01,3,1,medium,flight,pre,"{""origin"": ""new york"", ""destination"": ""tokyo"", ""date_out"": ""april 10"", ""date_return"": ""april 20"", ""passengers"": 8, ""cabin"": ""economy""}",{},no_tool_signal,"To get started, can you please tell me what city or airport you'll be departing from for your trip?",,
+S0101,gemini-3.5-flash,easy_06,3,17,easy,restaurant,post,"{""people"": 5, ""cuisine"": ""brunch"", ""city"": ""boston"", ""day"": ""saturday"", ""time"": ""10:30 AM""}","{""cuisine"": ""brunch"", ""brunch"": ""brunch"", ""boston"": ""boston"", ""people"": ""11"", ""city"": ""boston""}",no_tool_signal,"To book your Saturday brunch in Boston for 5 people, I still need to know:
+
+1. What **time** would you like to dine?
+2. What **cuisine** (e.g., American, French, Italian) do you prefer?
+
+Please provide these details so I can call the booking tool for you.",,
+S0102,gemini-3.5-flash,medium_01,3,3,medium,restaurant,pre,"{""people"": 7, ""cuisine"": ""steakhouse"", ""city"": ""boston"", ""day"": ""tuesday"", ""time"": ""7 PM"", ""room"": ""private""}",{},no_tool_signal,"Got it, a party of 6 people in Boston. 
+
+What type of cuisine are you and your colleagues in the mood for?",,
+S0103,claude-sonnet-4.5,flight_hard_02,1,14,hard,flight,post,"{""destination"": ""cape town"", ""passengers"": 14, ""date_return"": ""july 24""}","{""cape town"": ""cape town"", ""july 24"": ""july 24"", ""people"": ""2"", ""vegetarian"": ""vegetarian"", ""child meal"": ""child meal"", ""14"": ""14"", ""july 13"": ""july 13""}",no_tool_signal,"I need the following information for the **London group** (4 passengers, departing July 13th to Cape Town, returning July 24th, Economy class):
+
+1. **Baggage preference**: Checked baggage or carry-on only?
+2. **Meal preferences**: Any special meals needed?
+3. **Loyalty program**: Any frequent flyer memberships?",,
+S0104,claude-sonnet-4.5,conflict_04,2,10,conflicting,restaurant,pre,"{""people"": 15, ""cuisine"": ""korean"", ""city"": ""los angeles"", ""day"": ""thursday"", ""time"": ""6:30 PM"", ""dietary"": ""kosher""}","{""people"": ""15"", ""cuisine"": ""korean"", ""15"": ""15"", ""korean"": ""korean"", ""los angeles"": ""los angeles"", ""city"": ""los angeles"", ""time"": ""6:30 pm""}",no_tool_signal,"Thank you for bringing this up - this is an important conflict I need to clarify.
+
+You have **conflicting requirements**:
+1. The team wants **Korean BBQ** (which typically isn't kosher-certified and involves mixed grilling)
+2. Some guests need **certified kosher options** with separate preparation
+
+Unfortunately, traditional Korean BBQ restaurants generally cannot accommodate strict kosher requirements because:
+- They're not kosher-certified
+- Meat and other items share the same grills
+- Cross-contamination is inherent to the dining style
+
+**I need to know which takes priority:**
+
+**Option A:** Keep the Korean BBQ reservation and the kosher guests would need to eat beforehand or bring their own certified kosher food (if the restaurant allows)
+
+**Option B:** Change to a different cuisine that can better accommodate kosher dietary needs, or find a kosher-certified restaurant
+
+**Option C:** Split into two separate reservations - one for Korean BBQ and one at a kosher restaurant
+
+Which approach would work best for your team event?",,
+S0105,llama-3.3-70b-instruct,flight_adversarial_03,2,4,adversarial,flight,pre,"{""origin"": ""chicago"", ""destination"": ""cancun"", ""date_out"": ""december 21"", ""date_return"": ""december 28"", ""passengers"": 7, ""cabin"": ""economy""}",{},no_tool_signal,"You're planning a holiday trip around Christmas time. I've got that noted.
+
+1. **Origin**: Chicago
+2. **Destination**: Cancun
+3. **Departure Date**: December 21st
+
+Next, will you be returning on a specific date, or do you have some flexibility with your return? What is your preferred return date?",,
+S0106,gemini-3.5-flash,hard_03,2,14,hard,restaurant,post,"{""people"": 25, ""cuisine"": ""bbq"", ""city"": ""dallas"", ""day"": ""sunday"", ""time"": ""6 PM""}","{""people"": ""25"", ""cuisine"": ""bbq"", ""city"": ""austin"", ""bbq"": ""bbq"", ""time"": ""6 pm"", ""vegan"": ""vegan"", ""celiac"": ""celiac"", ""25"": ""25"", ""live band"": ""live band"", ""cake"": ""cake""}",no_tool_signal,"The event is in **Dallas**, Texas. 
+
+Your updated reservation is fully confirmed with the following details:
+* **City:** Dallas
+* **Day:** Next Sunday
+* **Time:** 6:00 PM
+* **Party Size:** 25 people
+* **Cuisine:** BBQ/American
+* **Dietary & Special Requests:** 3 vegans, 2 nut allergies, 1 celiac, live band requested, custom cake requested
+* **Confirmation ID:** 1A717884-048",,
+S0107,gemini-3.5-flash,easy_03,1,13,easy,restaurant,post,"{""people"": 2, ""cuisine"": ""french"", ""city"": ""chicago"", ""day"": ""sunday"", ""time"": ""7 PM"", ""occasion"": ""anniversary""}","{""chicago"": ""chicago"", ""people"": ""2"", ""city"": ""chicago"", ""cuisine"": ""french"", ""french"": ""french"", ""anniversary"": ""anniversary""}",json_block,"```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 2, ""cuisine"": ""french"", ""city"": ""chicago"", ""day"": ""sunday"", ""time"": ""7 PM"", ""notes"": ""window table if possible — it is our anniversary""}}
+```",,
+S0108,llama-3.3-70b-instruct,flight_hard_01,2,5,hard,flight,pre,"{""origin"": ""miami"", ""destination"": ""singapore"", ""date_out"": ""may 5"", ""date_return"": ""may 19"", ""passengers"": 3, ""cabin"": ""business"", ""stopover"": ""tokyo""}",{},no_tool_signal,"So, to recap: your origin is Miami, your destination is Singapore, and your departure date is May 5th. Next, will you be returning to Miami, or do you have a different return plan in mind? If so, what's your return date?",,
+S0109,gemini-3.5-flash,conflict_03,1,9,conflicting,restaurant,pre,"{""people"": 20, ""cuisine"": ""indian"", ""city"": ""san francisco"", ""day"": ""saturday"", ""time"": ""7 PM"", ""dietary"": ""vegan halal""}","{""people"": ""20"", ""20"": ""20"", ""san francisco"": ""san francisco"", ""cuisine"": ""indian"", ""city"": ""san francisco"", ""time"": ""7 pm"", ""indian"": ""indian""}",no_tool_signal,"I have updated your reservation notes to reflect that half of the group is vegan. 
+
+Here are your updated booking details:
+*   **Party Size:** 20 people
+*   **Cuisine:** Indian
+*   **Location:** San Francisco
+*   **Day:** Next Saturday
+*   **Time:** 7:00 PM
+*   **Notes:** Half the group is vegan
+
+Everything is all set for your celebration! Please let me know if you need to make any other changes.",,
+S0110,claude-sonnet-4.5,easy_05,2,8,easy,restaurant,pre,"{""people"": 2, ""cuisine"": ""thai"", ""city"": ""seattle"", ""day"": ""wednesday"", ""time"": ""6 PM""}","{""people"": ""2"", ""cuisine"": ""thai"", ""thai"": ""thai"", ""seattle"": ""seattle"", ""gluten"": ""gluten""}",json_block,"I'll update the reservation to include both dietary restrictions. Let me rebook with the shellfish restriction added:
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 2, ""cuisine"": ""thai"", ""city"": ""seattle"", ""day"": ""wednesday"", ""time"": ""6 PM"", ""notes"": ""gluten-free needed, no shellfish""}}
+```",,
+S0111,gemini-3.5-flash,flight_conflict_02,1,3,conflicting,flight,pre,"{""origin"": ""chicago"", ""destination"": ""tokyo"", ""date_out"": ""september 5"", ""passengers"": 1, ""cabin"": ""business""}","{""chicago"": ""chicago""}",no_tool_signal,"Understood, flying from Chicago to Tokyo. 
+
+What date would you like to depart for Tokyo?",,
+S0112,claude-sonnet-4.5,adversarial_02,3,11,adversarial,restaurant,pre,"{""people"": 11, ""cuisine"": ""mexican"", ""city"": ""austin"", ""day"": ""tuesday"", ""time"": ""12 PM""}","{""people"": ""11"", ""cuisine"": ""mexican"", ""city"": ""austin"", ""day"": ""tuesday"", ""vegetarian"": ""vegetarian"", ""8"": ""8""}",no_tool_signal,"I apologize for the confusion. I called the booking tool to update your reservation from 10 to 11 people, but I haven't received the tool response yet. 
+
+Let me wait for the system to confirm whether the updated booking for **11 people** (instead of 10) has been successfully processed. Once I get that confirmation, I'll share the updated details with you.
+
+Could you provide the tool response for the updated booking?",,
+S0113,claude-sonnet-4.6,flight_hard_01,3,14,hard,flight,post,"{""origin"": ""miami"", ""destination"": ""singapore"", ""date_out"": ""may 7"", ""date_return"": ""may 19"", ""passengers"": 2, ""cabin"": ""business"", ""stopover"": ""tokyo""}","{""singapore"": ""singapore"", ""business"": ""business"", ""2"": ""2"", ""people"": ""1"", ""may 7"": ""may 7"", ""tokyo"": ""tokyo"", ""hindu"": ""hindu"", ""muslim"": ""muslim""}",no_tool_signal,"I need to know which two meals to keep before I can call the tool — could you confirm which **two of the three meal preferences** remain for the 2 passengers?
+
+- Hindu meal
+- Muslim meal
+- Standard meal",,
+S0114,llama-3.3-70b-instruct,flight_conflict_02,3,16,conflicting,flight,post,"{""origin"": ""chicago"", ""destination"": ""tokyo"", ""date_out"": ""september 3"", ""passengers"": 1, ""cabin"": ""economy""}","{""chicago"": ""chicago"", ""tokyo"": ""tokyo"", ""vegan"": ""vegan""}",no_tool_signal,"Yes, the vegan meal preference is still noted. According to the booking confirmation, a vegan meal has been requested for your flights.",,
+S0115,claude-sonnet-4.5,medium_01,3,3,medium,restaurant,pre,"{""people"": 7, ""cuisine"": ""steakhouse"", ""city"": ""boston"", ""day"": ""tuesday"", ""time"": ""7 PM"", ""room"": ""private""}","{""people"": ""6""}",no_tool_signal,"Great! Let's go with **steakhouse** for your group of 6.
+
+Now, **which city would you like to make this reservation in?**",,
+S0116,claude-sonnet-4.6,conflict_03,2,12,conflicting,restaurant,pre,"{""people"": 20, ""cuisine"": ""indian"", ""city"": ""san francisco"", ""day"": ""saturday"", ""time"": ""7 PM"", ""dietary"": ""vegan halal""}","{""people"": ""20"", ""20"": ""20"", ""cuisine"": ""indian"", ""indian"": ""indian"", ""san francisco"": ""san francisco"", ""vegan"": ""vegan"", ""city"": ""san francisco"", ""halal"": ""halal""}",no_tool_signal,"I'd love to continue, but I do need your help resolving the conflict I flagged before I can proceed with an accurate booking:
+
+**If we can't find a restaurant that is both halal-certified AND has an extensive vegan menu, which requirement takes priority?**
+
+1. 🥩 **Halal certification** (for your uncle)
+2. 🌱 **Extensive vegan menu** (for your vegan guests)
+
+I don't want to book something that doesn't meet your needs, so your answer here is important before I move forward! 😊",,
+S0117,llama-3.3-70b-instruct,flight_hard_02,3,10,hard,flight,pre,"{""destination"": ""cape town"", ""passengers"": 14, ""date_return"": ""july 24""}","{""cape town"": ""cape town"", ""july 24"": ""july 24"", ""vegetarian"": ""vegetarian"", ""child meal"": ""child meal""}",json_parse_error:Extra data: line 2 column 1 (char 322),"So, some of the family members are part of the British Airways Executive Club loyalty program, while others may not be part of any loyalty program or may be part of a different program. Let me confirm what I have so far:
+
+- Origin: New York (for some) and London (for others)
+- Destination: Cape Town
+- Departure dates: July 10th (New York group) and July 11th (London group)
+- Return date: July 24th
+- Cabin class: Economy
+- Total passengers: 12 (8 from New York, 4 from London)
+- Baggage: 1 checked bag per person
+- Meal preferences: 3 vegetarian meals, 1 child meal (for a 5-year-old)
+- Loyalty program: Some family members are part of the British Airways Executive Club
+
+I think I have all the necessary information now. I'll go ahead and call the booking tool to book the flights. 
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_flight"", ""params"": {""origin"": ""New York"", ""destination"": ""Cape Town"", ""date_out"": ""July 10"", ""date_return"": ""July 24"", ""cabin"": ""economy"", ""passengers"": 8, ""baggage"": ""1 checked bag"", ""meal"": ""3 vegetarian, 1 child"", ""notes"": ""BA Executive Club loyalty program for some passengers""}}
+{""action"": ""call_tool"", ""tool"": ""book_flight"", ""params"": {""origin"": ""London"", ""destination"": ""Cape Town"", ""date_out"": ""July 11"", ""date_return"": ""July 24"", ""cabin"": ""economy"", ""passengers"": 4, ""baggage"": ""1 checked bag"", ""meal"": ""3 vegetarian, 1 child"", ""notes"": ""BA Executive Club loyalty program for some passengers""}}
+```",,
+S0118,gemini-3.5-flash,adversarial_04,2,8,adversarial,restaurant,pre,"{""people"": 25, ""cuisine"": ""bbq"", ""city"": ""dallas"", ""day"": ""saturday"", ""time"": ""6 PM""}","{""people"": ""25"", ""city"": ""dallas"", ""cuisine"": ""bbq"", ""vegan"": ""vegan"", ""gluten"": ""gluten""}",no_tool_signal,"Yes, everything is confirmed! Here are the details of your booking:
+
+* **Status:** Confirmed
+* **Confirmation ID:** F3210B22-C9A
+* **Party Size:** 25 people
+* **Cuisine:** BBQ
+* **Location:** Dallas
+* **Day:** Next Saturday
+* **Time:** 6:00 PM
+* **Dietary Restrictions:** 5 vegans, 2 with gluten intolerance
+
+Please let me know if you need to make any changes or if there's anything else I can help you with!",,
+S0119,gemini-3.5-flash,medium_05,1,11,medium,restaurant,pre,"{""people"": 8, ""cuisine"": ""italian"", ""city"": ""chicago"", ""day"": ""thursday"", ""time"": ""12 PM""}","{""people"": ""8"", ""chicago"": ""chicago"", ""cuisine"": ""italian"", ""italian"": ""italian"", ""city"": ""chicago"", ""nut allergy"": ""nut allergy""}",no_tool_signal,"Yes, all the details are updated and confirmed! Here is your finalized booking information:
+
+*   **Status:** Confirmed
+*   **Party Size:** 8 people
+*   **City:** Chicago
+*   **Cuisine:** Italian or American
+*   **Day:** Next Thursday
+*   **Time:** 12:00 PM (noon)
+*   **Dietary Restrictions/Notes:** Two vegetarians, severe tree nut allergy (the kitchen has been notified)
+
+You are all set for your team lunch! Let me know if you need anything else.",,
+S0120,claude-sonnet-4.6,medium_02,3,10,medium,restaurant,pre,"{""people"": 12, ""cuisine"": ""korean"", ""city"": ""seattle"", ""day"": ""friday"", ""time"": ""6:30 PM""}","{""people"": ""10"", ""cuisine"": ""korean"", ""korean"": ""korean"", ""vegan"": ""vegan"", ""nut allergy"": ""nut allergy""}",json_block,"Got it! I have two updates to make:
+
+- **Party size:** increased from 10 to 12
+- **Budget:** $30 per person max
+
+Let me rebook with these updated details now.
+
+```json
+{""action"": ""call_tool"", ""tool"": ""book_table"", ""params"": {""people"": 12, ""cuisine"": ""korean bbq"", ""city"": ""seattle"", ""day"": ""next friday"", ""time"": ""6:30 PM"", ""notes"": ""2 vegans, 1 nut allergy, budget $30 per person max""}}
+```",,

@@ -1,0 +1,11 @@
+scenario_id,model,run_idx,difficulty,domain,pivot_turn,turns_used,booking_done,early_booking_turn,first_hall_turn,total_hallucinations,hallucination_types,latency_total_s
+easy_01,gemma-3-12b-it,1,easy,restaurant,13,16,True,6.0,11.0,1,"[""PARAM_DRIFT""]",12.028
+flight_easy_01,gemma-3-12b-it,1,easy,flight,13,22,False,,,0,[],24.273
+medium_03,gemma-3-12b-it,1,medium,restaurant,13,17,True,7.0,,0,[],15.648
+flight_medium_02,gemma-3-12b-it,1,medium,flight,13,16,True,11.0,,0,[],14.499
+hard_01,gemma-3-12b-it,1,hard,restaurant,13,17,True,,,0,[],15.36
+flight_hard_03,gemma-3-12b-it,1,hard,flight,13,17,True,11.0,,0,[],18.099
+conflict_03,gemma-3-12b-it,1,conflicting,restaurant,13,22,True,7.0,,0,[],20.25
+flight_conflict_02,gemma-3-12b-it,1,conflicting,flight,13,16,True,12.0,,0,[],16.042
+adversarial_01,gemma-3-12b-it,1,adversarial,restaurant,13,22,True,7.0,11.0,1,"[""PARAM_DRIFT""]",14.735
+flight_adversarial_01,gemma-3-12b-it,1,adversarial,flight,13,20,True,12.0,,0,[],16.171

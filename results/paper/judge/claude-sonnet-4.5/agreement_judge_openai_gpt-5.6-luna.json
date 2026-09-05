@@ -1,0 +1,111 @@
+{
+  "n_turns": 2415,
+  "judge_parse_rate": 0.9991718426501035,
+  "parsed_only": {
+    "n_turns": 2413,
+    "label_agreement": 0.9229175300455864,
+    "label_kappa": 0.8361488342683452
+  },
+  "label_agreement": 0.9221532091097309,
+  "label_kappa": 0.8345892218858695,
+  "binary_agreement": 0.9726708074534162,
+  "binary_kappa": 0.934116489684905,
+  "confusion": {
+    "NONE": {
+      "NONE": 1673,
+      "PARAM_DRIFT": 3,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 6,
+      "CONFIDENT_CONFAB": 2,
+      "MEMORY_COLLAPSE": 31
+    },
+    "PARAM_DRIFT": {
+      "NONE": 1,
+      "PARAM_DRIFT": 142,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "PREMATURE_COMMIT": {
+      "NONE": 0,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 20,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 1
+    },
+    "CONSTRAINT_IGNORE": {
+      "NONE": 0,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 277,
+      "CONFIDENT_CONFAB": 3,
+      "MEMORY_COLLAPSE": 40
+    },
+    "CONFIDENT_CONFAB": {
+      "NONE": 0,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "MEMORY_COLLAPSE": {
+      "NONE": 23,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 78,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 115
+    }
+  },
+  "per_class": {
+    "NONE": {
+      "regex_count": 1715,
+      "llm_judge_count": 1697,
+      "precision_of_regex_vs_llm_judge": 0.9858573954036535,
+      "recall_of_regex_vs_llm_judge": 0.9755102040816327
+    },
+    "PARAM_DRIFT": {
+      "regex_count": 143,
+      "llm_judge_count": 145,
+      "precision_of_regex_vs_llm_judge": 0.9793103448275862,
+      "recall_of_regex_vs_llm_judge": 0.993006993006993
+    },
+    "PREMATURE_COMMIT": {
+      "regex_count": 21,
+      "llm_judge_count": 20,
+      "precision_of_regex_vs_llm_judge": 1.0,
+      "recall_of_regex_vs_llm_judge": 0.9523809523809523
+    },
+    "CONSTRAINT_IGNORE": {
+      "regex_count": 320,
+      "llm_judge_count": 361,
+      "precision_of_regex_vs_llm_judge": 0.7673130193905817,
+      "recall_of_regex_vs_llm_judge": 0.865625
+    },
+    "CONFIDENT_CONFAB": {
+      "regex_count": 0,
+      "llm_judge_count": 5,
+      "precision_of_regex_vs_llm_judge": 0.0,
+      "recall_of_regex_vs_llm_judge": null
+    },
+    "MEMORY_COLLAPSE": {
+      "regex_count": 216,
+      "llm_judge_count": 187,
+      "precision_of_regex_vs_llm_judge": 0.6149732620320856,
+      "recall_of_regex_vs_llm_judge": 0.5324074074074074
+    }
+  },
+  "regex_rates": {
+    "pre_rate": 0.0966183574879227,
+    "post_rate": 0.7114624505928854,
+    "post_constraint_ignore_rate": 0.42160737812911725
+  },
+  "llm_judge_rates": {
+    "pre_rate": 0.09782608695652174,
+    "post_rate": 0.7325428194993412,
+    "post_constraint_ignore_rate": 0.4756258234519104
+  }
+}

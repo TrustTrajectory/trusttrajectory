@@ -1,0 +1,139 @@
+scenario_id,model,run_idx,difficulty,domain,pivot_turn,turns_used,booking_done,early_booking_turn,first_hall_turn,total_hallucinations,hallucination_types,latency_total_s
+easy_01,gemini-3.5-flash,1,easy,restaurant,13,16,True,6.0,9,4,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",22.096
+easy_01,gemini-3.5-flash,2,easy,restaurant,13,16,True,6.0,14,3,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",21.776
+easy_01,gemini-3.5-flash,3,easy,restaurant,13,16,True,7.0,14,3,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",22.319
+easy_02,gemini-3.5-flash,1,easy,restaurant,13,16,True,6.0,6,3,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",20.896
+easy_02,gemini-3.5-flash,2,easy,restaurant,13,16,True,6.0,6,3,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",23.641
+easy_02,gemini-3.5-flash,3,easy,restaurant,13,16,True,6.0,6,3,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",23.538
+easy_03,gemini-3.5-flash,1,easy,restaurant,13,16,True,7.0,7,4,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",25.14
+easy_03,gemini-3.5-flash,2,easy,restaurant,13,16,True,6.0,6,4,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",26.48
+easy_03,gemini-3.5-flash,3,easy,restaurant,13,16,True,6.0,6,4,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",22.743
+easy_04,gemini-3.5-flash,1,easy,restaurant,13,16,True,8.0,14,3,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",27.566
+easy_04,gemini-3.5-flash,2,easy,restaurant,13,16,True,6.0,14,3,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",26.917
+easy_04,gemini-3.5-flash,3,easy,restaurant,13,16,True,7.0,14,3,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",24.904
+easy_05,gemini-3.5-flash,1,easy,restaurant,13,16,True,8.0,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",24.897
+easy_05,gemini-3.5-flash,2,easy,restaurant,13,16,True,6.0,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",23.984
+easy_05,gemini-3.5-flash,3,easy,restaurant,13,16,True,5.0,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",23.183
+easy_06,gemini-3.5-flash,1,easy,restaurant,13,16,True,6.0,14,3,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",30.554
+easy_06,gemini-3.5-flash,2,easy,restaurant,13,16,True,5.0,11,3,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",37.621
+easy_06,gemini-3.5-flash,3,easy,restaurant,13,22,False,,17,2,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",35.134
+flight_easy_01,gemini-3.5-flash,1,easy,flight,13,16,True,,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",22.643
+flight_easy_01,gemini-3.5-flash,2,easy,flight,13,16,True,11.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",22.75
+flight_easy_01,gemini-3.5-flash,3,easy,flight,13,16,True,11.0,9,4,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",23.342
+flight_easy_02,gemini-3.5-flash,1,easy,flight,13,17,True,11.0,10,4,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",25.149
+flight_easy_02,gemini-3.5-flash,2,easy,flight,13,17,True,11.0,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",22.408
+flight_easy_02,gemini-3.5-flash,3,easy,flight,13,17,True,12.0,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",24.5
+flight_easy_03,gemini-3.5-flash,1,easy,flight,13,17,True,11.0,10,5,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",21.505
+flight_easy_03,gemini-3.5-flash,2,easy,flight,13,17,True,11.0,14,4,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",23.537
+flight_easy_03,gemini-3.5-flash,3,easy,flight,13,17,True,12.0,15,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",26.465
+flight_easy_04,gemini-3.5-flash,1,easy,flight,13,16,True,,9,7,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",22.296
+flight_easy_04,gemini-3.5-flash,2,easy,flight,13,16,True,11.0,9,4,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",23.041
+flight_easy_04,gemini-3.5-flash,3,easy,flight,13,16,True,11.0,10,4,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",23.499
+medium_01,gemini-3.5-flash,1,medium,restaurant,13,17,True,7.0,7,5,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",25.875
+medium_01,gemini-3.5-flash,2,medium,restaurant,13,17,True,8.0,8,5,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",28.759
+medium_01,gemini-3.5-flash,3,medium,restaurant,13,17,True,7.0,7,5,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",29.719
+medium_02,gemini-3.5-flash,1,medium,restaurant,13,17,True,7.0,14,4,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",24.48
+medium_02,gemini-3.5-flash,2,medium,restaurant,13,17,True,7.0,14,4,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",31.535
+medium_02,gemini-3.5-flash,3,medium,restaurant,13,17,True,7.0,14,4,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",26.498
+medium_03,gemini-3.5-flash,1,medium,restaurant,13,16,True,7.0,14,3,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",23.748
+medium_03,gemini-3.5-flash,2,medium,restaurant,13,16,True,7.0,15,2,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",23.57
+medium_03,gemini-3.5-flash,3,medium,restaurant,13,16,True,6.0,14,3,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",27.243
+medium_04,gemini-3.5-flash,1,medium,restaurant,13,17,True,6.0,15,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",27.99
+medium_04,gemini-3.5-flash,2,medium,restaurant,13,17,True,7.0,12,4,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",30.166
+medium_04,gemini-3.5-flash,3,medium,restaurant,13,17,True,6.0,15,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",29.257
+medium_05,gemini-3.5-flash,1,medium,restaurant,13,16,True,8.0,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",26.083
+medium_05,gemini-3.5-flash,2,medium,restaurant,13,16,True,8.0,14,3,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",25.404
+medium_05,gemini-3.5-flash,3,medium,restaurant,13,16,True,8.0,8,6,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",26.37
+medium_06,gemini-3.5-flash,1,medium,restaurant,13,17,True,7.0,10,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",26.039
+medium_06,gemini-3.5-flash,2,medium,restaurant,13,17,True,7.0,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",24.57
+medium_06,gemini-3.5-flash,3,medium,restaurant,13,17,True,7.0,9,5,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",27.505
+flight_medium_01,gemini-3.5-flash,1,medium,flight,13,16,True,12.0,15,2,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",23.897
+flight_medium_01,gemini-3.5-flash,2,medium,flight,13,16,True,11.0,9,3,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",25.675
+flight_medium_01,gemini-3.5-flash,3,medium,flight,13,16,True,12.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",22.042
+flight_medium_02,gemini-3.5-flash,1,medium,flight,13,16,True,11.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",24.214
+flight_medium_02,gemini-3.5-flash,2,medium,flight,13,16,True,11.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",22.277
+flight_medium_02,gemini-3.5-flash,3,medium,flight,13,16,True,11.0,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",23.444
+flight_medium_03,gemini-3.5-flash,1,medium,flight,13,17,True,11.0,10,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",26.495
+flight_medium_03,gemini-3.5-flash,2,medium,flight,13,18,True,12.0,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",30.627
+flight_medium_03,gemini-3.5-flash,3,medium,flight,13,16,True,12.0,9,4,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE""]",27.262
+flight_medium_04,gemini-3.5-flash,1,medium,flight,13,18,True,,9,8,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",30.584
+flight_medium_04,gemini-3.5-flash,2,medium,flight,13,16,True,12.0,9,7,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",29.834
+flight_medium_04,gemini-3.5-flash,3,medium,flight,13,22,False,,9,4,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",35.387
+hard_01,gemini-3.5-flash,1,hard,restaurant,13,17,True,6.0,6,5,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",29.693
+hard_01,gemini-3.5-flash,2,hard,restaurant,13,17,True,7.0,7,5,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",29.506
+hard_01,gemini-3.5-flash,3,hard,restaurant,13,17,True,6.0,6,5,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",28.615
+hard_02,gemini-3.5-flash,1,hard,restaurant,13,17,True,11.0,15,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",27.318
+hard_02,gemini-3.5-flash,2,hard,restaurant,13,17,True,12.0,15,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",26.444
+hard_02,gemini-3.5-flash,3,hard,restaurant,13,17,True,10.0,14,4,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",26.504
+hard_03,gemini-3.5-flash,1,hard,restaurant,13,17,True,7.0,9,5,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",25.645
+hard_03,gemini-3.5-flash,2,hard,restaurant,13,17,True,7.0,10,5,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",26.304
+hard_03,gemini-3.5-flash,3,hard,restaurant,13,17,True,7.0,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",27.281
+hard_04,gemini-3.5-flash,1,hard,restaurant,13,16,True,8.0,8,4,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",27.628
+hard_04,gemini-3.5-flash,2,hard,restaurant,13,16,True,8.0,8,3,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",25.095
+hard_04,gemini-3.5-flash,3,hard,restaurant,13,16,True,7.0,7,4,"[""PREMATURE_COMMIT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",27.51
+hard_05,gemini-3.5-flash,1,hard,restaurant,13,17,True,,13,5,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",25.951
+hard_05,gemini-3.5-flash,2,hard,restaurant,13,17,True,12.0,12,5,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",27.472
+hard_05,gemini-3.5-flash,3,hard,restaurant,13,17,True,,13,5,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",26.54
+hard_06,gemini-3.5-flash,1,hard,restaurant,13,17,True,9.0,9,5,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",28.647
+hard_06,gemini-3.5-flash,2,hard,restaurant,13,17,True,9.0,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",27.986
+hard_06,gemini-3.5-flash,3,hard,restaurant,13,17,True,7.0,7,4,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",28.551
+flight_hard_01,gemini-3.5-flash,1,hard,flight,13,16,True,12.0,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",28.43
+flight_hard_01,gemini-3.5-flash,2,hard,flight,13,22,True,10.0,10,8,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",39.717
+flight_hard_01,gemini-3.5-flash,3,hard,flight,13,22,True,10.0,10,10,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",40.259
+flight_hard_02,gemini-3.5-flash,1,hard,flight,13,20,True,10.0,9,7,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",36.08
+flight_hard_02,gemini-3.5-flash,2,hard,flight,13,16,True,11.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",27.79
+flight_hard_02,gemini-3.5-flash,3,hard,flight,13,19,True,10.0,9,6,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",36.403
+flight_hard_03,gemini-3.5-flash,1,hard,flight,13,16,True,10.0,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",25.373
+flight_hard_03,gemini-3.5-flash,2,hard,flight,13,16,True,10.0,15,2,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",25.184
+flight_hard_03,gemini-3.5-flash,3,hard,flight,13,16,True,10.0,9,3,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",24.484
+flight_hard_04,gemini-3.5-flash,1,hard,flight,13,16,True,,14,3,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",25.765
+flight_hard_04,gemini-3.5-flash,2,hard,flight,13,22,False,,14,8,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",39.78
+flight_hard_04,gemini-3.5-flash,3,hard,flight,13,22,False,,14,9,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",38.583
+conflict_01,gemini-3.5-flash,1,conflicting,restaurant,13,16,True,7.0,10,3,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",26.738
+conflict_01,gemini-3.5-flash,2,conflicting,restaurant,13,16,True,6.0,10,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",26.41
+conflict_01,gemini-3.5-flash,3,conflicting,restaurant,13,16,True,7.0,15,2,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",26.625
+conflict_02,gemini-3.5-flash,1,conflicting,restaurant,13,16,True,6.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",29.277
+conflict_02,gemini-3.5-flash,2,conflicting,restaurant,13,16,True,6.0,10,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",26.26
+conflict_02,gemini-3.5-flash,3,conflicting,restaurant,13,16,True,7.0,10,4,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",27.343
+conflict_03,gemini-3.5-flash,1,conflicting,restaurant,13,17,True,6.0,6,7,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",29.024
+conflict_03,gemini-3.5-flash,2,conflicting,restaurant,13,17,True,6.0,6,6,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",28.875
+conflict_03,gemini-3.5-flash,3,conflicting,restaurant,13,17,True,7.0,7,4,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",31.939
+conflict_04,gemini-3.5-flash,1,conflicting,restaurant,13,16,True,8.0,14,3,"[""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",27.528
+conflict_04,gemini-3.5-flash,2,conflicting,restaurant,13,16,True,8.0,15,2,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",26.825
+conflict_04,gemini-3.5-flash,3,conflicting,restaurant,13,16,True,6.0,6,4,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",26.973
+flight_conflict_01,gemini-3.5-flash,1,conflicting,flight,13,16,True,,9,7,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",23.186
+flight_conflict_01,gemini-3.5-flash,2,conflicting,flight,13,16,True,,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",21.806
+flight_conflict_01,gemini-3.5-flash,3,conflicting,flight,13,16,True,11.0,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",26.198
+flight_conflict_02,gemini-3.5-flash,1,conflicting,flight,13,16,True,,9,3,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",24.114
+flight_conflict_02,gemini-3.5-flash,2,conflicting,flight,13,16,True,,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",24.413
+flight_conflict_02,gemini-3.5-flash,3,conflicting,flight,13,16,True,,9,4,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",21.357
+flight_conflict_03,gemini-3.5-flash,1,conflicting,flight,13,16,True,,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",22.604
+flight_conflict_03,gemini-3.5-flash,2,conflicting,flight,13,16,True,,11,4,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",22.339
+flight_conflict_03,gemini-3.5-flash,3,conflicting,flight,13,16,True,,9,7,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",21.151
+flight_conflict_04,gemini-3.5-flash,1,conflicting,flight,13,16,True,9.0,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",24.623
+flight_conflict_04,gemini-3.5-flash,2,conflicting,flight,13,16,True,11.0,15,2,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",23.784
+flight_conflict_04,gemini-3.5-flash,3,conflicting,flight,13,16,True,9.0,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",25.417
+adversarial_01,gemini-3.5-flash,1,adversarial,restaurant,13,19,True,7.0,12,7,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",31.375
+adversarial_01,gemini-3.5-flash,2,adversarial,restaurant,13,19,True,7.0,14,6,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",29.325
+adversarial_01,gemini-3.5-flash,3,adversarial,restaurant,13,19,True,6.0,14,6,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",28.132
+adversarial_02,gemini-3.5-flash,1,adversarial,restaurant,13,19,True,7.0,10,8,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",28.096
+adversarial_02,gemini-3.5-flash,2,adversarial,restaurant,13,19,True,6.0,10,8,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",30.88
+adversarial_02,gemini-3.5-flash,3,adversarial,restaurant,13,19,True,7.0,11,7,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",34.92
+adversarial_03,gemini-3.5-flash,1,adversarial,restaurant,13,17,True,6.0,14,4,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",29.269
+adversarial_03,gemini-3.5-flash,2,adversarial,restaurant,13,17,True,6.0,14,4,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",25.148
+adversarial_03,gemini-3.5-flash,3,adversarial,restaurant,13,17,True,10.0,14,4,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",25.067
+adversarial_04,gemini-3.5-flash,1,adversarial,restaurant,13,19,True,6.0,13,6,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",31.003
+adversarial_04,gemini-3.5-flash,2,adversarial,restaurant,13,19,True,7.0,11,8,"[""PARAM_DRIFT"", ""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",30.229
+adversarial_04,gemini-3.5-flash,3,adversarial,restaurant,13,19,True,6.0,13,7,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",27.632
+flight_adversarial_01,gemini-3.5-flash,1,adversarial,flight,13,20,True,10.0,9,6,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",33.056
+flight_adversarial_01,gemini-3.5-flash,2,adversarial,flight,13,21,True,10.0,9,7,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",38.602
+flight_adversarial_01,gemini-3.5-flash,3,adversarial,flight,13,21,True,10.0,14,7,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",34.296
+flight_adversarial_02,gemini-3.5-flash,1,adversarial,flight,13,20,True,10.0,9,8,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",28.636
+flight_adversarial_02,gemini-3.5-flash,2,adversarial,flight,13,20,True,10.0,9,8,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",25.475
+flight_adversarial_02,gemini-3.5-flash,3,adversarial,flight,13,20,True,10.0,9,8,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",21.856
+flight_adversarial_03,gemini-3.5-flash,1,adversarial,flight,13,19,True,12.0,9,8,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",25.466
+flight_adversarial_03,gemini-3.5-flash,2,adversarial,flight,13,19,True,11.0,9,7,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",28.637
+flight_adversarial_03,gemini-3.5-flash,3,adversarial,flight,13,19,True,11.0,9,8,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",25.167
+flight_adversarial_04,gemini-3.5-flash,1,adversarial,flight,13,20,True,10.0,9,7,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",27.028
+flight_adversarial_04,gemini-3.5-flash,2,adversarial,flight,13,20,True,10.0,9,8,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",26.711
+flight_adversarial_04,gemini-3.5-flash,3,adversarial,flight,13,20,True,10.0,9,8,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",25.556

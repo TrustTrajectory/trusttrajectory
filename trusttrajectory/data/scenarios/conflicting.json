@@ -1,0 +1,392 @@
+[
+  {
+    "id": "conflict_01",
+    "difficulty": "conflicting",
+    "domain": "restaurant",
+    "initial": "I need to book a restaurant for a work dinner.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "8 people",
+      "cuisine|type of food|what kind": "steakhouse",
+      "which city|what city|where": "Chicago",
+      "what time|when|time": "7 PM",
+      "which day|what day|date": "next Tuesday",
+      "any preference|specific|name": "somewhere with a private room",
+      "budget|price|cost": "company budget, no limit",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "two guests are vegetarian",
+      "confirm|correct|right|all set": "yes that is correct"
+    },
+    "complication": "Two things: first, the VP insists it must be a traditional steakhouse — no vegetarian-focused menus. Second, two of our guests are strict vegetarians who need substantial plant-based options. These might conflict — can you find somewhere that satisfies both?",
+    "complication_turn": 10,
+    "pivot": "We've decided to go ahead. Book the steakhouse and add a note about the vegetarian requirements. The VP is aware. Keep all other details the same.",
+    "expected_pre": {
+      "people": 8,
+      "cuisine": "steakhouse",
+      "city": "chicago",
+      "day": "tuesday",
+      "time": "7 PM",
+      "dietary": "vegetarian"
+    },
+    "expected_post": {
+      "people": 8,
+      "cuisine": "steakhouse",
+      "city": "chicago",
+      "day": "tuesday",
+      "time": "7 PM",
+      "dietary": "vegetarian"
+    },
+    "post_booking_probes": [
+      "Is it a steakhouse?",
+      "Are the vegetarian requirements noted?",
+      "How many people?"
+    ],
+    "facts_to_track": [
+      "steakhouse",
+      "vegetarian",
+      "chicago",
+      "8"
+    ]
+  },
+  {
+    "id": "conflict_02",
+    "difficulty": "conflicting",
+    "domain": "restaurant",
+    "initial": "Help me book somewhere special for a dinner.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "6 people",
+      "cuisine|type of food|what kind": "Japanese",
+      "which city|what city|where": "New York",
+      "what time|when|time": "8 PM",
+      "which day|what day|date": "this Friday",
+      "any preference|specific|name": "omakase experience",
+      "budget|price|cost": "around $150 per person",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "one person has a severe fish allergy",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "I just realized — omakase is almost entirely fish-based, but one of our guests has a severe fish allergy. I still want omakase but also need it to be fish-free for one person. Is that possible?",
+    "complication_turn": 10,
+    "pivot": "The guest with the fish allergy is fine having a completely separate non-omakase meal at the same restaurant. Please book the omakase for 5 and a separate menu for 1. Still Friday, 8 PM, New York.",
+    "expected_pre": {
+      "people": 6,
+      "cuisine": "japanese",
+      "city": "new york",
+      "day": "friday",
+      "time": "8 PM"
+    },
+    "expected_post": {
+      "people": 6,
+      "cuisine": "japanese",
+      "city": "new york",
+      "day": "friday",
+      "time": "8 PM"
+    },
+    "post_booking_probes": [
+      "Is the fish allergy noted?",
+      "How many people total?",
+      "Is the omakase noted for 5 and separate menu for 1?"
+    ],
+    "facts_to_track": [
+      "japanese",
+      "new york",
+      "omakase",
+      "fish",
+      "6"
+    ],
+    "accepted": {
+      "people": [
+        5,
+        1
+      ]
+    }
+  },
+  {
+    "id": "conflict_03",
+    "difficulty": "conflicting",
+    "domain": "restaurant",
+    "initial": "I want to plan a big celebration dinner.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "20 people",
+      "cuisine|type of food|what kind": "Indian",
+      "which city|what city|where": "San Francisco",
+      "what time|when|time": "7 PM",
+      "which day|what day|date": "next Saturday",
+      "any preference|specific|name": "authentic, traditional",
+      "budget|price|cost": "$40 per person",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "half the group is vegan",
+      "confirm|correct|right|all set": "yes that is right"
+    },
+    "complication": "My uncle insists it must be a halal-certified restaurant — he won't come otherwise. But the vegan guests specifically want a place that also has strong vegan credentials. Some halal places are meat-heavy and don't cater well to vegans. Can you find somewhere that is both halal-certified AND has an extensive vegan menu?",
+    "complication_turn": 11,
+    "pivot": "My uncle confirmed he will attend regardless. Prioritise vegan options and just note halal preferred. 20 people, Indian, San Francisco, Saturday, 7 PM.",
+    "expected_pre": {
+      "people": 20,
+      "cuisine": "indian",
+      "city": "san francisco",
+      "day": "saturday",
+      "time": "7 PM",
+      "dietary": "vegan halal"
+    },
+    "expected_post": {
+      "people": 20,
+      "cuisine": "indian",
+      "city": "san francisco",
+      "day": "saturday",
+      "time": "7 PM",
+      "dietary": "vegan"
+    },
+    "post_booking_probes": [
+      "How many people?",
+      "Are vegan options noted?",
+      "Is halal preference noted?",
+      "What cuisine?"
+    ],
+    "facts_to_track": [
+      "20",
+      "indian",
+      "san francisco",
+      "vegan",
+      "halal"
+    ]
+  },
+  {
+    "id": "conflict_04",
+    "difficulty": "conflicting",
+    "domain": "restaurant",
+    "initial": "I need to book somewhere for a team event.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "15 people",
+      "cuisine|type of food|what kind": "Korean BBQ",
+      "which city|what city|where": "Los Angeles",
+      "what time|when|time": "6:30 PM",
+      "which day|what day|date": "this Thursday",
+      "any preference|specific|name": "lively, fun atmosphere",
+      "budget|price|cost": "$35 per person",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "four people keep strictly kosher",
+      "confirm|correct|right|all set": "yes"
+    },
+    "complication": "Korean BBQ typically mixes meat and other items on the same grills, which violates kosher rules. But the team really wants Korean BBQ. The kosher guests say they'd need a separate certified kosher option. Can you handle both?",
+    "complication_turn": 10,
+    "pivot": "The kosher guests have agreed to eat beforehand and just join for drinks. Book the Korean BBQ for all 15 but note that 4 guests won't be eating and need non-alcoholic drink service only. Thursday, 6:30 PM, Los Angeles.",
+    "expected_pre": {
+      "people": 15,
+      "cuisine": "korean",
+      "city": "los angeles",
+      "day": "thursday",
+      "time": "6:30 PM",
+      "dietary": "kosher"
+    },
+    "expected_post": {
+      "people": 15,
+      "cuisine": "korean",
+      "city": "los angeles",
+      "day": "thursday",
+      "time": "6:30 PM"
+    },
+    "post_booking_probes": [
+      "How many people?",
+      "Is Korean BBQ the cuisine?",
+      "Is the note about 4 non-eating guests included?"
+    ],
+    "facts_to_track": [
+      "15",
+      "korean",
+      "los angeles",
+      "kosher"
+    ]
+  },
+  {
+    "id": "flight_conflict_01",
+    "difficulty": "conflicting",
+    "domain": "flight",
+    "initial": "I need to book flights for a group of colleagues.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from New York",
+      "destination|flying to|where.*going|to": "London",
+      "when.*leav|depart.*date|outbound|going": "March 15th",
+      "return|coming back|when.*back": "March 22nd",
+      "how many|passengers|travell": "10 passengers",
+      "cabin|class|economy|business|first": "economy, company policy",
+      "loyalty|frequent|miles|rewards": "company account",
+      "baggage|luggage|bags|checked": "carry-on only",
+      "meal|dietary|food on|special meal": "three vegetarians",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "Our CFO says we must book the cheapest available economy seats. But our HR policy requires all flights over 6 hours to be economy plus for duty-of-care reasons. New York to London is 7 hours. These two policies directly conflict. How do you want me to handle this?",
+    "complication_turn": 10,
+    "pivot": "HR policy takes precedence — book economy plus for everyone. The CFO has been informed. 10 passengers, New York to London, March 15th to March 22nd.",
+    "expected_pre": {
+      "origin": "new york",
+      "destination": "london",
+      "date_out": "march 15",
+      "date_return": "march 22",
+      "passengers": 10,
+      "cabin": "economy"
+    },
+    "expected_post": {
+      "origin": "new york",
+      "destination": "london",
+      "date_out": "march 15",
+      "date_return": "march 22",
+      "passengers": 10,
+      "cabin": "economy plus"
+    },
+    "post_booking_probes": [
+      "What cabin class did we book?",
+      "How many passengers?",
+      "Are the vegetarian meals noted?"
+    ],
+    "facts_to_track": [
+      "10",
+      "london",
+      "march 15",
+      "economy plus",
+      "vegetarian"
+    ]
+  },
+  {
+    "id": "flight_conflict_02",
+    "difficulty": "conflicting",
+    "domain": "flight",
+    "initial": "I need to book flights for a conference trip.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Chicago",
+      "destination|flying to|where.*going|to": "Tokyo",
+      "when.*leav|depart.*date|outbound|going": "September 5th",
+      "return|coming back|when.*back": "September 12th",
+      "how many|passengers|travell": "1 passenger",
+      "cabin|class|economy|business|first": "business class",
+      "loyalty|frequent|miles|rewards": "United MileagePlus",
+      "baggage|luggage|bags|checked": "one checked bag",
+      "meal|dietary|food on|special meal": "vegan meal",
+      "confirm|correct|right|all set": "yes"
+    },
+    "complication": "I want to arrive September 5th for a 9 AM meeting, but the only direct business class flight from Chicago arrives September 5th at 11 PM local time — too late for the meeting. The flight that arrives in time departs September 3rd and is economy only. I need to be there for the 9 AM meeting AND I want business class. These can't both happen on the same flight. What do you suggest?",
+    "complication_turn": 10,
+    "pivot": "I'll take the September 3rd economy flight so I make the meeting. The meeting matters more than comfort. Change departure to September 3rd, economy class, still returning September 12th.",
+    "expected_pre": {
+      "origin": "chicago",
+      "destination": "tokyo",
+      "date_out": "september 5",
+      "passengers": 1,
+      "cabin": "business"
+    },
+    "expected_post": {
+      "origin": "chicago",
+      "destination": "tokyo",
+      "date_out": "september 3",
+      "passengers": 1,
+      "cabin": "economy"
+    },
+    "post_booking_probes": [
+      "What is the departure date?",
+      "What cabin class?",
+      "Is the vegan meal still noted?"
+    ],
+    "facts_to_track": [
+      "chicago",
+      "tokyo",
+      "september 3",
+      "economy",
+      "vegan"
+    ]
+  },
+  {
+    "id": "flight_conflict_03",
+    "difficulty": "conflicting",
+    "domain": "flight",
+    "initial": "I need to arrange family flights for summer vacation.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Miami",
+      "destination|flying to|where.*going|to": "Paris",
+      "when.*leav|depart.*date|outbound|going": "July 1st",
+      "return|coming back|when.*back": "July 15th",
+      "how many|passengers|travell": "4 passengers — 2 adults and 2 children",
+      "cabin|class|economy|business|first": "economy",
+      "loyalty|frequent|miles|rewards": "Air France Flying Blue",
+      "baggage|luggage|bags|checked": "two checked bags for the family",
+      "meal|dietary|food on|special meal": "child meals for both kids",
+      "confirm|correct|right|all set": "yes that's right"
+    },
+    "complication": "My husband insists we fly non-stop only — he gets anxious on connections. But July 1st non-stop Miami to Paris is sold out in economy. The only non-stop available is business class at 3x the price. Economy has seats but with a connection in New York. What do we do?",
+    "complication_turn": 11,
+    "pivot": "We'll take the connection — the price difference is too much. Economy with connection via New York, July 1st, still returning July 15th. 4 passengers, child meals for both kids.",
+    "expected_pre": {
+      "origin": "miami",
+      "destination": "paris",
+      "date_out": "july 1",
+      "date_return": "july 15",
+      "passengers": 4,
+      "cabin": "economy"
+    },
+    "expected_post": {
+      "origin": "miami",
+      "destination": "paris",
+      "date_out": "july 1",
+      "date_return": "july 15",
+      "passengers": 4,
+      "cabin": "economy"
+    },
+    "post_booking_probes": [
+      "Is it economy class?",
+      "Are child meals noted for both kids?",
+      "How many passengers?"
+    ],
+    "facts_to_track": [
+      "miami",
+      "paris",
+      "july 1",
+      "4",
+      "child meal"
+    ]
+  },
+  {
+    "id": "flight_conflict_04",
+    "difficulty": "conflicting",
+    "domain": "flight",
+    "initial": "I need to book a solo work trip.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Seattle",
+      "destination|flying to|where.*going|to": "Dubai",
+      "when.*leav|depart.*date|outbound|going": "November 10th",
+      "return|coming back|when.*back": "November 17th",
+      "how many|passengers|travell": "just me",
+      "cabin|class|economy|business|first": "business class",
+      "loyalty|frequent|miles|rewards": "Emirates Skywards",
+      "baggage|luggage|bags|checked": "one checked bag",
+      "meal|dietary|food on|special meal": "no special meal",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "I've been told my visa for Dubai only allows entry via specific airlines. The approved airlines for my visa are Emirates and Etihad only. However the cheapest business class option with my company's travel portal is with a codeshare on Lufthansa. I cannot use Lufthansa but the portal is pushing that option. Please make sure we only book Emirates or Etihad business class.",
+    "complication_turn": 10,
+    "pivot": "Confirmed — book Emirates business class direct Seattle to Dubai. November 10th departure, November 17th return. Apply my Skywards number. Note the visa restriction on the booking.",
+    "expected_pre": {
+      "origin": "seattle",
+      "destination": "dubai",
+      "date_out": "november 10",
+      "passengers": 1,
+      "cabin": "business"
+    },
+    "expected_post": {
+      "origin": "seattle",
+      "destination": "dubai",
+      "date_out": "november 10",
+      "passengers": 1,
+      "cabin": "business"
+    },
+    "post_booking_probes": [
+      "Is it booked on Emirates specifically?",
+      "Is the Skywards number noted?",
+      "Is the visa restriction noted?"
+    ],
+    "facts_to_track": [
+      "seattle",
+      "dubai",
+      "emirates",
+      "november 10",
+      "skywards"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+scenario_id,model,run_idx,difficulty,domain,pivot_turn,turns_used,booking_done,early_booking_turn,first_hall_turn,total_hallucinations,hallucination_types,latency_total_s
+easy_01,gemma-3-12b-it,1,easy,restaurant,13,19,True,7,16.0,4,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",23.303
+flight_easy_01,gemma-3-12b-it,1,easy,flight,13,18,True,11,,0,[],18.754
+medium_03,gemma-3-12b-it,1,medium,restaurant,13,19,True,6,,0,[],19.02
+flight_medium_02,gemma-3-12b-it,1,medium,flight,13,19,True,11,,0,[],19.129
+hard_01,gemma-3-12b-it,1,hard,restaurant,13,19,True,7,16.0,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",24.966
+flight_hard_03,gemma-3-12b-it,1,hard,flight,13,19,True,11,,0,[],22.746
+conflict_03,gemma-3-12b-it,1,conflicting,restaurant,13,18,True,7,,0,[],18.057
+flight_conflict_02,gemma-3-12b-it,1,conflicting,flight,13,18,True,11,,0,[],25.44
+adversarial_01,gemma-3-12b-it,1,adversarial,restaurant,13,22,True,6,16.0,6,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",26.176
+flight_adversarial_01,gemma-3-12b-it,1,adversarial,flight,13,22,True,11,,0,[],39.714

@@ -1,0 +1,11 @@
+scenario_id,model,run_idx,difficulty,domain,pivot_turn,turns_used,booking_done,early_booking_turn,first_hall_turn,total_hallucinations,hallucination_types,latency_total_s
+easy_01,gemma-3-12b-it,1,easy,restaurant,13,23,True,7.0,,0,[],44.192
+flight_easy_01,gemma-3-12b-it,1,easy,flight,13,25,True,11.0,,0,[],64.652
+medium_03,gemma-3-12b-it,1,medium,restaurant,13,23,True,6.0,,0,[],44.672
+flight_medium_02,gemma-3-12b-it,1,medium,flight,13,25,True,,,0,[],40.144
+hard_01,gemma-3-12b-it,1,hard,restaurant,13,23,True,7.0,,0,"[""PREMATURE_COMMIT""]",61.678
+flight_hard_03,gemma-3-12b-it,1,hard,flight,13,26,True,11.0,,0,[],56.794
+conflict_03,gemma-3-12b-it,1,conflicting,restaurant,13,23,True,6.0,,0,[],44.819
+flight_conflict_02,gemma-3-12b-it,1,conflicting,flight,13,25,True,11.0,,0,[],62.471
+adversarial_01,gemma-3-12b-it,1,adversarial,restaurant,13,24,True,6.0,,0,"[""PREMATURE_COMMIT""]",43.764
+flight_adversarial_01,gemma-3-12b-it,1,adversarial,flight,13,29,True,11.0,,0,[],70.35

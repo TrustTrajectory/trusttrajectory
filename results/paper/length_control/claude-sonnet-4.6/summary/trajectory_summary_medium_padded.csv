@@ -1,0 +1,31 @@
+scenario_id,model,run_idx,difficulty,domain,pivot_turn,turns_used,booking_done,early_booking_turn,first_hall_turn,total_hallucinations,hallucination_types,latency_total_s
+medium_01,claude-sonnet-4.6,1,medium,restaurant,13,17,True,,15,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",62.162
+medium_01,claude-sonnet-4.6,2,medium,restaurant,13,17,True,,14,4,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",50.115
+medium_01,claude-sonnet-4.6,3,medium,restaurant,13,17,True,10.0,10,5,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",58.453
+medium_02,claude-sonnet-4.6,1,medium,restaurant,13,18,True,7.0,9,8,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",55.491
+medium_02,claude-sonnet-4.6,2,medium,restaurant,13,19,True,7.0,9,9,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",63.243
+medium_02,claude-sonnet-4.6,3,medium,restaurant,13,17,True,7.0,9,7,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",52.948
+medium_03,claude-sonnet-4.6,1,medium,restaurant,13,16,True,8.0,16,1,"[""CONSTRAINT_IGNORE""]",46.046
+medium_03,claude-sonnet-4.6,2,medium,restaurant,13,16,True,9.0,11,4,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",39.421
+medium_03,claude-sonnet-4.6,3,medium,restaurant,13,16,True,8.0,12,4,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",43.168
+medium_04,claude-sonnet-4.6,1,medium,restaurant,13,17,True,7.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",49.908
+medium_04,claude-sonnet-4.6,2,medium,restaurant,13,17,True,7.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",49.755
+medium_04,claude-sonnet-4.6,3,medium,restaurant,13,17,True,6.0,9,3,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",51.466
+medium_05,claude-sonnet-4.6,1,medium,restaurant,13,16,True,9.0,12,3,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",46.804
+medium_05,claude-sonnet-4.6,2,medium,restaurant,13,16,True,9.0,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",50.119
+medium_05,claude-sonnet-4.6,3,medium,restaurant,13,16,True,,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",55.303
+medium_06,claude-sonnet-4.6,1,medium,restaurant,13,17,True,12.0,14,4,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",64.003
+medium_06,claude-sonnet-4.6,2,medium,restaurant,13,17,True,12.0,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",59.814
+medium_06,claude-sonnet-4.6,3,medium,restaurant,13,17,True,12.0,14,4,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",58.524
+flight_medium_01,claude-sonnet-4.6,1,medium,flight,13,16,True,10.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",45.996
+flight_medium_01,claude-sonnet-4.6,2,medium,flight,13,16,True,10.0,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",49.235
+flight_medium_01,claude-sonnet-4.6,3,medium,flight,13,17,True,12.0,9,8,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",51.628
+flight_medium_02,claude-sonnet-4.6,1,medium,flight,13,16,True,,9,6,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",49.936
+flight_medium_02,claude-sonnet-4.6,2,medium,flight,13,16,True,10.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",46.449
+flight_medium_02,claude-sonnet-4.6,3,medium,flight,13,16,True,11.0,9,5,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",51.74
+flight_medium_03,claude-sonnet-4.6,1,medium,flight,13,16,True,11.0,9,3,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",92.304
+flight_medium_03,claude-sonnet-4.6,2,medium,flight,13,16,True,12.0,9,4,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",87.475
+flight_medium_03,claude-sonnet-4.6,3,medium,flight,13,16,True,11.0,9,4,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",89.136
+flight_medium_04,claude-sonnet-4.6,1,medium,flight,13,22,False,,9,12,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",70.325
+flight_medium_04,claude-sonnet-4.6,2,medium,flight,13,22,False,,10,10,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",68.943
+flight_medium_04,claude-sonnet-4.6,3,medium,flight,13,22,False,,9,11,"[""PARAM_DRIFT"", ""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",76.261

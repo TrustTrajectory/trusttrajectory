@@ -1,0 +1,111 @@
+{
+  "n_turns": 2363,
+  "judge_parse_rate": 0.9987304274227676,
+  "parsed_only": {
+    "n_turns": 2360,
+    "label_agreement": 0.9915254237288136,
+    "label_kappa": 0.37249062724348037
+  },
+  "label_agreement": 0.9915361828184511,
+  "label_kappa": 0.3724938258491108,
+  "binary_agreement": 0.9915361828184511,
+  "binary_kappa": 0.37134191763328633,
+  "confusion": {
+    "NONE": {
+      "NONE": 2337,
+      "PARAM_DRIFT": 5,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 1,
+      "CONFIDENT_CONFAB": 2,
+      "MEMORY_COLLAPSE": 8
+    },
+    "PARAM_DRIFT": {
+      "NONE": 3,
+      "PARAM_DRIFT": 4,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "PREMATURE_COMMIT": {
+      "NONE": 0,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 1,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "CONSTRAINT_IGNORE": {
+      "NONE": 0,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "CONFIDENT_CONFAB": {
+      "NONE": 0,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 0
+    },
+    "MEMORY_COLLAPSE": {
+      "NONE": 1,
+      "PARAM_DRIFT": 0,
+      "PREMATURE_COMMIT": 0,
+      "CONSTRAINT_IGNORE": 0,
+      "CONFIDENT_CONFAB": 0,
+      "MEMORY_COLLAPSE": 1
+    }
+  },
+  "per_class": {
+    "NONE": {
+      "assertion_count": 2353,
+      "judge_assertion_count": 2341,
+      "precision_of_assertion_vs_judge_assertion": 0.9982913284920973,
+      "recall_of_assertion_vs_judge_assertion": 0.9932001699957501
+    },
+    "PARAM_DRIFT": {
+      "assertion_count": 7,
+      "judge_assertion_count": 9,
+      "precision_of_assertion_vs_judge_assertion": 0.4444444444444444,
+      "recall_of_assertion_vs_judge_assertion": 0.5714285714285714
+    },
+    "PREMATURE_COMMIT": {
+      "assertion_count": 1,
+      "judge_assertion_count": 1,
+      "precision_of_assertion_vs_judge_assertion": 1.0,
+      "recall_of_assertion_vs_judge_assertion": 1.0
+    },
+    "CONSTRAINT_IGNORE": {
+      "assertion_count": 0,
+      "judge_assertion_count": 1,
+      "precision_of_assertion_vs_judge_assertion": 0.0,
+      "recall_of_assertion_vs_judge_assertion": null
+    },
+    "CONFIDENT_CONFAB": {
+      "assertion_count": 0,
+      "judge_assertion_count": 2,
+      "precision_of_assertion_vs_judge_assertion": 0.0,
+      "recall_of_assertion_vs_judge_assertion": null
+    },
+    "MEMORY_COLLAPSE": {
+      "assertion_count": 2,
+      "judge_assertion_count": 9,
+      "precision_of_assertion_vs_judge_assertion": 0.1111111111111111,
+      "recall_of_assertion_vs_judge_assertion": 0.5
+    }
+  },
+  "assertion_rates": {
+    "pre_rate": 0.004830917874396135,
+    "post_rate": 0.002828854314002829,
+    "post_constraint_ignore_rate": 0.0
+  },
+  "judge_assertion_rates": {
+    "pre_rate": 0.006038647342995169,
+    "post_rate": 0.016973125884016973,
+    "post_constraint_ignore_rate": 0.0014144271570014145
+  }
+}

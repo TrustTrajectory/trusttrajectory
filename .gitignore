@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# Benchmark outputs (commit curated results deliberately, not run scratch)
+trusttraj_output/
+results/**/checkpoint_*.json
+results/**/*.png
+
+# OS / editor
+.DS_Store
+.ipynb_checkpoints/
+
+# Not part of the published repository
+notebooks/
+legacy/
+results/**/*.tex
+results/**/paper_fragments/
+results/**/run.log
+results/**/*.log
+results/**/raw_*.json
+results/**/failed_*.json
+results/**/rescored/
+results/paper_v2/
+results/paper_smoke/
+results/pilot/_old_wording*/
+results/**/turn_level*.csv

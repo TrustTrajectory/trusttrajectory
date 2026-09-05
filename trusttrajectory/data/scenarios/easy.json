@@ -1,0 +1,480 @@
+[
+  {
+    "id": "easy_01",
+    "difficulty": "easy",
+    "domain": "restaurant",
+    "initial": "Hi, I need help booking a restaurant for tonight.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "just 2 of us",
+      "cuisine|type of food|what kind": "Italian",
+      "which city|what city|where": "New York",
+      "what time|when|time": "8 PM",
+      "which day|what day|date": "this Friday",
+      "any preference|specific|name": "No specific preference",
+      "budget|price|cost": "mid-range is fine",
+      "indoor|outdoor|seating": "indoor please",
+      "dietary|allerg|vegan|vegetarian": "no restrictions",
+      "confirm|correct|right|all set": "yes that's correct"
+    },
+    "complication": "Actually, one of my guests just told me they are vegetarian. Please make sure the restaurant has good vegetarian options.",
+    "complication_turn": 10,
+    "pivot": "Change of plans — my colleague can't make Friday. Can we move it to Saturday at 7 PM instead, and add one more person so 3 total?",
+    "expected_pre": {
+      "people": 2,
+      "cuisine": "italian",
+      "city": "new york",
+      "day": "friday",
+      "time": "8 PM",
+      "dietary": "vegetarian"
+    },
+    "expected_post": {
+      "people": 3,
+      "cuisine": "italian",
+      "city": "new york",
+      "day": "saturday",
+      "time": "7 PM",
+      "dietary": "vegetarian"
+    },
+    "post_booking_probes": [
+      "Just to confirm — how many people is this booking for?",
+      "And what day did we settle on?",
+      "Did you note the vegetarian requirement?"
+    ],
+    "facts_to_track": [
+      "italian",
+      "new york",
+      "vegetarian"
+    ]
+  },
+  {
+    "id": "easy_02",
+    "difficulty": "easy",
+    "domain": "restaurant",
+    "initial": "I'd like to book a table for dinner.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "4 people",
+      "cuisine|type of food|what kind": "Japanese",
+      "which city|what city|where": "San Francisco",
+      "what time|when|time": "7:30 PM",
+      "which day|what day|date": "next Wednesday",
+      "any preference|specific|name": "somewhere with good sushi",
+      "budget|price|cost": "around $50 per person",
+      "indoor|outdoor|seating": "no preference",
+      "dietary|allerg|vegan|vegetarian": "one person is gluten-free",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "Also, it is a birthday dinner so it would be great if they could do a small cake or dessert.",
+    "complication_turn": 8,
+    "pivot": "My friend moved the birthday to Thursday. Can you change the day to Thursday at the same time?",
+    "expected_pre": {
+      "people": 4,
+      "cuisine": "japanese",
+      "city": "san francisco",
+      "day": "wednesday",
+      "time": "7:30 PM",
+      "occasion": "birthday"
+    },
+    "expected_post": {
+      "people": 4,
+      "cuisine": "japanese",
+      "city": "san francisco",
+      "day": "thursday",
+      "time": "7:30 PM",
+      "occasion": "birthday"
+    },
+    "post_booking_probes": [
+      "How many people did we book for?",
+      "What day is the reservation?",
+      "Is the birthday occasion noted?"
+    ],
+    "facts_to_track": [
+      "japanese",
+      "san francisco",
+      "birthday",
+      "gluten"
+    ]
+  },
+  {
+    "id": "easy_03",
+    "difficulty": "easy",
+    "domain": "restaurant",
+    "initial": "Can you help me find a place to eat this weekend?",
+    "clarification_drip": {
+      "how many|party size|people|guests": "just me and my partner, so 2",
+      "cuisine|type of food|what kind": "French",
+      "which city|what city|where": "Chicago",
+      "what time|when|time": "7 PM",
+      "which day|what day|date": "Saturday",
+      "any preference|specific|name": "romantic atmosphere",
+      "budget|price|cost": "fine dining is fine",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "no restrictions",
+      "confirm|correct|right|all set": "yes all correct"
+    },
+    "complication": "We would also like a window table if possible — it is our anniversary.",
+    "complication_turn": 9,
+    "pivot": "Actually we decided to push it to Sunday dinner instead. Keep everything else the same.",
+    "expected_pre": {
+      "people": 2,
+      "cuisine": "french",
+      "city": "chicago",
+      "day": "saturday",
+      "time": "7 PM",
+      "occasion": "anniversary"
+    },
+    "expected_post": {
+      "people": 2,
+      "cuisine": "french",
+      "city": "chicago",
+      "day": "sunday",
+      "time": "7 PM",
+      "occasion": "anniversary"
+    },
+    "post_booking_probes": [
+      "What cuisine did we book?",
+      "What day is the reservation?",
+      "Is the anniversary noted?"
+    ],
+    "facts_to_track": [
+      "french",
+      "chicago",
+      "anniversary"
+    ]
+  },
+  {
+    "id": "easy_04",
+    "difficulty": "easy",
+    "domain": "restaurant",
+    "initial": "Hey, can you book me a table somewhere for lunch tomorrow?",
+    "clarification_drip": {
+      "how many|party size|people|guests": "3 people",
+      "cuisine|type of food|what kind": "Mexican",
+      "which city|what city|where": "Austin",
+      "what time|when|time": "12:30 PM",
+      "which day|what day|date": "tomorrow",
+      "any preference|specific|name": "nothing specific",
+      "budget|price|cost": "casual, under $20 each",
+      "indoor|outdoor|seating": "outdoor if possible",
+      "dietary|allerg|vegan|vegetarian": "no restrictions",
+      "confirm|correct|right|all set": "yes that works"
+    },
+    "complication": "One of my friends just said she doesn't eat meat. Can you make sure there are good vegetarian options?",
+    "complication_turn": 9,
+    "pivot": "Actually lunch won't work — can we switch to dinner instead? 7 PM, same day, same place, same people.",
+    "expected_pre": {
+      "people": 3,
+      "cuisine": "mexican",
+      "city": "austin",
+      "day": "tomorrow",
+      "time": "12:30 PM",
+      "dietary": "vegetarian"
+    },
+    "expected_post": {
+      "people": 3,
+      "cuisine": "mexican",
+      "city": "austin",
+      "day": "tomorrow",
+      "time": "7 PM",
+      "dietary": "vegetarian"
+    },
+    "post_booking_probes": [
+      "What time is the reservation?",
+      "How many people?",
+      "Is vegetarian noted?"
+    ],
+    "facts_to_track": [
+      "mexican",
+      "austin",
+      "vegetarian"
+    ]
+  },
+  {
+    "id": "easy_05",
+    "difficulty": "easy",
+    "domain": "restaurant",
+    "initial": "I want to take my coworker out for a quick dinner after work.",
+    "clarification_drip": {
+      "how many|party size|people|guests": "just the 2 of us",
+      "cuisine|type of food|what kind": "Thai",
+      "which city|what city|where": "Seattle",
+      "what time|when|time": "6 PM",
+      "which day|what day|date": "this Wednesday",
+      "any preference|specific|name": "somewhere quick, we have plans later",
+      "budget|price|cost": "around $30 each",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "she is gluten-free",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "My coworker mentioned she also can't do shellfish. Please add that to the notes.",
+    "complication_turn": 8,
+    "pivot": "Wednesday doesn't work anymore — can we do Thursday instead? Same time, same everything.",
+    "expected_pre": {
+      "people": 2,
+      "cuisine": "thai",
+      "city": "seattle",
+      "day": "wednesday",
+      "time": "6 PM"
+    },
+    "expected_post": {
+      "people": 2,
+      "cuisine": "thai",
+      "city": "seattle",
+      "day": "thursday",
+      "time": "6 PM"
+    },
+    "post_booking_probes": [
+      "What day is the booking?",
+      "Is gluten-free noted?",
+      "Is shellfish noted?"
+    ],
+    "facts_to_track": [
+      "thai",
+      "seattle",
+      "gluten",
+      "shellfish"
+    ]
+  },
+  {
+    "id": "easy_06",
+    "difficulty": "easy",
+    "domain": "restaurant",
+    "initial": "Can you help me book somewhere for brunch this weekend?",
+    "clarification_drip": {
+      "how many|party size|people|guests": "4 of us",
+      "cuisine|type of food|what kind": "American brunch",
+      "which city|what city|where": "Boston",
+      "what time|when|time": "10:30 AM",
+      "which day|what day|date": "Sunday",
+      "any preference|specific|name": "good coffee and eggs",
+      "budget|price|cost": "casual, $20 each is fine",
+      "indoor|outdoor|seating": "indoor",
+      "dietary|allerg|vegan|vegetarian": "one person is vegan",
+      "confirm|correct|right|all set": "yes that's right"
+    },
+    "complication": "One more friend is joining — 5 people total now.",
+    "complication_turn": 8,
+    "pivot": "Can we move it to Saturday instead of Sunday? Same time, 5 people, everything else the same.",
+    "expected_pre": {
+      "people": 5,
+      "cuisine": "brunch",
+      "city": "boston",
+      "day": "sunday",
+      "time": "10:30 AM"
+    },
+    "expected_post": {
+      "people": 5,
+      "cuisine": "brunch",
+      "city": "boston",
+      "day": "saturday",
+      "time": "10:30 AM"
+    },
+    "post_booking_probes": [
+      "What day is brunch?",
+      "How many people?",
+      "Is vegan noted?"
+    ],
+    "facts_to_track": [
+      "brunch",
+      "boston",
+      "vegan"
+    ]
+  },
+  {
+    "id": "flight_easy_01",
+    "difficulty": "easy",
+    "domain": "flight",
+    "initial": "I need to book a flight to visit my sister.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from New York JFK",
+      "destination|flying to|where.*going|to": "Los Angeles",
+      "when.*leav|depart.*date|outbound|going": "next Friday",
+      "return|coming back|when.*back": "the following Monday",
+      "how many|passengers|travell": "just me, 1 passenger",
+      "cabin|class|economy|business|first": "economy is fine",
+      "loyalty|frequent|miles|rewards": "no loyalty programme",
+      "baggage|luggage|bags|checked": "just a carry-on",
+      "meal|dietary|food on|special meal": "no special meal needed",
+      "confirm|correct|right|all set": "yes that's right"
+    },
+    "complication": "Actually I want to add a checked bag — I'm bringing gifts.",
+    "complication_turn": 9,
+    "pivot": "My sister changed the plans — can I leave on Saturday instead of Friday? Keep the return Monday, same everything else.",
+    "expected_pre": {
+      "origin": "new york",
+      "destination": "los angeles",
+      "date_out": "friday",
+      "date_return": "monday",
+      "cabin": "economy",
+      "passengers": 1
+    },
+    "expected_post": {
+      "origin": "new york",
+      "destination": "los angeles",
+      "date_out": "saturday",
+      "date_return": "monday",
+      "cabin": "economy",
+      "passengers": 1
+    },
+    "post_booking_probes": [
+      "What day am I departing?",
+      "When do I return?",
+      "Is the checked bag included?"
+    ],
+    "facts_to_track": [
+      "new york",
+      "los angeles",
+      "saturday",
+      "monday",
+      "checked bag"
+    ]
+  },
+  {
+    "id": "flight_easy_02",
+    "difficulty": "easy",
+    "domain": "flight",
+    "initial": "Can you help me book flights for a short trip?",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Chicago O'Hare",
+      "destination|flying to|where.*going|to": "Miami",
+      "when.*leav|depart.*date|outbound|going": "December 20th",
+      "return|coming back|when.*back": "December 27th",
+      "how many|passengers|travell": "2 passengers, me and my partner",
+      "cabin|class|economy|business|first": "economy",
+      "loyalty|frequent|miles|rewards": "United MileagePlus",
+      "baggage|luggage|bags|checked": "one checked bag each",
+      "meal|dietary|food on|special meal": "vegetarian meals for both",
+      "confirm|correct|right|all set": "yes confirmed"
+    },
+    "complication": "Can we upgrade to economy plus for the extra legroom? Long flight and my partner has back problems.",
+    "complication_turn": 9,
+    "pivot": "We need to push the departure to December 21st — my partner can't get off work on the 20th. Return stays December 27th, everything else the same.",
+    "expected_pre": {
+      "origin": "chicago",
+      "destination": "miami",
+      "date_out": "december 20",
+      "date_return": "december 27",
+      "passengers": 2,
+      "cabin": "economy plus"
+    },
+    "expected_post": {
+      "origin": "chicago",
+      "destination": "miami",
+      "date_out": "december 21",
+      "date_return": "december 27",
+      "passengers": 2,
+      "cabin": "economy plus"
+    },
+    "post_booking_probes": [
+      "What's the departure date?",
+      "How many passengers?",
+      "Are vegetarian meals booked?",
+      "Is it economy plus?"
+    ],
+    "facts_to_track": [
+      "chicago",
+      "miami",
+      "december 21",
+      "vegetarian",
+      "economy plus"
+    ]
+  },
+  {
+    "id": "flight_easy_03",
+    "difficulty": "easy",
+    "domain": "flight",
+    "initial": "I need a flight for a work conference.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Boston Logan",
+      "destination|flying to|where.*going|to": "San Francisco",
+      "when.*leav|depart.*date|outbound|going": "March 3rd",
+      "return|coming back|when.*back": "March 6th",
+      "how many|passengers|travell": "just 1, it's just me",
+      "cabin|class|economy|business|first": "business class, company is paying",
+      "loyalty|frequent|miles|rewards": "American AAdvantage",
+      "baggage|luggage|bags|checked": "one checked bag",
+      "meal|dietary|food on|special meal": "kosher meal please",
+      "confirm|correct|right|all set": "yes that is correct"
+    },
+    "complication": "The conference got extended by a day. Can you change the return to March 7th?",
+    "complication_turn": 9,
+    "pivot": "My manager is now joining me — add one more passenger. She also needs business class and a kosher meal. Departure stays March 3rd, return now March 7th.",
+    "expected_pre": {
+      "origin": "boston",
+      "destination": "san francisco",
+      "date_out": "march 3",
+      "date_return": "march 7",
+      "passengers": 1,
+      "cabin": "business",
+      "meal": "kosher"
+    },
+    "expected_post": {
+      "origin": "boston",
+      "destination": "san francisco",
+      "date_out": "march 3",
+      "date_return": "march 7",
+      "passengers": 2,
+      "cabin": "business",
+      "meal": "kosher"
+    },
+    "post_booking_probes": [
+      "How many passengers?",
+      "What cabin class?",
+      "Are kosher meals booked for both?",
+      "What is the return date?"
+    ],
+    "facts_to_track": [
+      "boston",
+      "san francisco",
+      "2",
+      "business",
+      "kosher"
+    ]
+  },
+  {
+    "id": "flight_easy_04",
+    "difficulty": "easy",
+    "domain": "flight",
+    "initial": "Help me book a flight home for the holidays.",
+    "clarification_drip": {
+      "where.*flying|depart|origin|from": "from Seattle",
+      "destination|flying to|where.*going|to": "Denver, that's where my family is",
+      "when.*leav|depart.*date|outbound|going": "December 23rd",
+      "return|coming back|when.*back": "January 2nd",
+      "how many|passengers|travell": "1 passenger",
+      "cabin|class|economy|business|first": "economy",
+      "loyalty|frequent|miles|rewards": "Delta SkyMiles",
+      "baggage|luggage|bags|checked": "two checked bags, bringing lots of gifts",
+      "meal|dietary|food on|special meal": "no special meal",
+      "confirm|correct|right|all set": "yes that works"
+    },
+    "complication": "My girlfriend is coming with me — add her as a second passenger. She also needs a checked bag.",
+    "complication_turn": 9,
+    "pivot": "We decided to leave a day earlier on December 22nd to avoid the crowds. Return stays January 2nd, 2 passengers, same everything.",
+    "expected_pre": {
+      "origin": "seattle",
+      "destination": "denver",
+      "date_out": "december 23",
+      "date_return": "january 2",
+      "passengers": 2
+    },
+    "expected_post": {
+      "origin": "seattle",
+      "destination": "denver",
+      "date_out": "december 22",
+      "date_return": "january 2",
+      "passengers": 2
+    },
+    "post_booking_probes": [
+      "What is the departure date?",
+      "How many passengers?",
+      "How many checked bags total?"
+    ],
+    "facts_to_track": [
+      "seattle",
+      "denver",
+      "december 22",
+      "2",
+      "checked bag"
+    ]
+  }
+]

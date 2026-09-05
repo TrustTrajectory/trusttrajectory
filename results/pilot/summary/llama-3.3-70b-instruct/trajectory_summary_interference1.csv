@@ -1,0 +1,11 @@
+scenario_id,model,run_idx,difficulty,domain,pivot_turn,turns_used,booking_done,early_booking_turn,first_hall_turn,total_hallucinations,hallucination_types,latency_total_s
+easy_01,llama-3.3-70b-instruct,1,easy,restaurant,13,23,True,6,,0,[],77.988
+flight_easy_01,llama-3.3-70b-instruct,1,easy,flight,13,25,True,10,,0,[],95.174
+medium_03,llama-3.3-70b-instruct,1,medium,restaurant,13,22,True,6,,0,[],75.831
+flight_medium_02,llama-3.3-70b-instruct,1,medium,flight,13,25,True,11,,0,[],97.873
+hard_01,llama-3.3-70b-instruct,1,hard,restaurant,13,24,True,7,,0,[],76.644
+flight_hard_03,llama-3.3-70b-instruct,1,hard,flight,13,25,True,10,,0,[],78.374
+conflict_03,llama-3.3-70b-instruct,1,conflicting,restaurant,13,23,True,6,,0,[],54.02
+flight_conflict_02,llama-3.3-70b-instruct,1,conflicting,flight,13,25,True,12,,0,[],70.732
+adversarial_01,llama-3.3-70b-instruct,1,adversarial,restaurant,13,25,True,6,,0,[],67.326
+flight_adversarial_01,llama-3.3-70b-instruct,1,adversarial,flight,13,28,True,10,,0,[],96.54

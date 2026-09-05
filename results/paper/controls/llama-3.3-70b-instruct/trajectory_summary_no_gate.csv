@@ -1,0 +1,47 @@
+scenario_id,model,run_idx,difficulty,domain,pivot_turn,turns_used,booking_done,early_booking_turn,first_hall_turn,total_hallucinations,hallucination_types,latency_total_s
+easy_01,llama-3.3-70b-instruct,1,easy,restaurant,13,16,True,5.0,15,2,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",68.512
+easy_02,llama-3.3-70b-instruct,1,easy,restaurant,13,16,True,7.0,7,4,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",55.136
+easy_03,llama-3.3-70b-instruct,1,easy,restaurant,13,16,True,7.0,7,4,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",57.372
+easy_04,llama-3.3-70b-instruct,1,easy,restaurant,13,16,True,5.0,14,3,"[""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",73.166
+easy_05,llama-3.3-70b-instruct,1,easy,restaurant,13,16,True,6.0,15,2,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",63.681
+easy_06,llama-3.3-70b-instruct,1,easy,restaurant,13,16,True,6.0,14,2,"[""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",54.339
+flight_easy_01,llama-3.3-70b-instruct,1,easy,flight,13,16,True,10.0,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",70.546
+flight_easy_02,llama-3.3-70b-instruct,1,easy,flight,13,17,True,,14,4,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",49.527
+flight_easy_03,llama-3.3-70b-instruct,1,easy,flight,13,17,True,11.0,15,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",65.161
+flight_easy_04,llama-3.3-70b-instruct,1,easy,flight,13,16,True,10.0,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",59.69
+medium_01,llama-3.3-70b-instruct,1,medium,restaurant,13,17,True,6.0,6,6,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",68.285
+medium_02,llama-3.3-70b-instruct,1,medium,restaurant,13,17,True,7.0,14,4,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",63.485
+medium_03,llama-3.3-70b-instruct,1,medium,restaurant,13,16,True,6.0,6,7,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",73.341
+medium_04,llama-3.3-70b-instruct,1,medium,restaurant,13,17,True,7.0,14,4,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",78.874
+medium_05,llama-3.3-70b-instruct,1,medium,restaurant,13,16,True,6.0,6,7,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",59.066
+medium_06,llama-3.3-70b-instruct,1,medium,restaurant,13,17,True,6.0,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",74.548
+flight_medium_01,llama-3.3-70b-instruct,1,medium,flight,13,16,True,11.0,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",77.982
+flight_medium_02,llama-3.3-70b-instruct,1,medium,flight,13,16,True,12.0,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",71.165
+flight_medium_03,llama-3.3-70b-instruct,1,medium,flight,13,16,True,11.0,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",107.444
+flight_medium_04,llama-3.3-70b-instruct,1,medium,flight,13,16,True,,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",97.35
+hard_01,llama-3.3-70b-instruct,1,hard,restaurant,13,17,True,7.0,7,5,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",56.635
+hard_02,llama-3.3-70b-instruct,1,hard,restaurant,13,17,True,8.0,8,5,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",71.904
+hard_03,llama-3.3-70b-instruct,1,hard,restaurant,13,17,True,7.0,14,4,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",49.355
+hard_04,llama-3.3-70b-instruct,1,hard,restaurant,13,16,True,8.0,14,3,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",46.741
+hard_05,llama-3.3-70b-instruct,1,hard,restaurant,13,17,True,10.0,10,7,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",48.197
+hard_06,llama-3.3-70b-instruct,1,hard,restaurant,13,17,True,6.0,6,4,"[""PREMATURE_COMMIT"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",69.056
+flight_hard_01,llama-3.3-70b-instruct,1,hard,flight,13,16,True,11.0,11,4,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",73.625
+flight_hard_02,llama-3.3-70b-instruct,1,hard,flight,13,22,True,12.0,14,7,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONFIDENT_CONFAB""]",277.759
+flight_hard_03,llama-3.3-70b-instruct,1,hard,flight,13,16,True,11.0,14,3,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",50.234
+flight_hard_04,llama-3.3-70b-instruct,1,hard,flight,13,16,True,11.0,14,1,"[""CONSTRAINT_IGNORE""]",109.296
+conflict_01,llama-3.3-70b-instruct,1,conflicting,restaurant,13,16,True,7.0,15,2,"[""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",102.862
+conflict_02,llama-3.3-70b-instruct,1,conflicting,restaurant,13,16,True,7.0,16,1,"[""MEMORY_COLLAPSE""]",79.903
+conflict_03,llama-3.3-70b-instruct,1,conflicting,restaurant,13,17,True,6.0,6,6,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",101.876
+conflict_04,llama-3.3-70b-instruct,1,conflicting,restaurant,13,16,True,7.0,10,4,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",81.506
+flight_conflict_01,llama-3.3-70b-instruct,1,conflicting,flight,13,16,True,11.0,11,4,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",64.211
+flight_conflict_02,llama-3.3-70b-instruct,1,conflicting,flight,13,16,True,12.0,14,2,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",47.531
+flight_conflict_03,llama-3.3-70b-instruct,1,conflicting,flight,13,16,True,12.0,11,4,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",45.112
+flight_conflict_04,llama-3.3-70b-instruct,1,conflicting,flight,13,16,True,10.0,15,2,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",54.614
+adversarial_01,llama-3.3-70b-instruct,1,adversarial,restaurant,13,19,True,7.0,10,7,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",51.524
+adversarial_02,llama-3.3-70b-instruct,1,adversarial,restaurant,13,19,True,7.0,7,8,"[""PREMATURE_COMMIT"", ""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE""]",45.435
+adversarial_03,llama-3.3-70b-instruct,1,adversarial,restaurant,13,17,True,7.0,9,5,"[""PARAM_DRIFT"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",40.962
+adversarial_04,llama-3.3-70b-instruct,1,adversarial,restaurant,13,19,True,6.0,13,7,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",75.426
+flight_adversarial_01,llama-3.3-70b-instruct,1,adversarial,flight,13,19,True,9.0,9,7,"[""PREMATURE_COMMIT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",111.012
+flight_adversarial_02,llama-3.3-70b-instruct,1,adversarial,flight,13,20,True,10.0,9,8,"[""PARAM_DRIFT"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE""]",85.409
+flight_adversarial_03,llama-3.3-70b-instruct,1,adversarial,flight,13,19,True,,14,6,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE""]",96.362
+flight_adversarial_04,llama-3.3-70b-instruct,1,adversarial,flight,13,20,True,10.0,14,7,"[""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE"", ""MEMORY_COLLAPSE"", ""CONSTRAINT_IGNORE""]",114.649

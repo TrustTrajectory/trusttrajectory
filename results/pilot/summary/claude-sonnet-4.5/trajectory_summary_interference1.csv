@@ -1,0 +1,11 @@
+scenario_id,model,run_idx,difficulty,domain,pivot_turn,turns_used,booking_done,early_booking_turn,first_hall_turn,total_hallucinations,hallucination_types,latency_total_s
+easy_01,claude-sonnet-4.5,1,easy,restaurant,13,23,True,6,,0,[],58.067
+flight_easy_01,claude-sonnet-4.5,1,easy,flight,13,25,True,10,,0,[],69.567
+medium_03,claude-sonnet-4.5,1,medium,restaurant,13,24,True,6,22.0,1,"[""CONSTRAINT_IGNORE""]",61.254
+flight_medium_02,claude-sonnet-4.5,1,medium,flight,13,25,True,10,,0,[],57.377
+hard_01,claude-sonnet-4.5,1,hard,restaurant,13,23,True,6,,0,[],53.176
+flight_hard_03,claude-sonnet-4.5,1,hard,flight,13,25,True,12,,0,[],61.966
+conflict_03,claude-sonnet-4.5,1,conflicting,restaurant,13,24,True,7,,0,[],63.525
+flight_conflict_02,claude-sonnet-4.5,1,conflicting,flight,13,25,True,12,,0,[],65.249
+adversarial_01,claude-sonnet-4.5,1,adversarial,restaurant,13,26,True,7,,0,[],65.086
+flight_adversarial_01,claude-sonnet-4.5,1,adversarial,flight,13,31,True,10,16.0,1,"[""CONSTRAINT_IGNORE""]",85.829

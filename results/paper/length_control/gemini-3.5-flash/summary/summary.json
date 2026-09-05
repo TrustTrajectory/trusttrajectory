@@ -1,0 +1,376 @@
+{
+  "main": {
+    "label": "main",
+    "model": "gemini-3.5-flash",
+    "n_trajectories": 138,
+    "n_turns": 2369,
+    "pivot_turns": [
+      13
+    ],
+    "gate_mode": "hard",
+    "scorer": "regex",
+    "pre_post": {
+      "pre_rate": 0.09601449275362318,
+      "pre_ci": [
+        0.08031400966183574,
+        0.11231884057971014
+      ],
+      "post_rate": 0.7068723702664796,
+      "post_ci": [
+        0.6761891233766234,
+        0.7355704697986577
+      ],
+      "delta": 0.6108578775128565,
+      "delta_ci": [
+        0.5737005410915451,
+        0.6463087938631418
+      ],
+      "n_trajectories": 138,
+      "n_boot": 10000,
+      "alpha": 0.05
+    },
+    "pre_post_by_tier": [
+      {
+        "difficulty": "easy",
+        "pre_rate": 0.08333333333333333,
+        "post_rate": 0.6439393939393939,
+        "delta": 0.5606060606060606,
+        "n_pre": 360,
+        "n_post": 132
+      },
+      {
+        "difficulty": "medium",
+        "pre_rate": 0.1111111111111111,
+        "post_rate": 0.6363636363636364,
+        "delta": 0.5252525252525253,
+        "n_pre": 360,
+        "n_post": 143
+      },
+      {
+        "difficulty": "hard",
+        "pre_rate": 0.06111111111111111,
+        "post_rate": 0.7469879518072289,
+        "delta": 0.6858768406961178,
+        "n_pre": 360,
+        "n_post": 166
+      },
+      {
+        "difficulty": "conflicting",
+        "pre_rate": 0.14930555555555555,
+        "post_rate": 0.6363636363636364,
+        "delta": 0.4870580808080808,
+        "n_pre": 288,
+        "n_post": 99
+      },
+      {
+        "difficulty": "adversarial",
+        "pre_rate": 0.08333333333333333,
+        "post_rate": 0.815028901734104,
+        "delta": 0.7316955684007707,
+        "n_pre": 288,
+        "n_post": 173
+      }
+    ],
+    "fht_by_tier": [
+      {
+        "difficulty": "easy",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 10.733333333333333,
+        "min_fht": 6,
+        "max_fht": 17
+      },
+      {
+        "difficulty": "medium",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 11.1,
+        "min_fht": 7,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "hard",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 10.766666666666667,
+        "min_fht": 6,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "conflicting",
+        "n": 24,
+        "n_with_fht": 24,
+        "mean_fht": 10.166666666666666,
+        "min_fht": 6,
+        "max_fht": 15
+      },
+      {
+        "difficulty": "adversarial",
+        "n": 24,
+        "n_with_fht": 24,
+        "mean_fht": 10.958333333333334,
+        "min_fht": 9,
+        "max_fht": 14
+      }
+    ],
+    "booked_by_tier": [
+      {
+        "difficulty": "easy",
+        "booked": 29,
+        "n": 30,
+        "rate": 0.9666666666666667
+      },
+      {
+        "difficulty": "medium",
+        "booked": 29,
+        "n": 30,
+        "rate": 0.9666666666666667
+      },
+      {
+        "difficulty": "hard",
+        "booked": 28,
+        "n": 30,
+        "rate": 0.9333333333333333
+      },
+      {
+        "difficulty": "conflicting",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      },
+      {
+        "difficulty": "adversarial",
+        "booked": 24,
+        "n": 24,
+        "rate": 1.0
+      }
+    ],
+    "taxonomy_counts": [
+      {
+        "type": "PARAM_DRIFT",
+        "pre": 126,
+        "post": 0,
+        "total": 126
+      },
+      {
+        "type": "PREMATURE_COMMIT",
+        "pre": 33,
+        "post": 7,
+        "total": 40
+      },
+      {
+        "type": "CONSTRAINT_IGNORE",
+        "pre": 0,
+        "post": 314,
+        "total": 314
+      },
+      {
+        "type": "CONFIDENT_CONFAB",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "MEMORY_COLLAPSE",
+        "pre": 0,
+        "post": 183,
+        "total": 183
+      }
+    ],
+    "label_collisions": {
+      "n_hallucinated": 663,
+      "n_multi_condition": 117,
+      "frac_multi_condition": 0.17647058823529413,
+      "combinations": {
+        "CONSTRAINT_IGNORE+MEMORY_COLLAPSE": 117
+      }
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.3,
+        "post_pivot_constraint_ignore_rate": 0.4011220196353436,
+        "post_pivot_hallucination_rate": 0.667601683029453,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.44039270687237025,
+        "post_pivot_hallucination_rate": 0.7068723702664796,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.45582047685834504,
+        "post_pivot_hallucination_rate": 0.7223001402524544,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.44039270687237025,
+        "post_pivot_hallucination_rate": 0.7068723702664796,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.44039270687237025,
+        "post_pivot_hallucination_rate": 0.7068723702664796,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.6,
+        "post_pivot_constraint_ignore_rate": 0.44039270687237025,
+        "post_pivot_hallucination_rate": 0.7068723702664796,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      }
+    ]
+  },
+  "medium padded": {
+    "label": "medium padded",
+    "model": "gemini-3.5-flash",
+    "n_trajectories": 30,
+    "n_turns": 512,
+    "pivot_turns": [
+      13
+    ],
+    "gate_mode": "hard",
+    "scorer": "regex",
+    "pre_post": {
+      "pre_rate": 0.12222222222222222,
+      "pre_ci": [
+        0.08611111111111111,
+        0.15833333333333333
+      ],
+      "post_rate": 0.6381578947368421,
+      "post_ci": [
+        0.5862068965517241,
+        0.6896551724137931
+      ],
+      "delta": 0.5159356725146199,
+      "delta_ci": [
+        0.4390312856877274,
+        0.5912010730626336
+      ],
+      "n_trajectories": 30,
+      "n_boot": 10000,
+      "alpha": 0.05
+    },
+    "pre_post_by_tier": [
+      {
+        "difficulty": "medium",
+        "pre_rate": 0.12222222222222222,
+        "post_rate": 0.6381578947368421,
+        "delta": 0.5159356725146199,
+        "n_pre": 360,
+        "n_post": 152
+      }
+    ],
+    "fht_by_tier": [
+      {
+        "difficulty": "medium",
+        "n": 30,
+        "n_with_fht": 30,
+        "mean_fht": 11.1,
+        "min_fht": 6,
+        "max_fht": 15
+      }
+    ],
+    "booked_by_tier": [
+      {
+        "difficulty": "medium",
+        "booked": 27,
+        "n": 30,
+        "rate": 0.9
+      }
+    ],
+    "taxonomy_counts": [
+      {
+        "type": "PARAM_DRIFT",
+        "pre": 37,
+        "post": 0,
+        "total": 37
+      },
+      {
+        "type": "PREMATURE_COMMIT",
+        "pre": 7,
+        "post": 0,
+        "total": 7
+      },
+      {
+        "type": "CONSTRAINT_IGNORE",
+        "pre": 0,
+        "post": 62,
+        "total": 62
+      },
+      {
+        "type": "CONFIDENT_CONFAB",
+        "pre": 0,
+        "post": 0,
+        "total": 0
+      },
+      {
+        "type": "MEMORY_COLLAPSE",
+        "pre": 0,
+        "post": 35,
+        "total": 35
+      }
+    ],
+    "label_collisions": {
+      "n_hallucinated": 141,
+      "n_multi_condition": 22,
+      "frac_multi_condition": 0.15602836879432624,
+      "combinations": {
+        "CONSTRAINT_IGNORE+MEMORY_COLLAPSE": 22
+      }
+    },
+    "threshold_sensitivity": [
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.3,
+        "post_pivot_constraint_ignore_rate": 0.3684210526315789,
+        "post_pivot_hallucination_rate": 0.5986842105263158,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.40789473684210525,
+        "post_pivot_hallucination_rate": 0.6381578947368421,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "constraint_ignore",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.40789473684210525,
+        "post_pivot_hallucination_rate": 0.6381578947368421,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.4,
+        "post_pivot_constraint_ignore_rate": 0.40789473684210525,
+        "post_pivot_hallucination_rate": 0.6381578947368421,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.5,
+        "post_pivot_constraint_ignore_rate": 0.40789473684210525,
+        "post_pivot_hallucination_rate": 0.6381578947368421,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      },
+      {
+        "threshold": "param_drift",
+        "value": 0.6,
+        "post_pivot_constraint_ignore_rate": 0.40789473684210525,
+        "post_pivot_hallucination_rate": 0.6381578947368421,
+        "dominant_post_pivot_class": "CONSTRAINT_IGNORE"
+      }
+    ]
+  }
+}
